@@ -78,36 +78,6 @@
       }
     </style>
   </head>
-  <?php
-        include 'model/login.php';
-        if(isset($_POST['btn_login'])){
-          $username= $_POST['user'];
-          $password= $_POST['pass'];
-          $account= getAllAccount($username, $password);
-          if($account!=null){
-            session_start();
-            session_destroy();
-            if(!isset($_SESSION['username'])){
-              $_SESSION['username']= $account['username'];
-              $_SESSION['password']= $account['password'];
-              $_SESSION['phanquyen']= $account['phanquyen'];
-            }
-            
-            if($_SESSION['phanquyen']==0){
-              header('location: ../site/index.php');
-            }
-            else{
-              header('location: index.php');
-            }
-          }
-          else{
-            echo '
-              <script>
-                alert("Đăng nhập không thành công !");
-              </script>';
-          }
-        }
-      ?>
   <body>
       
     <div class="row">
