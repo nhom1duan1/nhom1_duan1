@@ -53,7 +53,7 @@
               <li><a href="">Điện thoại</a></li>
               <li><a href="">Điện thoại</a></li>
               <li><a href="">Điện thoại</a></li>
-              <li><a href="">Điện thoại</a></li>
+              <li><a href="index.php?ctrl=intro&action=intro">Giới thiệu</a></li>
             </ul>
           </nav>
         </div>
