@@ -1,4 +1,5 @@
 <?php 
+	include 'model/catalogs.php';
 	include 'model/product.php';
 	$act='index';
 	if (isset($_GET['act'])) {
@@ -10,40 +11,57 @@
 			include 'view/product/showProduct.php';
 			break;
 		case 'update':
-			$id=$_GET['id'];
+			 $id=$_GET['id'];
+			 $catalogs=getAllCatalog();
+			$hang=getAllCatalog();
+			$maloai=getAllCatalog();
+			$tensp=getAllCatalog();
 			$productId= showProductbyId($id);
+			
 			include 'view/product/updateProduct.php';
 		break;
 		case 'chinhsua':
-				$id=$_POST['id_sp'];
+				 $id=$_POST['id'];
+				 $cataid=$_POST['loai'];
 				$productName=$_POST['productName'];
-				$catalogName=$_POST['catalogName'];
 				$giaGoc=$_POST['giaGoc'];
 				$giaGiam=$_POST['giaGiam'];
 				$brand=$_POST['brand'];
-				$imgProduct=$_POST['imgProduct'];
-				$mota=$_POST['moTa'];
-				$danhGia=$_POST['danhGia'];
-				$thuTu=$_POST['thuTu'];
-				$anHien=$_POST['anHien'];
-				updateProduct($id,$productName,$catalogName,$giaGoc,$giaGiam,$brand,$imgProduct,$mota,$danhGia,$thuTu,$anHien);
-				echo "<script>
-				alert('CHỈNH SỬA THÀNH CÔNG')
-			</script>";
+				$imgProduct=$_FILES['imgProduct']['name'];
+				 $path='images/images/'.$imgProduct;
+				$truycap=$_POST['truycap'];
+				$danhgia=$_POST['danhgia'];
+				$mota=$_POST['mota'];
+				$anhien=$_POST['anhien'];
+				$thutu=$_POST['thutu'];
+				
+				updateProduct($id,$cataid,$productName,$giaGoc,$giaGiam,$brand,$path,$truycap,$danhgia,$mota,$anhien,$thutu);
+				
 			header('location: index.php?ctrl=product');
 			break;
 		case 'addnew':
-			include 'view/product/addProducct.php';
+			 $catalogs=getAllCatalog();
+			$hang=getAllCatalog();
+			$maloai=getAllCatalog();
+			include 'view/product/addProduct.php';
 			break;
 		case 'insert':
-				include 
+				 $catalogs=getAllCatalog();
+				 $id=$_POST['id'];
+				 $cataid=$_POST['loai'];
 				$productName=$_POST['productName'];
-				$catalogID=$_POST['catalogID'];
 				$giaGoc=$_POST['giaGoc'];
 				$giaGiam=$_POST['giaGiam'];
 				$brand=$_POST['brand'];
 				$imgProduct=$_POST['imgProduct'];
-				addNewProduct($productName,$catalogID,$giaGoc,$giaGiam,$brand,$imgProduct);
+				 $path='images/images/'.$imgProduct;
+				$truycap=$_POST['truycap'];
+				$danhgia=$_POST['danhgia'];
+				$mota=$_POST['mota'];
+				$anhien=$_POST['anhien'];
+				$thutu=$_POST['thutu'];
+				
+				addNewProduct($id,$cataid,$productName,$giaGoc,$giaGiam,$brand,$path,$truycap,$danhgia,$mota,$anhien,$thutu);
 				echo "<script>
 				alert('THÊM THÀNH CÔNG')
 			</script>";

@@ -1,17 +1,27 @@
 <?php 
-	include 'database.php';
+	include_once 'database.php';
 	function showAllProduct()
 	{
 		$sql='select * from sanpham';
 		return query($sql);
 	}
-	function addNewProduct($productName,$catalogID,$giaGoc,$giaGiam,$brand,$imgProduct){
-		$sql="insert into sanpham(ma_loai,ten_sp,gia_goc,gia_giam,hang,hinh_anh) values('$catalogID','$productName','$giaGoc','$giaGiam','$brand','$imgProduct')";
+	
+	function addNewProduct($id,$cataid,$productName,$giaGoc,$giaGiam,$brand,$path,$truycap,$danhgia,$mota,$anhien,$thutu){
+		$sql="insert into sanpham(ma_sp,ma_loai,ten_sp,gia_goc,gia_giam,hang,hinh_anh,truy_cap,danh_gia,mo_ta,an_hien,thu_tu) values(null,'$cataid','$productName','$giaGoc','$giaGiam','$brand','$path','$truycap','$danhgia','$mota','$anhien','$thutu')";
 		execute($sql);
 	}
-	function updateProduct($id,$productName,$catalogName,$giaGoc,$giaGiam,$brand,$imgProduct,$mota,$danhGia,$thuTu,$anHien){
-		$sql="update sanpham set ten_loai='$catalogName', ten_sp='$productName', gia_goc='$giaGoc', gia_giam='$giaGiam', hang='$brand', hinh_anh='$imgProduct', mo_ta='$mota', danh_gia='$danhGia',  thu_tu='$thuTu', an_hien='$anHien' where ma_sp='$id'";
+	function updateProduct($id,$cataid,$productName,$giaGoc,$giaGiam,$brand,$path,$truycap,$danhgia,$mota,$anhien,$thutu){
+		if($path==""){
+		$sql="update sanpham set ma_loai='$cataid', ten_sp='$productName',  gia_goc='$giaGoc', gia_giam='$giaGiam', hang='$brand', hinh_anh='$path', truy_cap='$truycap', danh_gia='$danhGia', mo_ta='$mota', thu_tu='$thutu', an_hien='$anhien' where ma_sp='$id'";
+		}else{
+			$sql="update sanpham set ma_loai='$cataid', ten_sp='$productName',  gia_goc='$giaGoc', gia_giam='$giaGiam', hang='$brand', truy_cap='$truycap', danh_gia='$danhGia', mo_ta='$mota', thu_tu='$thutu', an_hien='$anhien' where ma_sp='$id'";
+
+		}
+		echo "<script>
+				alert('CHỈNH SỬA THÀNH CÔNG');
+			</script>";
 		execute($sql);
+
 	}
 	function showProductbyId($id){
 		$sql="select *from sanpham where ma_sp='$id' ";

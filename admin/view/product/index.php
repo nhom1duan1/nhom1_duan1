@@ -9,7 +9,6 @@
 		<th>Hãng</th>
 		<th>Hình Anh</th>
 		<th>Mô Tả</th>
-		<th>Dánh Giá</th>
 		<th>Truy Cập</th>
 		<th>Thứ Tự</th>
 		<th>Ẩn Hiện</th>
@@ -30,7 +29,6 @@
 					<td>'.$key['hang'].'</td>
 					<td><img width="100px" height="100px" src="../site/images/'.$key['hinh_anh'].'"></td>
 					<td>'.$key['mo_ta'].'</td>
-					<td>'.$key['danh_gia'].'</td>
 					<td>'.$key['truy_cap'].'</td>
 					<td>'.$key['thu_tu'].'</td>
 					<td>'.$key['an_hien'].'</td>

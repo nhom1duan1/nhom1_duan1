@@ -1,18 +1,18 @@
-<form action="index.php?ctrl=product&act=chinhsua" method="POST" enctype="multipart/form-data">
-				       <div class="card mt-3">
+<div class="card mt-3">
         <div class="card-header info">
           QUẢN LÝ LOẠI HÀNG
         </div>
         <div class="card-body">
-        
+          <form action="index.php?ctrl=product&act=insert" method="post">
         
             <div class="form-group">
                 <label for="">Mã Sản Phẩm</label>
-                <input type="text" readonly name="id" class="form-control" placeholder="Mã loại tự phát sinh" value="<?php echo $id?>">
+                <input type="text" readonly name="id" class="form-control" placeholder="Mã loại tự phát sinh">
               </div>
+        
               <div class="form-group">
                 <label for="">Tên sản phẩm</label>
-                <input type="text" name="productName" class="form-control" placeholder="Tên sản phẩm" value="<?php echo $productId['ten_sp']?>">
+                <input type="text" name="productName" class="form-control" placeholder="Tên sản phẩm">
               </div>
               <div class="form-group">
                 <label for="">Loại sản phẩm</label>
@@ -26,49 +26,46 @@
               </div>
               <div class="form-group">
                 <label for="">Giá gốc</label>
-              <input type="text" name="giaGoc" class="form-control" placeholder="Giá gốc" value="<?php echo $productId['gia_goc']?>">
+              <input type="text" name="giaGoc" class="form-control" placeholder="Giá gốc">
               </div>
               <div class="form-group">
                 <label for="">Giá giảm</label>
-              <input type="text" name="giaGiam" class="form-control" placeholder="Giá Giảm" value="<?php echo $productId['gia_giam']?>">
+              <input type="text" name="giaGiam" class="form-control" placeholder="Giá Giảm">
               </div>
                <div class="form-group">
                 <label for="">Mô tả</label>
-              <input type="text" name="mota" class="form-control" placeholder="Mô tả" value="<?php echo $productId['mo_ta']?>">
+              <input type="text" name="mota" class="form-control" placeholder="Mô tả">
               </div>
               <div class="form-group">
                 <label for="">Hãng</label>
                 <select name="brand" class="form-control" id="">
                      <?php
                   foreach($hang as $ceta){
-                    echo '<option >'.$ceta['hang'].'</option>';
+                    echo '<option>'.$ceta['hang'].'</option>';
                   }
                 ?>     
                 </select>
               </div>
                <div class="form-group">
                 <label for="">Truy cập</label>
-              <input type="text" name="truycap" class="form-control" placeholder="Truy cập" value="<?php echo $productId['truy_cap']?>">
+              <input type="text" name="truycap" class="form-control" placeholder="Truy cập">
               </div>
-    
               <div class="form-group">
                 <label for="">Hình ảnh</label>
-              <input type="file" name="imgProduct" class="form-control" value="<?php echo $productId['hinh_anh']?>">
+              <input type="file" name="imgProduct"  class="form-control">
               </div>
                <div class="form-group">
                 <label for="">Thứ tự</label>
-              <input type="text" name="thutu" class="form-control" value="<?php echo $productId['thu_tu']?>">
+              <input type="text" name="thutu" class="form-control" placeholder="Thứ tự">
               </div>
                <div class="form-group">
                 <label for="">Ẩn hiện</label>
-              <input type="text" name="anhien" class="form-control" value="<?php echo $productId['an_hien']?>">
+              <input type="text" name="anhien" class="form-control" placeholder="Ẩn hiện">
               </div>
               <div class="form-group">
                   <button type="submit" class="btn btn-primary">Lưu</button>
                   <a href="#" class="btn btn-danger">Danh sách</a>
               </div>
-          
+          </form>
         </div>
       </div>
-</form>
-<!-- hình ảnh giá loại tên ẩn hiện -->
