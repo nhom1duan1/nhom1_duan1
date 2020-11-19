@@ -48,7 +48,7 @@
             <div class="hinh-tin">
               <img src="images/tin1.jpg" alt="" />
             </div>
-            <div class="title-tin">...</div>
+            <div class="title-tin">Đánh giá camera Galaxy M51: Dành cho người thích sáng tạo nội dung hình ảnh suốt ngày đêm</div>
           </div>
           <div class="tin">
             <div class="hinh-tin">

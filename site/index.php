@@ -48,11 +48,11 @@
         <div class="menubar">
           <nav class="menu">
             <ul>
+              <li><a href="index.php">Trang chủ</a></li>
               <li><a href="">Điện thoại</a></li>
-              <li><a href="">Điện thoại</a></li>
-              <li><a href="">Điện thoại</a></li>
-              <li><a href="">Điện thoại</a></li>
-              <li><a href="">Điện thoại</a></li>
+              <li><a href="">Laptop</a></li>
+              <li><a href="">Phụ Kiện</a></li>
+              <li><a href="">Liên hệ</a></li>
               <li><a href="index.php?ctrl=intro&action=intro">Giới thiệu</a></li>
             </ul>
           </nav>
