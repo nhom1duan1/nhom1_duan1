@@ -143,8 +143,8 @@
           >
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Chức năng:</h6>
-              <a class="collapse-item" href="">Xem danh sách</a>
-              <a class="collapse-item" href="">Thêm khách hàng mới</a>
+              <a class="collapse-item" href="index.php?ctrl=user">Xem danh sách</a>
+              <a class="collapse-item" href="index.php?ctrl=user&act=newAccount">Thêm khách hàng mới</a>
             </div>
           </div>
         </li>
