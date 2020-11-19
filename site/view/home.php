@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<!-- Mirrored from ledthanhdat.vn/html/dagon/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 09:39:33 GMT -->
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
-    <title>Dagon</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png"/>
-    <link rel="stylesheet" type="text/css" href="assets/fonts/flaticon/flaticon.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/pe-icon-7-stroke.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/chosen.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/jquery.bxslider.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;display=swap"
-          rel="stylesheet">
-</head>
-<body class="index-opt-3">
-
-    <main class="site-main">
         <div class="block-slide">
             <div class="container">
                 <div class="main-slide slide-opt-5">
@@ -32,9 +9,9 @@
                             <div class="container">
                                 <div class="slide-desc slide-desc-1">
                                     <div class="container-inner">
-                                        <div class="p-primary">The inspiration behind elector</div>
-                                        <p>Id egestas placerat purus eratunc</p>
-                                        <a href="grid-product.html" class="btn-shop-now">Shop Now</a>
+                                        <div class="p-primary">Nguồn cảm hứng đằng sau xu thế</div>
+                                        <p>Fshop đặt chất lượng lên đầu</p>
+                                        <a href="grid-product.html" class="btn-shop-now">Xem ngay</a>
                                     </div>
                                 </div>
                             </div>
@@ -43,9 +20,9 @@
                             <div class="container">
                                 <div class="slide-desc slide-desc-2">
                                     <div class="container-inner">
-                                        <div class="p-primary">Let’s create Your digital world</div>
-                                        <p>ut a pulvinar dapibus etiam torquent</p>
-                                        <a href="grid-product.html" class="btn-shop-now">Shop Now</a>
+                                        <div class="p-primary">Hãy tạo ra thế giới kỹ thuật số của bạn</div>
+                                        <p>Để cho chúng tôi phục vụ bạn</p>
+                                        <a href="grid-product.html" class="btn-shop-now">Xem ngay</a>
                                     </div>
                                 </div>
                             </div>
@@ -54,9 +31,9 @@
                             <div class="container">
                                 <div class="slide-desc slide-desc-3">
                                     <div class="container-inner">
-                                        <div class="p-primary">Better Idea Your technology</div>
-                                        <p>Lobortis natoque litora gravida risus</p>
-                                        <a href="grid-product.html" class="btn-shop-now">Shop Now</a>
+                                        <div class="p-primary">Lựa chọn hàng đầu Việt Nam</div>
+                                        <p>Chế độ bảo hành tốt nhất</p>
+                                        <a href="grid-product.html" class="btn-shop-now">Xem ngay</a>
                                     </div>
                                 </div>
                             </div>
@@ -67,13 +44,13 @@
         </div>
         <div class="block-top-categori">
             <div class="container">
-                <div class="title-of-section main-title"><span>Top Categories</span></div>
+                <div class="title-of-section main-title"><span>Loại sản phẩm bán chạy</span></div>
                 <div class="owl-carousel nav-style2" data-nav="true" data-autoplay="false" data-dots="false"
                      data-loop="true" data-margin="30"
                      data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4}}'>
                     <div class="block-top-categori-item">
                         <a href="#"><img src="assets/images/home1/c1.jpg" alt="c1"></a>
-                        <div class="block-top-categori-title">Speakers</div>
+                        <div class="block-top-categori-title">Đồng hồ</div>
                     </div>
                     <div class="block-top-categori-item">
                         <a href="#"><img src="assets/images/home1/c2.jpg" alt="c2"></a>
@@ -81,15 +58,15 @@
                     </div>
                     <div class="block-top-categori-item">
                         <a href="#"><img src="assets/images/home1/c3.jpg" alt="c3"></a>
-                        <div class="block-top-categori-title">Game Mouse</div>
+                        <div class="block-top-categori-title">Chuột chơi game</div>
                     </div>
                     <div class="block-top-categori-item">
                         <a href="#"><img src="assets/images/home1/c4.jpg" alt="c4"></a>
-                        <div class="block-top-categori-title">Cell Phones</div>
+                        <div class="block-top-categori-title">Điện thoại di động</div>
                     </div>
                     <div class="block-top-categori-item">
                         <a href="#"><img src="assets/images/home1/c5.jpg" alt="c5"></a>
-                        <div class="block-top-categori-title">Monitor</div>
+                        <div class="block-top-categori-title">Máy tính</div>
                     </div>
                 </div>
             </div>
@@ -101,9 +78,9 @@
                         <div class="promotion-banner style-5">
                             <a href="#" class="banner-img"><img src="assets/images/home1/banner3.jpg" alt="banner3"></a>
                             <div class="promotion-banner-inner">
-                                <h4>Headphone</h4>
+                                <h4>Flycam</h4>
                                 <h3>Sale <strong>40%</strong> Off</h3>
-                                <a class="banner-link" href="grid-product.html">Shop now</a>
+                                <a class="banner-link" href="grid-product.html">Xem ngay</a>
                             </div>
                         </div>
                     </div>
@@ -111,9 +88,9 @@
                         <div class="promotion-banner style-5">
                             <a href="#" class="banner-img"><img src="assets/images/home1/banner4.jpg" alt="banner4"></a>
                             <div class="promotion-banner-inner">
-                                <h4>New Arrivals</h4>
+                                <h4>Tai nghe</h4>
                                 <h3>Get <strong>25%</strong> Flat Off</h3>
-                                <a class="banner-link" href="grid-product.html">Shop now</a>
+                                <a class="banner-link" href="grid-product.html">Xem ngay</a>
                             </div>
                         </div>
                     </div>
@@ -122,13 +99,13 @@
         </div>
         <div class="block-feature-product">
             <div class="container">
-                <div class="title-of-section main-title"><span>Featured Products</span></div>
+                <div class="title-of-section main-title"><span>Sản phẩm sắp ra mắt</span></div>
                 <div class="tab-product tab-product-fade-effect">
                     <ul class="box-tabs nav-tab">
-                        <li class="active"><a data-animated="" data-toggle="tab" href="#tab-1">All Products </a></li>
-                        <li><a data-toggle="tab" href="#tab-2">Computer</a></li>
-                        <li><a data-toggle="tab" href="#tab-2">Tv & Audio</a></li>
-                        <li><a data-toggle="tab" href="#tab-1">LifeStyle</a></li>
+                        <li class="active"><a data-animated="" data-toggle="tab" href="#tab-1">Tất cả</a></li>
+                        <li><a data-toggle="tab" href="#tab-2">Máy tính</a></li>
+                        <li><a data-toggle="tab" href="#tab-2">Tv & Phụ kiện âm nhạc</a></li>
+                        <li><a data-toggle="tab" href="#tab-1">Phụ kiện điện thoại</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-container">
@@ -172,7 +149,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -216,7 +193,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -262,7 +239,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -308,7 +285,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -356,7 +333,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -399,7 +376,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -444,7 +421,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -490,7 +467,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -538,7 +515,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -584,7 +561,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -635,7 +612,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -679,7 +656,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -725,7 +702,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -771,7 +748,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -819,7 +796,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -862,7 +839,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -907,7 +884,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -953,7 +930,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -1001,7 +978,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -1047,7 +1024,7 @@
                                                         <div class="inner">
                                                             <a href="compare.html" class="compare"><i
                                                                     class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Add to cart</a>
+                                                            <a href="#" class="add-to-cart">Mua ngay</a>
                                                             <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                             aria-hidden="true"></i></a>
                                                         </div>
@@ -1065,7 +1042,7 @@
         </div>
         <div class="block-sale-product full-width block-background">
             <div class="container">
-                <div class="title-of-section"><span>Sale Products</span></div>
+                <div class="title-of-section"><span>Sản phẩm giảm giá</span></div>
                 <div class="owl-carousel nav-style2 border-background equal-container" data-nav="true"
                      data-autoplay="false" data-dots="false" data-loop="true" data-margin="30"
                      data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"1200":{"items":3}}'>
@@ -1242,7 +1219,7 @@
         </div>
         <div class="block-recent-view">
             <div class="container">
-                <div class="title-of-section"><span>Recently Viewed</span></div>
+                <div class="title-of-section"><span>Sản phẩm xem gần đây</span></div>
                 <div class="owl-carousel nav-style2 border-background equal-container" data-nav="true"
                      data-autoplay="false" data-dots="false" data-loop="true" data-margin="30"
                      data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4},"1000":{"items":4}}'>
@@ -1496,29 +1473,3 @@
         </div>
         
         </div>
-    </main><!-- end MAIN -->
-</div>
-<a href="#" id="scrollup" title="Scroll to Top">Scroll</a>
-<!-- jQuery -->
-<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="assets/js/wow.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.actual.min.js"></script>
-<script type="text/javascript" src="assets/js/chosen.jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.bxslider.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.sticky.js"></script>
-<script type="text/javascript" src="assets/js/jquery.elevateZoom.min.js"></script>
-<script src="assets/js/fancybox/source/jquery.fancybox.pack.js"></script>
-<script src="assets/js/fancybox/source/helpers/jquery.fancybox-media.js"></script>
-<script src="assets/js/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
-<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC3nDHy1dARR-Pa_2jjPCjvsOR4bcILYsM'></script>
-<script type="text/javascript" src="assets/js/function.js"></script>
-<script type="text/javascript" src="assets/js/Modernizr.js"></script>
-<script type="text/javascript" src="assets/js/jquery.plugin.js"></script>
-<script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
-</body>
-
-<!-- Mirrored from ledthanhdat.vn/html/dagon/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 09:39:43 GMT -->
-</html>

@@ -1,5 +1,5 @@
-<div class="card mt-3">
-        <div class="card-header info">
+<div class="card mt-3 container">
+        <div class="card-header info container">
           QUẢN LÝ LOẠI HÀNG
         </div>
         <div class="card-body">

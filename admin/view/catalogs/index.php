@@ -3,8 +3,8 @@
 		color:white;
 	}
 </style>
-<form action="#" method="post">
-      <div class="card mt-3">
+<form action="#" method="post" class="container d-flex justify-content-center">
+      <div class="card container">
         <div class="card-header">
           QUẢN LÝ LOẠI HÀNG
         </div>
