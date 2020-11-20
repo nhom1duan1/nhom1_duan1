@@ -122,7 +122,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#"><i class="flaticon-profile" aria-hidden="true"></i>Đăng kí / Đăng nhập</a></li>
+                    <li><a href="../admin/login.php"><i class="flaticon-profile" aria-hidden="true"></i>Đăng nhập</a></li>
                 </ul><!-- heder links -->
             </div>
         </div> <!-- header-top -->
@@ -203,16 +203,19 @@
                                     <a href="index.php">Trang chủ</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="index-2.html">sản phẩm</a>
+                                    <a href="index.php?ctrl=product">sản phẩm</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="index-2.html">tin tức</a>
+                                    <a href="">tin tức</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="index-2.html">liên hệ</a>
+                                    <a href="">liên hệ</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="index-2.html">giỏ hàng</a>
+                                    <a href="">giỏ hàng</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="">Giới thiệu</a>
                                 </li>
                                 
                             </ul>
