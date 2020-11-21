@@ -28,7 +28,7 @@
 				$giaGiam=$_POST['giaGiam'];
 				$brand=$_POST['brand'];
 				$imgProduct=$_FILES['imgProduct']['name'];
-				 $path='images/images/'.$imgProduct;
+				 $path='../images/'.$imgProduct;
 				$truycap=$_POST['truycap'];
 				$danhgia=$_POST['danhgia'];
 				$mota=$_POST['mota'];
@@ -54,7 +54,7 @@
 				$giaGiam=$_POST['giaGiam'];
 				$brand=$_POST['brand'];
 				$imgProduct=$_POST['imgProduct'];
-				 $path='images/images/'.$imgProduct;
+				 $path='../images/'.$imgProduct;
 				$truycap=$_POST['truycap'];
 				$danhgia=$_POST['danhgia'];
 				$mota=$_POST['mota'];

@@ -1786,7 +1786,7 @@ input[type="password"] {
   background-image: url(../images/home1/slide3.jpg);
 }
 .slide-opt-5 .item-slide-1 {
-  background-image: url(../images/home3/slide1.jpg);
+  background-image: url(asset/images/home3/slide1.jpg);
 }
 .slide-opt-5 .item-slide-2 {
   background-image: url(../images/home3/slide2.jpg);
@@ -3020,6 +3020,7 @@ input[type="password"] {
 }
 .product-item.style1 .thumb-inner {
   padding: 15px;
+  height: 250px;
 }
 .product-item.style1 .single-add-to-cart {
   padding-bottom: 5px;

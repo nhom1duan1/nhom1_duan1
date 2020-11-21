@@ -33,7 +33,7 @@
       >
         <a
           class="sidebar-brand d-flex align-items-center justify-content-center"
-          href="index.html"
+          href="index.php"
         >
           <div class="sidebar-brand-icon">
             <i class="fas fa-user-shield"></i>
@@ -224,6 +224,7 @@
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
                 <?php 
+                $ctrl="home";
                   if (isset($_GET['ctrl'])) {
                     $ctrl=$_GET['ctrl'];
                   }

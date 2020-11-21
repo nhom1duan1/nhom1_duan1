@@ -15,9 +15,8 @@ include_once 'model/catalogs.php';
          case 'insert':
             $name=$_POST['nameCata'];
             $thutu=$_POST['thutu'];
-            $hang=$_POST['hang'];
             $anhien=$_POST['anhien'];
-            addNewCatalog($name,$thutu,$hang,$anhien);
+            addNewCatalog($name,$thutu,$anhien);
             header('location:index.php?ctrl=catalogs&action=index');
             break;
         case 'edit':
@@ -29,9 +28,8 @@ include_once 'model/catalogs.php';
             $id=$_POST['id'];
             $name=$_POST['nameCata'];
              $thutu=$_POST['thutu'];
-            $hang=$_POST['hang'];
             $anhien=$_POST['anhien'];
-            updateCatalog($id,$name,$thutu,$hang,$anhien);
+            updateCatalog($id,$name,$thutu,$anhien);
             header('location:index.php?ctrl=catalogs&action=index');
             break;
         case 'delete':
