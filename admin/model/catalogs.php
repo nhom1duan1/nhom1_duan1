@@ -4,16 +4,16 @@
         $sql="SELECT * from catalogs order by ma_loai ";
         return query($sql);
     }
-    function addNewCatalog($name,$thutu,$hang,$anhien){
-        $sql="INSERT INTO catalogs(ten_loai,thu_tu,hang,an_hien) VALUES ('$name','$thutu','$hang','$anhien')";
+    function addNewCatalog($name,$thutu,$anhien){
+        $sql="INSERT INTO catalogs(ten_loai,thu_tu,an_hien) VALUES ('$name','$thutu','$anhien')";
         execute($sql);
     }
     function getCatalogById($id){
         $sql="SELECT * from catalogs where ma_loai='$id'";
         return queryOne($sql);
     }
-    function updateCatalog($id,$name,$thutu,$hang,$anhien){
-        $sql="UPDATE catalogs SET ten_loai='$name',thu_tu='$thutu',hang='$hang',an_hien='$anhien' where ma_loai='$id'";
+    function updateCatalog($id,$name,$thutu,$anhien){
+        $sql="UPDATE catalogs SET ten_loai='$name',thu_tu='$thutu',an_hien='$anhien' where ma_loai='$id'";
         execute($sql);
     }
     function deleteCatalog($id){

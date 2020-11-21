@@ -10,12 +10,12 @@ include_once 'model/catalogs.php';
             include 'view/catalogs/index.php';
             break;
         case 'addnew':
+             $catalogs =getAllcatalog();
             include 'view/catalogs/addnew.php';
             break;
          case 'insert':
             $name=$_POST['nameCata'];
             $thutu=$_POST['thutu'];
-            $hang=$_POST['hang'];
             $anhien=$_POST['anhien'];
             addNewCatalog($name,$thutu,$hang,$anhien);
             header('location:index.php?ctrl=catalogs&action=index');

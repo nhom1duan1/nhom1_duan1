@@ -9,8 +9,12 @@
 			$users=getShowUser();
 			include 'view/user/showAccount.php';
 			break;
-		case 'newAccount':
+
+		case 'add':
 			include 'view/user/newAccount.php';
+			$users=getShowUser();
+		break;
+		case 'newAccount':
 			if (isset($_POST['add'])) {
 				if (isset($_POST['phanQuyen'])) {
 					$fullName=$_POST['fullName'];
@@ -51,11 +55,12 @@
 				$password2=$_POST['password2'];
 				$diaChi=$_POST['txtDC'];
 				$avatar=$_POST['avatar'];
+				$path='../images/images/'.$avatar;
 				$soDienThoai=$_POST['txtSDT'];
 				$phanQuyen=$_POST['phanQuyen'];
 				if ($password==$password2) {
-					updateUser($fullName,$password,$diaChi,$avatar,$soDienThoai,$phanQuyen,$email);
-					header("localhost:index.php?ctrl=user");
+					updateUser($fullName,$password,$diaChi,$path,$soDienThoai,$phanQuyen,$email);
+					header("location:index.php?ctrl=user");
 					break;
 				}
 				else{
@@ -72,10 +77,10 @@
 			include 'view/user/updateUser.php';
 			break;
 			case 'delete':
-				if (isset($_GET['email'])) {
-					$email=$_GET['email'];
-					deleteAccount($email);
-				}
+				$id=$_GET['ma_kh'];
+				
+					deleteAccount($id);
+					header("locaion:index.php?ctrl=user");
 				break;
 		default:
 			echo "sai cu phap";

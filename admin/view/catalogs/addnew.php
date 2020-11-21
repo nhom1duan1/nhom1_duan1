@@ -17,10 +17,7 @@
                 <label for="">Thứ tự</label>
                 <input type="text" name="thutu" class="form-control" placeholder="Thứ tự">
               </div>
-               <div class="form-group">
-                <label for="">Hãng</label>
-                <input type="text" name="hang" class="form-control" placeholder="Hãng">
-              </div>
+
                <div class="form-group">
                 <label for="">Ẩn hiện</label>
                 <input type="text" name="anhien" class="form-control" placeholder="Ẩn hiện">

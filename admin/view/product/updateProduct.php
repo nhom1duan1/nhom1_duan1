@@ -1,7 +1,7 @@
 <form action="index.php?ctrl=product&act=chinhsua" method="POST" enctype="multipart/form-data">
 				       <div class="card mt-3">
         <div class="card-header info">
-          QUẢN LÝ LOẠI HÀNG
+          CẬP NHẬT SẢN PHẨM
         </div>
         <div class="card-body">
         

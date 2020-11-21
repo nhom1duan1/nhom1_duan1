@@ -1,6 +1,6 @@
 <div class="card mt-3">
         <div class="card-header info">
-          QUẢN LÝ LOẠI HÀNG
+          THÊM SẢN PHẨM
         </div>
         <div class="card-body">
           <form action="index.php?ctrl=product&act=insert" method="post">

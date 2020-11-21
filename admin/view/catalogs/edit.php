@@ -19,10 +19,6 @@
                 <input type="text" name="thutu" class="form-control" value="<?php echo $cate['thu_tu'];?>">
               </div>
                <div class="form-group">
-                <label for="">Hãng</label>
-                <input type="text" name="hang" class="form-control" value="<?php echo $cate['hang'];?>">
-              </div>
-               <div class="form-group">
                 <label for="">Ẩn hiện</label>
                 <input type="text" name="anhien" class="form-control" value="<?php echo $cate['an_hien'];?>">
               </div>

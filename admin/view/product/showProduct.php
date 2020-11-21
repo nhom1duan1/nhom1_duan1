@@ -6,7 +6,7 @@
 <form action="#" method="post">
       <div class="card mt-3">
         <div class="card-header">
-          QUẢN LÝ LOẠI HÀNG
+          SẢN PHẨM
         </div>
         <div class="card-body">
           <table class="table table-striped table"  >
@@ -48,8 +48,8 @@
           <td>'.$key['truy_cap'].'</td>
           <td>'.$key['thu_tu'].'</td>
 					<td>'.$key['an_hien'].'</td>
-					<td><a href="index.php?ctrl=product&act=delete&id='.$key['ma_sp'].'" class="btn btn-warning">delete</a></td>
-					<td><a href="index.php?ctrl=product&act=update&id='.$key['ma_sp'].'" class="btn btn-info">edit</a></td>
+					<td><a href="index.php?ctrl=product&act=delete&id='.$key['ma_sp'].'" class="btn btn-warning">Xóa</a></td>
+					<td><a href="index.php?ctrl=product&act=update&id='.$key['ma_sp'].'" class="btn btn-info">Sửa</a></td>
 				</tr>
 			';
 		}
@@ -61,7 +61,7 @@
             <input type="button" class="btn btn-info" onclick='selectAll()' value="Chọn tất cả" >
             <input type="button" class="btn btn-info" onclick='UnSelectAll()' value="bỏ Chọn tất cả" >
             <button type="submit" class="btn btn-info">Xoá danh mục đã chọn</button>
-            <a href="index.php?ctrl=product&act=addnew" class="btn btn-info">Thêm mới</a>
+            <a href="index.php?ctrl=product&act=addnew" class="btn btn-danger">Thêm mới</a>
         </div>
       </div>
 </form>
