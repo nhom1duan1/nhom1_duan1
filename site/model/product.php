@@ -2,7 +2,12 @@
 	include 'database.php';
 	function showAllProduct()
 	{
-		$sql='select * from sanpham';
+		$sql='select * from sanpham order by thu_tu';
+		return query($sql);
+	}
+	function showProductbyId_loai($ma_loai)
+	{
+		$sql="select * from sanpham where ma_loai='$ma_loai'";
 		return query($sql);
 	}
 	function addNewProduct($productName,$catalogID,$giaGoc,$giaGiam,$brand,$imgProduct){

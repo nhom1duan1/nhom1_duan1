@@ -6,7 +6,7 @@
 <form action="#" method="post" class="container d-flex justify-content-center">
       <div class="card container">
         <div class="card-header">
-          QUẢN LÝ LOẠI HÀNG
+          QUẢN LÝ LOẠI SẢN PHẨM
         </div>
         <div class="card-body">
           <table class="table table-striped table"  >
@@ -24,13 +24,23 @@
               <tbody>
               <?php
                 foreach($catalogs as $cate){
+                  if($cate['an_hien']==1){
+                    $anhien='Hiện';
+                  }
+                  else{
+                    $anhien='Ẩn';
+                  }
                   echo'
                     <tr>
                       <th scope="row"><input type="checkbox" id="chonX" name="chonX[]"></th>
                       <td>'.$cate['ma_loai'].'</td>
                       <td>'.$cate['ten_loai'].'</td>
                        <td>'.$cate['thu_tu'].'</td>
+<<<<<<< HEAD
                          <td>'.$cate['an_hien'].'</td>
+=======
+                         <td>'.$anhien.'</td>
+>>>>>>> d9c33c0c803df9fbd4865f16db65e8a97d6a3a87
                       <td>
                         <a href="index.php?ctrl=catalogs&action=delete&ma_loai='.$cate['ma_loai'].'" class="btn btn-warning" >Xoá</a>
                         <a href="index.php?ctrl=catalogs&action=edit&ma_loai='.$cate['ma_loai'].'"class="btn btn-info">Sửa</a>

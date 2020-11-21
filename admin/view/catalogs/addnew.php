@@ -1,6 +1,6 @@
 <div class="card mt-3 container">
         <div class="card-header info container">
-          QUẢN LÝ LOẠI HÀNG
+          THÊM LOẠI SẢN PHẨM
         </div>
         <div class="card-body">
           <form action="index.php?ctrl=catalogs&action=insert"  method="post">
@@ -17,10 +17,16 @@
                 <label for="">Thứ tự</label>
                 <input type="text" name="thutu" class="form-control" placeholder="Thứ tự">
               </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> d9c33c0c803df9fbd4865f16db65e8a97d6a3a87
                <div class="form-group">
                 <label for="">Ẩn hiện</label>
-                <input type="text" name="anhien" class="form-control" placeholder="Ẩn hiện">
+                <select name="anhien" id="" class="form-control">
+                  <option value="0">Ẩn</option>
+                  <option value="1">Hiện</option>
+                </select>
               </div>
               <div class="form-group">
                   <button type="submit" class="btn btn-primary" >Lưu</button>
