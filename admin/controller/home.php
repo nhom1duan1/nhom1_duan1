@@ -1,1 +1,7 @@
-<?php include 'view/home/index.php'; ?>
+<?php
+ include 'model/product.php';
+ include 'model/catalogs.php';
+ $product= showAllProduct();
+ $loai_sp= getAllCatalog();
+ include 'view/home/index.php';
+ ?>

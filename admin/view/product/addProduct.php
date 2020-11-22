@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<div class="card mt-3">
+<div class="card container">
         <div class="card-header info">
           THÊM SẢN PHẨM
         </div>
         <div class="card-body">
           <form action="index.php?ctrl=product&act=insert" method="post">
-=======
-
->>>>>>> d9c33c0c803df9fbd4865f16db65e8a97d6a3a87
         
           <form action="index.php?ctrl=product&act=insert" method="post" class="container d-flex justify-content-center">
             <div class="card container">
