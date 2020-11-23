@@ -9,7 +9,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-9">
-                            <form class="form-cart">
+                            <form class="form-cart" method="post">
                                 <div class="table-cart">
                                     <table class="table">
                                         <thead>
@@ -24,6 +24,8 @@
                                         </thead>
                                         <tbody>
                                         <?php
+                                            
+                                            $tongtien=0;
                                             if(!isset($_SESSION['carts'])){
                                             echo '
                                                 <div class="baorong">Bạn chưa chọn sản phẩm nào !</div>
@@ -37,7 +39,7 @@
                                                 echo '
                                                 
                                                 <tr>
-                                                    <td class="tb-image"><a href="#" class="item-photo"><img src="images/'.$p['image'].'" width="100px" /></a></td>
+                                                    <td class="tb-image"><a href="#" class="item-photo"><img src="'.$p['image'].'" width="100px" /></a></td>
                                                     <td class="tb-product">
                                                         <div class="product-name"><a href="#">'.$p['name'].'</a></div>
                                                     </td>
@@ -47,7 +49,7 @@
                                                     <td class="tb-qty">
                                                         <div class="quantity">
                                                             <div class="buttons-added">
-                                                                <input type="text" value="1" title="Qty" class="input-text qty text"
+                                                                <input name="soluong" type="text" value="'.$p['quantity'].'" title="Qty" class="input-text qty text"
                                                                     size="1">
                                                                 <a href="#" class="sign plus"><i class="fa fa-plus"></i></a>
                                                                 <a href="#" class="sign minus"><i class="fa fa-minus"></i></a>
@@ -55,7 +57,7 @@
                                                         </div>
                                                     </td>
                                                     <td class="tb-total">
-                                                        <span class="price">'.$p['price'].'</span>
+                                                        <span class="price">'.$p['price']*$p['quantity'].'</span>
                                                     </td>
                                                     <td class="tb-remove">
                                                         <a href="index.php?ctrl=cart&action=remove&id='.$p['id'].'" class="action-remove"><span><i class="flaticon-close"
@@ -63,39 +65,39 @@
                                                     </td>
                                                 </tr>
                                                 ';
+                                                
+                                                $tongtien= $tongtien + $p['price']*$p['quantity'];
                                             } 
                                             } 
                                         ?>
+                                        
                                     
                                         </tbody>
                                     </table>
                                 </div>
                                 <div class="cart-actions">
                                     <button type="submit" class="btn-continue">
-                                        <span>Continue Shopping</span>
+                                        <span>Tiếp tục mua sắm</span>
                                     </button>
                                     <button type="submit" class="btn-clean">
                                         <span>Update Shopping Cart</span>
                                     </button>
                                     <button type="submit" class="btn-update">
-                                        <span>Clear Shopping Cart</span>
+                                        <span>Xóa toàn bộ giỏ hàng</span>
                                     </button>
                                 </div>
                             </form>
                         </div>
                         <div class="col-md-3">
                             <div class="order-summary">
-                                <h4 class="title-shopping-cart">Order Summary</h4>
+                                <h4 class="title-shopping-cart">Giỏ hàng của bạn</h4>
                                 <div class="checkout-element-content">
-                                    <span class="order-left">Subtotal:<span>$458.00</span></span>
-                                    <span class="order-left">Shipping:<span>Free Shipping</span></span>
-                                    <span class="order-left">Total:<span>$458.00</span></span>
-                                    <ul>
-                                        <li><label class="inline"><input type="checkbox"><span class="input"></span>I have promo
-                                            code</label></li>
-                                    </ul>
+                                    <span class="order-left">Tính tiền:<span>$<?php echo $tongtien ?></span></span>
+                                    <span class="order-left">Phí ship:<span>Miễn phí</span></span>
+                                    <span class="order-left">Tổng:<span>$<?php echo $tongtien ?></span></span>
+                                    
                                     <button type="submit" class="btn-checkout">
-                                        <span>Check Out</span>
+                                        <span>Xác nhận</span>
                                     </button>
                                 </div>
                             </div>
