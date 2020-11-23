@@ -17,10 +17,6 @@
                 <label for="">Thứ tự</label>
                 <input type="text" name="thutu" class="form-control" placeholder="Thứ tự">
               </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> d9c33c0c803df9fbd4865f16db65e8a97d6a3a87
                <div class="form-group">
                 <label for="">Ẩn hiện</label>
                 <select name="anhien" id="" class="form-control">

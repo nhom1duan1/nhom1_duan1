@@ -11,7 +11,7 @@
         <div class="card-body">
           <table class="table table-striped table"  >
               <thead>
-                <tr class="bg-info">
+                <tr class="bg-primary">
                   <th scope="col"></th>
                   <th scope="col">Mã loại</th>
                   <th scope="col">Tên loại</th>
@@ -36,11 +36,7 @@
                       <td>'.$cate['ma_loai'].'</td>
                       <td>'.$cate['ten_loai'].'</td>
                        <td>'.$cate['thu_tu'].'</td>
-<<<<<<< HEAD
-                         <td>'.$cate['an_hien'].'</td>
-=======
                          <td>'.$anhien.'</td>
->>>>>>> d9c33c0c803df9fbd4865f16db65e8a97d6a3a87
                       <td>
                         <a href="index.php?ctrl=catalogs&action=delete&ma_loai='.$cate['ma_loai'].'" class="btn btn-warning" >Xoá</a>
                         <a href="index.php?ctrl=catalogs&action=edit&ma_loai='.$cate['ma_loai'].'"class="btn btn-info">Sửa</a>
