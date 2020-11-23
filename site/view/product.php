@@ -82,7 +82,7 @@
                                                         <p>Guarantee: 2 Year</p>
                                                     </div>
                                                     <div class="single-add-to-cart">
-                                                        <a href="#" class="btn-add-to-cart">Thêm vào giỏ hàng</a>
+                                                        <a href="index.php?ctrl=cart&action=addtocart&id='.$value['ma_sp'].'" class="btn-add-to-cart">Thêm vào giỏ hàng</a>
                                                         <a href="compare.html" class="compare"><i class="fa fa-exchange"></i>Compare</a>
                                                         <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                         aria-hidden="true"></i>Wishlist</a>

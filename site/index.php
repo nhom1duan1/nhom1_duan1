@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+?>
 <html lang="en">
 
 <!-- Mirrored from ledthanhdat.vn/html/dagon/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 09:36:25 GMT -->
@@ -173,14 +176,22 @@
                                         <span class="cart-icon"><i class="flaticon-shopping-cart"
                                                                    aria-hidden="true"></i></span>
 
-                                        <span class="counter-number">2</span>
+                                        <span class="counter-number"><?php 
+                                        $dem=0;
+                                        $tongtien=0;
+                                            foreach ($_SESSION['carts'] as  $p) {
+                                                $dem= $dem + $p['quantity'];
+                                                $tongtien= $tongtien+ $p['quantity']*$p['price'];
+                                            };
+                                            echo $dem;
+                                        ?></span>
 
                                     </span>
                                 <span class="counter-your-cart">
 
                                         <span class="counter-label">Giỏ hàng:</span>
 
-                                        <span class="counter-price">$00.00</span>
+                                        <span class="counter-price">$<?php echo $tongtien ?></span>
 
                                     </span>
                             </a>

@@ -2,7 +2,7 @@
 	include 'database.php';
 	function showAllProduct()
 	{
-		$sql='select * from sanpham order by thu_tu';
+		$sql='select * from sanpham';
 		return query($sql);
 	}
 	function showProductbyId_loai($ma_loai)
