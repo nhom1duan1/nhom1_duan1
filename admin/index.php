@@ -1,6 +1,6 @@
 <?php
   ob_start();
-  include 'model/user.php';
+  //include 'model/user.php';
   session_start();
   if (!isset($_GET['ad'])&&!isset($_SESSION['username'])) {
     header('location:login.php');

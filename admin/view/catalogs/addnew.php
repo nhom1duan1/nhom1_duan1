@@ -11,7 +11,7 @@
               </div>
               <div class="form-group">
                 <label for="">Tên danh mục</label>
-                <input type="text" name="nameCata" class="form-control" placeholder="Tên loại">
+                <input type="text" name="nameCata" class="form-control" placeholder="Tên loại" require>
               </div>
                <div class="form-group">
                 <label for="">Thứ tự</label>

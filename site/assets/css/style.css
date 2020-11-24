@@ -5392,6 +5392,9 @@ label.inline {
 .cart-actions {
   overflow: hidden;
 }
+.cart-actions a{
+  color: #fff;
+}
 @media (max-width: 767px) {
   .shopping-cart .form-cart {
     overflow-y: hidden;

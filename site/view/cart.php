@@ -76,8 +76,8 @@
                                     </table>
                                 </div>
                                 <div class="cart-actions">
-                                    <button type="submit" class="btn-continue">
-                                        <span>Tiếp tục mua sắm</span>
+                                    <button type="button" class="btn-continue">
+                                        <span><a href="index.php?ctrl=product">Tiếp tục mua sắm</a> </span>
                                     </button>
                                     <button type="submit" class="btn-clean">
                                         <span>Update Shopping Cart</span>
