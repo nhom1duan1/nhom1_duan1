@@ -211,7 +211,7 @@
               aria-expanded="false"
             >
               <span class="mr-2 d-none d-lg-inline text-gray-600 small"
-                >Chào admin</span
+                >hello Admin!!</span
               >
               <i class="fas fa-user-lock"></i>
             </a>
