@@ -45,27 +45,15 @@ function addToOrderDetail($ma_donhang)
   }
 }
 function deleteCart($id){
-    $product=getProductByID($id);
+    $product=showProductbyId($id);
     $i=0;
     if(isset($_SESSION['carts'])){
         foreach($_SESSION['carts'] as $item)
       if($item['id']==$id)
       {
-        if($item['quantity']-1==0){
+        
           array_splice($_SESSION['carts'],$i,1);
-        }else{
-          array_splice($_SESSION['carts'],$i,1,
-          array(
-            array(
-              "id"=>$id,
-              "name"=>$product['name'],
-              "price"=>$product['price'],
-              "image"=>$product['image_link'],
-              "quantity"=>$item['quantity']-1
-            )
-          )
-            );
-        }
+        
         $i++;
       }
   }

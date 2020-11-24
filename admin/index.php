@@ -168,7 +168,7 @@
             aria-controls="collapseNCC"
           >
             <i class="fas fa-fw fa-folder"></i>
-            <span>Nhà cung cấp</span>
+            <span>Hãng sản xuất</span>
           </a>
           <div
             id="collapseNCC"
@@ -178,7 +178,7 @@
           >
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Chức năng:</h6>
-              <a class="collapse-item" href="">Xem danh sách</a>
+              <a class="collapse-item" href="index.php?ctrl=brand&action=index">Xem danh sách</a>
               <a class="collapse-item" href="">Thêm nhà cung cấp mới</a>
             </div>
           </div>
