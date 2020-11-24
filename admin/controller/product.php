@@ -1,6 +1,7 @@
 <?php 
 	include 'model/catalogs.php';
 	include 'model/product.php';
+	include 'model/brand.php';
 	$act='index';
 	if (isset($_GET['act'])) {
 		$act=$_GET['act'];
@@ -13,7 +14,7 @@
 		case 'update':
 			 $id=$_GET['id'];
 			 $catalogs=getAllCatalog();
-			$hang=getAllCatalog();
+			$hang=getAllBrand();
 			$maloai=getAllCatalog();
 			$tensp=getAllCatalog();
 			$productId= showProductbyId($id);
@@ -41,7 +42,7 @@
 			break;
 		case 'addnew':
 			 $catalogs=getAllCatalog();
-			$hang=getAllCatalog();
+			$hang=getAllBrand();
 			$maloai=getAllCatalog();
 			include 'view/product/addProduct.php';
 			break;
