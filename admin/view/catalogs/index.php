@@ -11,7 +11,7 @@
         <div class="card-body">
           <table class="table table-striped table"  >
               <thead>
-                <tr class="bg-info">
+                <tr class="bg-primary">
                   <th scope="col"></th>
                   <th scope="col">Mã loại</th>
                   <th scope="col">Tên loại</th>

@@ -4,14 +4,14 @@
 	}
 </style>
 <form action="#" method="post">
-      <div class="card container">
+      <div class="card container ">
         <div class="card-header">
           QUẢN LÝ SẢN PHẨM
         </div>
         <div class="card-body">
           <table class="table table-striped table"  >
               <thead>
-                <tr class="bg-info">
+                <tr class="bg-primary">
                 <th name="chonX[]"></th>
                   <th>Mã Sản Phẩm</th>
                   <th>Loại sản phẩm</th>

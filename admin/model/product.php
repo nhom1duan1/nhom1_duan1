@@ -32,5 +32,10 @@
     {
         $sql="delete from sanpham where ma_sp='$id'";
         execute($sql);
-    }
+	}
+	function demCatalog($id)
+	{
+		$sql="Select count(*) as 'soluong' from sanpham where ma_loai='$id'";
+		return queryOne($sql);
+	}
 ?>

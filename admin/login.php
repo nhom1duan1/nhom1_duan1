@@ -19,37 +19,6 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
   </head>
-   <?php
-        include 'model/login.php';
-        if(isset($_POST['btn_login'])){
-          $username= $_POST['user'];
-          $password= $_POST['pass'];
-          $account= getAllAccount($username, $password);
-          if($account!=null){
-            session_start();
-            session_destroy();
-            if(!isset($_SESSION['username'])){
-              $_SESSION['username']= $account['email'];
-              $_SESSION['password']= $account['mat_khau'];
-              $_SESSION['phanquyen']= $account['phan_quyen'];
-            }
-            
-            if($_SESSION['phanquyen']!=0){
-              header('location: ../site/index.php');
-            }
-            else{
-              header('location: index.php');
-            }
-          }
-          else{
-            echo '
-              <script>
-                alert("Đăng nhập không thành công !");
-              </script>';
-          }
-        }
-      ?>
-
   <body class="bg-gradient-primary">
     <div class="container">
       <!-- Outer Row -->
@@ -65,7 +34,7 @@
                     <div class="text-center">
                       <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                     </div>
-                    <form class="user">
+                    <form class="user" method="post" action="controller/login.php?act=login">
                       <div class="form-group">
                         <input
                           name="user"
@@ -99,7 +68,7 @@
                           >
                         </div>
                       </div>
-                      <button name="btn_login" href="#" class="btn btn-primary btn-user btn-block">
+                      <button name="btn_login" class="btn btn-primary btn-user btn-block">
                         Login
                       </button>
                       <hr />
