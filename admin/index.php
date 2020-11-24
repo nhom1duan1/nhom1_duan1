@@ -1,5 +1,6 @@
 <?php
   ob_start();
+<<<<<<< HEAD
   //include 'model/user.php';
   session_start();
   if (!isset($_GET['ad'])&&!isset($_SESSION['username'])) {
@@ -8,6 +9,8 @@
   if (!isset($_SESSION['username'])) {
     $_SESSION['username']=$_GET['ad'];
   }
+=======
+>>>>>>> 09230658e206f49277f8cad504d3cd02b5fc0607
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -168,7 +171,7 @@
             aria-controls="collapseNCC"
           >
             <i class="fas fa-fw fa-folder"></i>
-            <span>Nhà cung cấp</span>
+            <span>Hãng sản xuất</span>
           </a>
           <div
             id="collapseNCC"
@@ -178,7 +181,7 @@
           >
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Chức năng:</h6>
-              <a class="collapse-item" href="">Xem danh sách</a>
+              <a class="collapse-item" href="index.php?ctrl=brand&action=index">Xem danh sách</a>
               <a class="collapse-item" href="">Thêm nhà cung cấp mới</a>
             </div>
           </div>
@@ -278,7 +281,6 @@
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
                 <?php 
-                $ctrl="home";
                   if (isset($_GET['ctrl'])) {
                     $ctrl=$_GET['ctrl'];
                   }
