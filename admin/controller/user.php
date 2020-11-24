@@ -1,5 +1,4 @@
 <?php 
-<<<<<<< HEAD
 //include 'model/user.php';
 $act='index';
 if (isset($_GET['act'])) {
@@ -45,7 +44,6 @@ switch ($act) {
 			}
 			else{
 				echo "<script>alert('vui long kiem tra mat khau');</script>";
-=======
 	include 'model/user.php';
 	$act='index';
 	if (isset($_GET['act'])) {
