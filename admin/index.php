@@ -41,7 +41,7 @@
       >
         <a
           class="sidebar-brand d-flex align-items-center justify-content-center"
-          href="index.html"
+          href="index.php"
         >
           <div class="sidebar-brand-icon">
             <i class="fas fa-user-shield"></i>
@@ -50,7 +50,7 @@
         </a>
         <hr class="sidebar-divider my-0" />
         <li class="nav-item active">
-          <a class="nav-link" href="">
+          <a class="nav-link" href="index.php">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a
           >
@@ -127,7 +127,7 @@
           >
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Chức năng:</h6>
-              <a class="collapse-item" href="">Xem danh sách</a>
+              <a class="collapse-item" href="index.php?ctrl=cart&action=index">Xem danh sách</a>
             </div>
           </div>
         </li>
@@ -156,6 +156,8 @@
             </div>
           </div>
         </li>
+
+        
         <li class="nav-item">
           <a
             class="nav-link collapsed"
@@ -178,6 +180,31 @@
               <h6 class="collapse-header">Chức năng:</h6>
               <a class="collapse-item" href="">Xem danh sách</a>
               <a class="collapse-item" href="">Thêm nhà cung cấp mới</a>
+            </div>
+          </div>
+        </li>
+
+         <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseBL"
+            aria-expanded="true"
+            aria-controls="collapseBL"
+          >
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Bình luận</span>
+          </a>
+          <div
+            id="collapseBL"
+            class="collapse"
+            aria-labelledby="headingNCC"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Chức năng:</h6>
+              <a class="collapse-item" href="index.php?ctrl=comment&action=index">Xem danh sách</a>
             </div>
           </div>
         </li>
@@ -251,6 +278,7 @@
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
                 <?php 
+                $ctrl="home";
                   if (isset($_GET['ctrl'])) {
                     $ctrl=$_GET['ctrl'];
                   }

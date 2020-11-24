@@ -1,26 +1,74 @@
-<form action="index.php?ctrl=product&act=chinhsua" method="POST">
-				<label>Mã sản phẩm</label>
-				<input type="text" name="id_sp" value="<?php echo $productId['ma_sp']?>" >
-				<label>Tên Sản Phẩm</label>
-				<input type="text" name="productName" value="<?php echo $productId['ten_sp']?>" >
-				<label>Tên Loại</label>
-				<input type="text" name="catalogName"value="<?php echo $productId['ten_loai']?>">
-				<label>Gía Gốc</label>
-				<input type="number" name="giaGoc" min="1000" max="999999999"value="<?php echo $productId['gia_goc']?>">
-				<label>Giá Giảm</label>
-				<input type="number" name="giaGiam"  min="1000" max="999999999"value="<?php echo $productId['gia_giam']?>">
-				<label>Tên Hãng</label>
-				<input type="text" name="brand" value="<?php echo $productId['hang']?>">
-				<input type="file" name="imgProduct">
-				<label>Mô tả sãn phẩm</label>
-				<textarea maxlength="100" name="moTa"></textarea>
-				<label>Đánh Giá</label>
-				<textarea maxlength="100" name="danhGia"></textarea>
-				<label>Thứ Tự</label>
-				<input type="number" name="thuTu"value="<?php echo $productId['thu_tu']?>">
-				<label>Ẩn Hiện</label>
-				<input type="" name="anHien"value="<?php echo $productId['an_hien']?>">
-				<button type="submit" name="btn">Chỉnh sửa</button>
-	
+<form action="index.php?ctrl=product&act=chinhsua" method="POST" enctype="multipart/form-data">
+				       <div class="card mt-3">
+        <div class="card-header info">
+          CẬP NHẬT SẢN PHẨM
+        </div>
+        <div class="card-body">
+        
+        
+            <div class="form-group">
+                <label for="">Mã Sản Phẩm</label>
+                <input type="text" readonly name="id" class="form-control" placeholder="Mã loại tự phát sinh" value="<?php echo $id?>">
+              </div>
+              <div class="form-group">
+                <label for="">Tên sản phẩm</label>
+                <input type="text" name="productName" class="form-control" placeholder="Tên sản phẩm" value="<?php echo $productId['ten_sp']?>">
+              </div>
+              <div class="form-group">
+                <label for="">Loại sản phẩm</label>
+                <select name="loai" class="form-control" id="">
+                     <?php
+                  foreach($catalogs as $cate){
+                    echo '<option value='.$cate['ma_loai'].' >'.$cate['ten_loai'].'</option>';
+                  }
+                ?>     
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="">Giá gốc</label>
+              <input type="text" name="giaGoc" class="form-control" placeholder="Giá gốc" value="<?php echo $productId['gia_goc']?>">
+              </div>
+              <div class="form-group">
+                <label for="">Giá giảm</label>
+              <input type="text" name="giaGiam" class="form-control" placeholder="Giá Giảm" value="<?php echo $productId['gia_giam']?>">
+              </div>
+               <div class="form-group">
+                <label for="">Mô tả</label>
+              <input type="text" name="mota" class="form-control" placeholder="Mô tả" value="<?php echo $productId['mo_ta']?>">
+              </div>
+              <div class="form-group">
+                <label for="">Hãng</label>
+                <select name="brand" class="form-control" id="">
+                     <?php
+                  foreach($hang as $ceta){
+                    echo '<option >'.$ceta['hang'].'</option>';
+                  }
+                ?>     
+                </select>
+              </div>
+               <div class="form-group">
+                <label for="">Truy cập</label>
+              <input type="text" name="truycap" class="form-control" placeholder="Truy cập" value="<?php echo $productId['truy_cap']?>">
+              </div>
+    
+              <div class="form-group">
+                <label for="">Hình ảnh</label>
+              <input type="file" name="imgProduct" class="form-control" value="<?php echo $productId['hinh_anh']?>">
+              </div>
+               <div class="form-group">
+                <label for="">Thứ tự</label>
+              <input type="text" name="thutu" class="form-control" value="<?php echo $productId['thu_tu']?>">
+              </div>
+               <div class="form-group">
+                <label for="">Ẩn hiện</label>
+              <input type="text" name="anhien" class="form-control" value="<?php echo $productId['an_hien']?>">
+              </div>
+              <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Lưu</button>
+                  <a href="#" class="btn btn-danger">Danh sách</a>
+              </div>
+          
+        </div>
+      </div>
 </form>
 <!-- hình ảnh giá loại tên ẩn hiện -->

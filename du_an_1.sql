@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 13, 2020 lúc 10:51 AM
+-- Thời gian đã tạo: Th10 21, 2020 lúc 11:52 AM
 -- Phiên bản máy phục vụ: 10.4.13-MariaDB
--- Phiên bản PHP: 7.4.8
+-- Phiên bản PHP: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -46,9 +46,19 @@ CREATE TABLE `catalogs` (
   `ma_loai` int(11) NOT NULL,
   `ten_loai` varchar(50) NOT NULL,
   `thu_tu` int(10) NOT NULL,
-  `hang` int(11) NOT NULL,
   `an_hien` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `catalogs`
+--
+
+INSERT INTO `catalogs` (`ma_loai`, `ten_loai`, `thu_tu`, `an_hien`) VALUES
+(1, 'Điện thoại', 0, 1),
+(2, 'Laptop', 2, 1),
+(3, 'Máy chơi game', 2, 1),
+(4, 'Máy tính để bàn', 2, 1),
+(5, 'Đồng hồ thông minh', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -99,6 +109,13 @@ CREATE TABLE `khachhang` (
   `trang_thai` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Đang đổ dữ liệu cho bảng `khachhang`
+--
+
+INSERT INTO `khachhang` (`ma_kh`, `mat_khau`, `ho_ten`, `email`, `dia_chi`, `anh_daidien`, `so_dt`, `phan_quyen`, `trang_thai`) VALUES
+(1, '21232f297a57a5a743894a0e4a801fc3', '', 'admin@gmail.com', '', '', 0, 0, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -108,18 +125,24 @@ CREATE TABLE `khachhang` (
 CREATE TABLE `sanpham` (
   `ma_sp` int(225) NOT NULL,
   `ma_loai` int(11) NOT NULL,
-  `ten_loai` varchar(20) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
   `ten_sp` varchar(20) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
   `gia_goc` decimal(20,0) NOT NULL,
   `gia_giam` decimal(20,0) NOT NULL,
   `hang` int(20) NOT NULL,
   `hinh_anh` varchar(100) NOT NULL,
   `mo_ta` varchar(100) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
-  `danh_gia` varchar(100) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
   `truy_cap` int(11) DEFAULT NULL,
   `thu_tu` int(225) NOT NULL,
   `an_hien` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `sanpham`
+--
+
+INSERT INTO `sanpham` (`ma_sp`, `ma_loai`, `ten_sp`, `gia_goc`, `gia_giam`, `hang`, `hinh_anh`, `mo_ta`, `truy_cap`, `thu_tu`, `an_hien`) VALUES
+(4, 4, 'IMAC 100', '3000', '1000', 0, '../images/c5.jpg', '', 0, 1, 0),
+(5, 1, 'Samsung 20', '3000', '2500', 0, '../images/r3.jpg', '', 0, 1, 0);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -181,7 +204,7 @@ ALTER TABLE `binhluan`
 -- AUTO_INCREMENT cho bảng `catalogs`
 --
 ALTER TABLE `catalogs`
-  MODIFY `ma_loai` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ma_loai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT cho bảng `donhang`
@@ -193,13 +216,13 @@ ALTER TABLE `donhang`
 -- AUTO_INCREMENT cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `ma_kh` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ma_kh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `ma_sp` int(225) NOT NULL AUTO_INCREMENT;
+  MODIFY `ma_sp` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
