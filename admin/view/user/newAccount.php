@@ -1,30 +1,45 @@
-<table border="1" style="text-align: center;">
-	<tr>
-		<th>Mã khách hàng</th>
-		<th>Avatar</th>
-		<th>Tên khách hàng</th>
-		<th>Email</th>
-		<th>Địa chỉ</th>
-		<th>SĐT</th>
-		<th>Phan quyền</th>
-		<th>Sửa</th>
-		<th>Xóa</th>
-	</tr>
-	<?php 
-		foreach ($users as $key) {
-			echo'
-			<tr>
-				<td>'.$key['ma_kh'].'</td>
-				<td>'.$key['anh_daidien'].'</td>
-				<td>'.$key['ho_ten'].'</td>
-				<td>'.$key['email'].'</td>
-				<td>'.$key['dia_chi'].'</td>
-				<td>'.$key['so_dt'].'</td>
-				<td>'.(($key['phan_quyen']=='0')?'khách hàng':'admin').'</td>
-				<td><a href="index.php?ctrl=user&act=edit&email='.$key['email'].'">sua</a></td>
-				<td><a href="index.php?ctrl=user&act=delete&email='.$key['email'].'">xoa</a></td>
-			</tr>
-			';
-		}
-	?>
-</table>
+<form class="form-group" action="" method="POST">
+	<!-- hot ten -->
+	<div class="form-group">
+		<label>Họ và tên</label><br>
+		<input class="form-control" type="text" name="fullName" placeholder="nhập Họ và tên"><br>
+	</div>
+	<!-- mat khau -->
+	<div class="form-group">
+		<label>mật khẩu</label><br>
+		<input class="form-control" type="password" name="password" placeholder="mật khẩu đăng nhập của bạn"><br>
+	</div>
+	<!-- nhap lai mat khau -->
+	<div class="form-group">
+		<label>nhập lại mật khẩu</label><br>
+		<input class="form-control" type="password" name="password2" placeholder="nhập lại mật khẩu"><br>
+	</div>
+	<!-- email -->
+	<div class="form-group">
+		<label>địa chỉ email</label><br>
+		<input class="form-control" type="text" name="txtEmail" placeholder="nhập địa chỉ email của bạn"><br>
+	</div>
+	<!-- dia chi cua ban -->
+	<div class="form-group">
+		<label>địa chỉ của bạn</label><br>
+		<textarea class="form-control" name="txtDC" placeholder="địa chỉ của bạn" maxlength="200"></textarea><br>	
+	</div>
+	<!-- anh dai dien -->
+	<div class="form-group">
+		<label>ảnh đại diện</label><br>
+		<input type="file" name="avatar">
+	</div>
+	<!-- SDT -->
+	<div class="form-group">
+		<label>Số điện thoại</label><br>
+		<input class="form-control" type="text" name="txtSDT" placeholder="nhập số điện thoại của bạn"><br>
+	</div>
+	<!-- phan quyen -->
+	<div class="form-group">
+		<select name="phanQuyen" class="form-control">
+			<option value="1" >Khach Hang</option>
+			<?php $Aoption=($phanQuyen=='0') ? '<option value="0" selected>Admin</option>':'<option value="0">Admin</option>';echo $Aoption.$phanQuyen ?>
+		</select>
+	</div><br>
+	<input class="btn btn-danger" type="submit" name="add" value="thêm tài khoản">
+</form>
