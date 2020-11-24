@@ -1,5 +1,13 @@
 <?php
   ob_start();
+  include 'model/user.php';
+  session_start();
+  if (!isset($_GET['ad'])&&!isset($_SESSION['username'])) {
+    header('location:login.php');
+  }
+  if (!isset($_SESSION['username'])) {
+    $_SESSION['username']=$_GET['ad'];
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -201,8 +209,19 @@
                 </div>
               </div>
             </form>
-            <a
-              class="nav-link dropdown-toggle"
+            <div class="btn_group">
+              
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </div>
+            <div class="btn-group">
+              <a
+              class="btn_group nav-link dropdown-toggle"
               href="#"
               id="userDropdown"
               role="button"
@@ -211,10 +230,18 @@
               aria-expanded="false"
             >
               <span class="mr-2 d-none d-lg-inline text-gray-600 small"
-                >hello Admin!!</span
+                ><?php echo $_SESSION['username']; ?></span
               >
               <i class="fas fa-user-lock"></i>
-            </a>
+              </a>
+              <div class="dropdown-menu" style="left: 30%;right: 1vw;padding: .5rem 1rem;">
+                <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> About</a>
+                <a class="dropdown-item" href="#"><i class="fas fa-language"></i> language</a>
+                <a class="dropdown-item" href="#"><i class="fas fa-users-cog"></i> Setting</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Log out</a>
+              </div>
+            </div>
           </nav>
           <!--Hết phần trên-->
 

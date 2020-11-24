@@ -24,7 +24,7 @@
 	<input class="form-control" type="text" name="txtSDT" value="<?php echo $txtSDT ?>" placeholder="nhập số điện thoại của bạn"><br>
 	<select name="phanQuyen" class="form-control">
 		<option value="1" >Khach Hang</option>
-		<?php $Aoption=($phanQuyen!='0') ? '<option value="0" selected>Admin</option>': '<option value="1">Admin</option>'; echo $Aoption.$phanQuyen ?>
+		<?php $Aoption=($phanQuyen!='0') ? '<option value="0" selected>Admin</option>': '<option value="1">Admin</option>'; echo $Aoption ?>
 	</select><br>
 	<input type="submit" name="add" value="update tài khoản">
 </form>

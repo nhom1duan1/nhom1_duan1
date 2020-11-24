@@ -1,6 +1,6 @@
 <?php 
 	include '../model/login.php';
-	$act='';
+	$act='index';
 	if (isset($_GET['act']))
 	{
 		$act=$_GET['act'];
@@ -27,16 +27,19 @@
 					            header('location: ../../site/index.php?'.$_SESSION['username']);
 					        }
 					        else{
-					        	header('location: ../index.php?'.$_SESSION['username']);
+					        	header('location: ../index.php?ad='.$_SESSION['username']);
 					        	//echo $_SESSION['username'].'aaaaa';
 					        }
 		        		}
-				        else{
+				    	else{
 				        	echo '
 				            <script>
 				            	alert("Đăng nhập không thành công !");
 				            </script>';
 				        }
+	        		}
+	        		else{
+	        			header('location:../login.php');
 	        		}
 		        }
 		    }
