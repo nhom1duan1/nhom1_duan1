@@ -278,7 +278,7 @@
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
                 <?php 
-                $ctrl="home";
+                $ctrl= "home";
                   if (isset($_GET['ctrl'])) {
                     $ctrl=$_GET['ctrl'];
                   }
