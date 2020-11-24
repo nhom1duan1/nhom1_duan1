@@ -54,8 +54,8 @@
 				$password=$_POST['password'];
 				$password2=$_POST['password2'];
 				$diaChi=$_POST['txtDC'];
-				$avatar=$_POST['avatar'];
-				$path='../images/images/'.$avatar;
+				$avatar=$_FILES['avatar']['name'];
+				$path='../images/'.$avatar;
 				$soDienThoai=$_POST['txtSDT'];
 				$phanQuyen=$_POST['phanQuyen'];
 				if ($password==$password2) {

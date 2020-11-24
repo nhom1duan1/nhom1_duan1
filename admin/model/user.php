@@ -1,5 +1,5 @@
 <?php 
-	include '../site/model/database.php';
+	include 'model/database.php';
 	function getShowUser(){
 		$sql="select*from khachhang";
 		return query($sql);

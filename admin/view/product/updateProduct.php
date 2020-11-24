@@ -59,10 +59,13 @@
                 <label for="">Thứ tự</label>
               <input type="text" name="thutu" class="form-control" value="<?php echo $productId['thu_tu']?>">
               </div>
-               <div class="form-group">
-                <label for="">Ẩn hiện</label>
-              <input type="text" name="anhien" class="form-control" value="<?php echo $productId['an_hien']?>">
-              </div>
+                <div class="form-group">
+                    <label for="">Ẩn hiện</label>
+                  <select name="anhien" id="" class="form-control">
+                  <option value="0">Ẩn</option>
+                  <option value="1">Hiện</option>
+                </select>
+                  </div>
               <div class="form-group">
                   <button type="submit" class="btn btn-primary">Lưu</button>
                   <a href="#" class="btn btn-danger">Danh sách</a>
