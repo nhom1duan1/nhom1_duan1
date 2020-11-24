@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 21, 2020 lúc 11:52 AM
+-- Thời gian đã tạo: Th10 24, 2020 lúc 01:22 PM
 -- Phiên bản máy phục vụ: 10.4.13-MariaDB
 -- Phiên bản PHP: 7.4.7
 
@@ -58,7 +58,9 @@ INSERT INTO `catalogs` (`ma_loai`, `ten_loai`, `thu_tu`, `an_hien`) VALUES
 (2, 'Laptop', 2, 1),
 (3, 'Máy chơi game', 2, 1),
 (4, 'Máy tính để bàn', 2, 1),
-(5, 'Đồng hồ thông minh', 2, 0);
+(5, 'Đồng hồ thông minh', 2, 1),
+(7, 'Phụ kiện máy tính & laptop', 2, 1),
+(8, 'Phụ kiện điện thoại', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -99,7 +101,7 @@ CREATE TABLE `donhang` (
 
 CREATE TABLE `khachhang` (
   `ma_kh` int(11) NOT NULL,
-  `mat_khau` varchar(50) NOT NULL,
+  `mat_khau` varchar(60) NOT NULL,
   `ho_ten` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
   `dia_chi` varchar(200) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
@@ -114,7 +116,8 @@ CREATE TABLE `khachhang` (
 --
 
 INSERT INTO `khachhang` (`ma_kh`, `mat_khau`, `ho_ten`, `email`, `dia_chi`, `anh_daidien`, `so_dt`, `phan_quyen`, `trang_thai`) VALUES
-(1, '21232f297a57a5a743894a0e4a801fc3', '', 'admin@gmail.com', '', '', 0, 0, 0);
+(1, '21232f297a57a5a743894a0e4a801fc3', '', 'admin@gmail.com', '', '', 0, 0, 0),
+(2, '$2y$12$Q1u3VNY8KsgQDHS6mbvDbOM.mOCUP4zErWuperHJ/82MNQ4w/SVPC', 'Khải Nguyễn', 'khai@gmail.com', '', '../site/images/lock-icon.png', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -141,8 +144,12 @@ CREATE TABLE `sanpham` (
 --
 
 INSERT INTO `sanpham` (`ma_sp`, `ma_loai`, `ten_sp`, `gia_goc`, `gia_giam`, `hang`, `hinh_anh`, `mo_ta`, `truy_cap`, `thu_tu`, `an_hien`) VALUES
-(4, 4, 'IMAC 100', '3000', '1000', 0, '../images/c5.jpg', '', 0, 1, 0),
-(5, 1, 'Samsung 20', '3000', '2500', 0, '../images/r3.jpg', '', 0, 1, 0);
+(4, 4, 'IMAC 100', '3000', '1000', 0, '../images/c5.jpg', '', 200, 0, 0),
+(5, 1, 'Samsung 20', '3000', '2500', 0, '../images/r3.jpg', '', 68, 0, 0),
+(7, 4, 'Máy tính 450', '4999', '2999', 0, '../images/f5.jpg', '', 400, 0, 0),
+(8, 7, 'Chuột chơi game X11', '200', '100', 0, '../images/c3.jpg', '', 13, 0, 0),
+(9, 5, 'Đồng hồ thông minh X', '599', '499', 0, '../images/c1.jpg', '', 234, 1, 0),
+(10, 1, 'Samsung galaxy S20', '5990', '4990', 0, '../images/s1.jpg', '', 654, 1, 0);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -204,7 +211,7 @@ ALTER TABLE `binhluan`
 -- AUTO_INCREMENT cho bảng `catalogs`
 --
 ALTER TABLE `catalogs`
-  MODIFY `ma_loai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ma_loai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `donhang`
@@ -216,13 +223,13 @@ ALTER TABLE `donhang`
 -- AUTO_INCREMENT cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `ma_kh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ma_kh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `ma_sp` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ma_sp` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
