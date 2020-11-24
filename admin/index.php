@@ -1,13 +1,5 @@
 <?php
   ob_start();
-  include 'model/user.php';
-  session_start();
-  if (!isset($_GET['ad'])&&!isset($_SESSION['username'])) {
-    header('location:login.php');
-  }
-  if (!isset($_SESSION['username'])) {
-    $_SESSION['username']=$_GET['ad'];
-  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -278,7 +270,6 @@
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
                 <?php 
-                $ctrl="home";
                   if (isset($_GET['ctrl'])) {
                     $ctrl=$_GET['ctrl'];
                   }
