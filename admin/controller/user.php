@@ -1,5 +1,9 @@
 <?php 
+<<<<<<< HEAD
 include 'model/user.php';
+=======
+//include 'model/user.php';
+>>>>>>> aa995868f50cd7799a10165234a956d49e5fa7d3
 $act='index';
 if (isset($_GET['act'])) {
 	$act=$_GET['act'];
@@ -44,66 +48,98 @@ switch ($act) {
 			}
 			else{
 				echo "<script>alert('vui long kiem tra mat khau');</script>";
+<<<<<<< HEAD
+=======
+			}
+		}
+	}
+	break;
+		case 'edit':
+		$email='';
+		if (isset($_GET['email'])) {
+			$email=$_GET['email'];
+		}
+		$users=getShowUserID($email);
+			// foreach ($users as $key) {
+			// 	echo $key['ho_ten'];
+			// }
+<<<<<<< HEAD
+
+		if (isset($_POST['add'])) {
+=======
+			
+			if (isset($_POST['add'])) {
+				$fullName=$_POST['fullName'];
+				$password=$_POST['password'];
+				$password2=$_POST['password2'];
+				$diaChi=$_POST['txtDC'];
+				$avatar=$_FILES['avatar']['name'];
+				$path='../images/'.$avatar;
+				$soDienThoai=$_POST['txtSDT'];
+				$phanQuyen=$_POST['phanQuyen'];
+				if ($password==$password2) {
+					updateUser($fullName,$password,$diaChi,$path,$soDienThoai,$phanQuyen,$email);
+					header("location:index.php?ctrl=user");
+					break;
+				}
+				else{
+					echo 'mat khau khong trung';
+				}
+			}
+			$id=$users['ma_kh'];
+			$fullName=$users['ho_ten'];
+			$txtEmail=$users['email'];
+			$txtDC=$users['dia_chi'];
+			$avatar=$users['anh_daidien'];
+			$txtSDT=$users['so_dt'];
+			$phanQuyen=$users['phan_quyen'];
+			include 'view/user/updateUser.php';
+			break;
+			case 'delete':
+				$id=$_GET['ma_kh'];
+				
+					deleteAccount($id);
+					header("locaion:index.php?ctrl=user");
+>>>>>>> b001f3a8fb317aa8e6e76f08f84ee4ce86860ebf
+>>>>>>> aa995868f50cd7799a10165234a956d49e5fa7d3
 				break;
 			}
 					
 		}
 		else{
+>>>>>>> 09230658e206f49277f8cad504d3cd02b5fc0607
 			$fullName=$_POST['fullName'];
 			$password=$_POST['password'];
-			$email=$_POST['txtEmail'];
+			$password2=$_POST['password2'];
 			$diaChi=$_POST['txtDC'];
-			$avatar=$_FILE['avatar']['name'];
+			$avatar=$_POST['avatar'];
+			$path='../images/images/'.$avatar;
 			$soDienThoai=$_POST['txtSDT'];
-			addUser($fullName,$password,$email,$diaChi,$avatar,$soDienThoai);
-			//header('location:http://localhost/duan1/nhom1_duan1/site/index.php');
+			$phanQuyen=$_POST['phanQuyen'];
+			if ($password==$password2) {
+				updateUser($fullName,$password,$diaChi,$path,$soDienThoai,$phanQuyen,$email);
+				header("location:index.php?ctrl=user");
+				break;
+			}
+			else{
+				echo 'mat khau khong trung';
+			}
 		}
+		$id=$users['ma_kh'];
+		$fullName=$users['ho_ten'];
+		$txtEmail=$users['email'];
+		$txtDC=$users['dia_chi'];
+		$avatar=$users['anh_daidien'];
+		$txtSDT=$users['so_dt'];
+		$phanQuyen=$users['phan_quyen'];
+		include 'view/user/updateUser.php';
+		break;
+		case 'delete':
+		$id=$_GET['ma_kh'];
+
+		deleteAccount($id);
+		header("locaion:index.php?ctrl=user");
+		break;
+
 	}
-	break;
-	case 'edit':
-	$email='';
-	if (isset($_GET['email'])) {
-		$email=$_GET['email'];
-	}
-	$users=getShowUserID($email);
-	
-	if (isset($_POST['add'])) {
-		$fullName=$_POST['fullName'];
-		$password=$_POST['password'];
-		$password2=$_POST['password2'];
-		$diaChi=$_POST['txtDC'];
-		$avatar=$_POST['avatar'];
-		$soDienThoai=$_POST['txtSDT'];
-		$phanQuyen=$_POST['phanQuyen'];
-		if ($password==$password2&& $password!='') {
-			$pass_mahoa=password_hash($password, PASSWORD_BCRYPT,['cost'=>12]);
-			updateUser($fullName,$pass_mahoa,$diaChi,$avatar,$soDienThoai,$phanQuyen,$email);
-			header("localhost:index.php?ctrl=user");
-			break;
-		}
-		else{
-			echo "<script>alert('vui long kiem tra mat khau');</script>";
-		}
-	}
-	$id=$users['ma_kh'];
-	$fullName=$users['ho_ten'];
-	$txtEmail=$users['email'];
-	$txtDC=$users['dia_chi'];
-	$avatar=$users['anh_daidien'];
-	$txtSDT=$users['so_dt'];
-	$phanQuyen=$users['phan_quyen'];
-	include 'view/user/updateUser.php';
-	break;
-	case 'delete':
-	$email=$_GET['email'];
-	deleteAccount($email);
-	echo "<script>
-	alert('XÓA THÀNH CÔNG')
-	</script>";
-	header('location: index.php?ctrl=user');
-	break;
-	default:
-	echo "sai cu phap";
-	break;
-}
-?>
+	?>

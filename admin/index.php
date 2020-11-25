@@ -1,5 +1,9 @@
 <?php
   ob_start();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aa995868f50cd7799a10165234a956d49e5fa7d3
   //include 'model/user.php';
   session_start();
   if (!isset($_GET['ad'])&&!isset($_SESSION['username'])) {
@@ -8,6 +12,11 @@
   if (!isset($_SESSION['username'])) {
     $_SESSION['username']=$_GET['ad'];
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 09230658e206f49277f8cad504d3cd02b5fc0607
+>>>>>>> aa995868f50cd7799a10165234a956d49e5fa7d3
 ?>
 <!DOCTYPE html>
 <html lang="en">

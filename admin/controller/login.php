@@ -18,7 +18,7 @@
 		        	if (password_verify($password, $account['mat_khau'])) {
 		        		if($account!=null){
 			        		session_start();
-			        		session_destroy();
+			        		//session_destroy();
 		            		$_SESSION['username']= $account['email'];
 		            		
 				            $_SESSION['password']= $account['mat_khau'];
