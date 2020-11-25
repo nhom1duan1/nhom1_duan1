@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
+<<<<<<< HEAD
 -- Thời gian đã tạo: Th10 25, 2020 lúc 10:21 AM
+=======
+-- Thời gian đã tạo: Th10 24, 2020 lúc 03:18 PM
+>>>>>>> cf6fed07e55be81e294660a9b7530bd7de7e7c40
 -- Phiên bản máy phục vụ: 10.4.13-MariaDB
 -- Phiên bản PHP: 7.4.7
 
@@ -24,9 +28,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `binhluan`
+-- Cấu trúc bảng cho bảng `hang`
 --
 
+<<<<<<< HEAD
 CREATE TABLE `binhluan` (
   `ma_binhluan` int(11) NOT NULL,
   `ma_kh` int(11) NOT NULL,
@@ -98,10 +103,13 @@ CREATE TABLE `donhang` (
 -- Cấu trúc bảng cho bảng `hang`
 --
 
+=======
+>>>>>>> cf6fed07e55be81e294660a9b7530bd7de7e7c40
 CREATE TABLE `hang` (
   `ma_hang` int(11) NOT NULL,
   `hang` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+<<<<<<< HEAD
 
 -- --------------------------------------------------------
 
@@ -163,14 +171,17 @@ INSERT INTO `sanpham` (`ma_sp`, `ma_loai`, `ten_sp`, `gia_goc`, `gia_giam`, `han
 (8, 7, 'Chuột chơi game X11', '200', '100', 0, '../images/c3.jpg', '', 13, 0, 0),
 (9, 5, 'Đồng hồ thông minh X', '599', '499', 0, '../images/c1.jpg', '', 234, 1, 0),
 (10, 1, 'Samsung galaxy S20', '5990', '4990', 0, '../images/s1.jpg', '', 654, 1, 0);
+=======
+>>>>>>> cf6fed07e55be81e294660a9b7530bd7de7e7c40
 
 --
 -- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Chỉ mục cho bảng `binhluan`
+-- Chỉ mục cho bảng `hang`
 --
+<<<<<<< HEAD
 ALTER TABLE `binhluan`
   ADD PRIMARY KEY (`ma_binhluan`),
   ADD KEY `fk1_ma_kh` (`ma_kh`),
@@ -207,12 +218,17 @@ ALTER TABLE `khachhang`
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`ma_sp`),
   ADD KEY `fk1_ma_loai` (`ma_loai`);
+=======
+ALTER TABLE `hang`
+  ADD PRIMARY KEY (`ma_hang`);
+>>>>>>> cf6fed07e55be81e294660a9b7530bd7de7e7c40
 
 --
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
+<<<<<<< HEAD
 -- AUTO_INCREMENT cho bảng `binhluan`
 --
 ALTER TABLE `binhluan`
@@ -267,9 +283,12 @@ ALTER TABLE `donhang`
 
 --
 -- Các ràng buộc cho bảng `sanpham`
+=======
+-- AUTO_INCREMENT cho bảng `hang`
+>>>>>>> cf6fed07e55be81e294660a9b7530bd7de7e7c40
 --
-ALTER TABLE `sanpham`
-  ADD CONSTRAINT `fk1_ma_loai` FOREIGN KEY (`ma_loai`) REFERENCES `catalogs` (`ma_loai`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `hang`
+  MODIFY `ma_hang` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

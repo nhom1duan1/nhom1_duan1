@@ -1,5 +1,5 @@
 <form class="form-group" action="" method="POST" class="container d-flex justify-content-center">
-	<div class="card container">
+	<div class="card container ">
 		<div class="card-header info">
                 THÊM SẢN PHẨM
 		</div>
@@ -46,7 +46,7 @@
 					<?php $Aoption=($phanQuyen=='0') ? '<option value="0" selected>Admin</option>':'<option value="0">Admin</option>';echo $Aoption.$phanQuyen ?>
 				</select>
 			</div><br>
-			<input class="btn btn-danger" type="submit" name="add" value="thêm tài khoản">
+			<input class="btn btn-primary" type="submit" name="add" value="thêm tài khoản">
 		</div>
 	</div>
 </form>

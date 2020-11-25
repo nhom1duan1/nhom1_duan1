@@ -1,7 +1,7 @@
 <?php 
 	include 'model/database.php';
 	function getShowUser(){
-		$sql="select*from khachhang";
+		$sql="select * from khachhang";
 		return query($sql);
 	}
 	function getShowUserID($email){

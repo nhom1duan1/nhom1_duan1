@@ -11,17 +11,17 @@
               </div>
               <div class="form-group">
                 <label for="">Tên danh mục</label>
-                <input type="text" name="nameCata" class="form-control" placeholder="Tên loại" require>
+                <input type="text" name="nameCata" class="form-control" placeholder="Tên loại" required>
               </div>
                <div class="form-group">
                 <label for="">Thứ tự</label>
-                <input type="text" name="thutu" class="form-control" placeholder="Thứ tự">
+                <input type="text" name="thutu" class="form-control" placeholder="Thứ tự" required>
               </div>
                <div class="form-group">
                 <label for="">Ẩn hiện</label>
                 <select name="anhien" id="" class="form-control">
                   <option value="0">Ẩn</option>
-                  <option value="1">Hiện</option>
+                  <option value="1" selected>Hiện</option>
                 </select>
               </div>
               <div class="form-group">

@@ -8,7 +8,7 @@
   if (!isset($_SESSION['username'])) {
     $_SESSION['username']=$_GET['ad'];
   }
-?>
+  ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
