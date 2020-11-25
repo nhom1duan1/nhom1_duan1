@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 24, 2020 lúc 01:22 PM
+-- Thời gian đã tạo: Th10 25, 2020 lúc 10:21 AM
 -- Phiên bản máy phục vụ: 10.4.13-MariaDB
 -- Phiên bản PHP: 7.4.7
 
@@ -69,10 +69,10 @@ INSERT INTO `catalogs` (`ma_loai`, `ten_loai`, `thu_tu`, `an_hien`) VALUES
 --
 
 CREATE TABLE `chitietdonhang` (
-  `ma_sp` int(225) NOT NULL,
+  `ma_sp` int(11) NOT NULL,
   `ma_donhang` int(11) NOT NULL,
-  `so_luong` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `soluong` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -82,16 +82,26 @@ CREATE TABLE `chitietdonhang` (
 
 CREATE TABLE `donhang` (
   `ma_donhang` int(11) NOT NULL,
-  `ma_sp` int(11) NOT NULL,
   `ma_kh` int(11) NOT NULL,
-  `ten_sp` varchar(50) NOT NULL,
-  `hinh_anh` varchar(100) NOT NULL,
-  `gia` decimal(15,0) NOT NULL,
-  `so_luong` int(11) NOT NULL,
   `thanh_tien` decimal(11,0) NOT NULL,
   `ngay_dat` date NOT NULL,
-  `gio_dat` datetime(6) NOT NULL
+  `gio_dat` datetime(6) NOT NULL,
+  `ten_nguoinhan` varchar(255) NOT NULL,
+  `dia_chi` varchar(255) NOT NULL,
+  `sdt` int(11) NOT NULL,
+  `ghi_chu` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `hang`
+--
+
+CREATE TABLE `hang` (
+  `ma_hang` int(11) NOT NULL,
+  `hang` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -116,8 +126,11 @@ CREATE TABLE `khachhang` (
 --
 
 INSERT INTO `khachhang` (`ma_kh`, `mat_khau`, `ho_ten`, `email`, `dia_chi`, `anh_daidien`, `so_dt`, `phan_quyen`, `trang_thai`) VALUES
-(1, '21232f297a57a5a743894a0e4a801fc3', '', 'admin@gmail.com', '', '', 0, 0, 0),
-(2, '$2y$12$Q1u3VNY8KsgQDHS6mbvDbOM.mOCUP4zErWuperHJ/82MNQ4w/SVPC', 'Khải Nguyễn', 'khai@gmail.com', '', '../site/images/lock-icon.png', 0, 0, 1);
+(2, '$2y$12$4v4Cawqfp75mwYu.Zmn4..eCSbwg/veT3iQynpskDU95mIpstZqk.', 'Khải Nguyễn', 'khai@gmail.com', '', '', 0, 1, 1),
+(3, '$2y$12$.DP3vF4at1vYqmqbxF1GLudsZ236LgcL/RizNjI9Tb.R0y.3oMq8.', 'Tuấn Anh', 'tuananh@gmail.com', '', '../site/images/iphone-xs-max-64gb-like-new_2.jpg', 0, 1, 1),
+(4, '$2y$12$ryPHBwd9Vy5N4AxDpMzWoe.g06ILANkMT6FqissTga3lMkL8ddnB.', 'Nhựt Tiến', 'nhuttien@gmail.com', '', '', 0, 1, 1),
+(5, '$2y$12$PbxpG4sXnwD0IgKAkhneSuvMskCN4yrBSMH1rK4V3ScW7y7Dpvlai', 'Thanh Thoảng', 'thanhthoang@gmail.com', '', '', 0, 1, 1),
+(6, '$2y$12$CoH1t8yY50AkWG9CcoUUseRy0lp5AzmrjKc6Uxxxl9o1mJp/KLr06', 'Thiệu Tuấn', 'tuan@gmail.com', '', '', 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -170,19 +183,17 @@ ALTER TABLE `catalogs`
   ADD PRIMARY KEY (`ma_loai`);
 
 --
--- Chỉ mục cho bảng `chitietdonhang`
---
-ALTER TABLE `chitietdonhang`
-  ADD PRIMARY KEY (`ma_sp`),
-  ADD KEY `fk2_ma_donhang` (`ma_donhang`);
-
---
 -- Chỉ mục cho bảng `donhang`
 --
 ALTER TABLE `donhang`
   ADD PRIMARY KEY (`ma_donhang`),
-  ADD KEY `fk1_ma_sp` (`ma_sp`),
   ADD KEY `fk2_ma_kh` (`ma_kh`);
+
+--
+-- Chỉ mục cho bảng `hang`
+--
+ALTER TABLE `hang`
+  ADD PRIMARY KEY (`ma_hang`);
 
 --
 -- Chỉ mục cho bảng `khachhang`
@@ -211,7 +222,7 @@ ALTER TABLE `binhluan`
 -- AUTO_INCREMENT cho bảng `catalogs`
 --
 ALTER TABLE `catalogs`
-  MODIFY `ma_loai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ma_loai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `donhang`
@@ -220,10 +231,16 @@ ALTER TABLE `donhang`
   MODIFY `ma_donhang` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT cho bảng `hang`
+--
+ALTER TABLE `hang`
+  MODIFY `ma_hang` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `ma_kh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ma_kh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT cho bảng `sanpham`
@@ -243,17 +260,9 @@ ALTER TABLE `binhluan`
   ADD CONSTRAINT `fk2_ma_sp` FOREIGN KEY (`ma_sp`) REFERENCES `sanpham` (`ma_sp`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `chitietdonhang`
---
-ALTER TABLE `chitietdonhang`
-  ADD CONSTRAINT `fk1_masp_chitiet` FOREIGN KEY (`ma_sp`) REFERENCES `sanpham` (`ma_sp`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk2_ma_donhang` FOREIGN KEY (`ma_donhang`) REFERENCES `donhang` (`ma_donhang`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Các ràng buộc cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  ADD CONSTRAINT `fk1_ma_sp` FOREIGN KEY (`ma_sp`) REFERENCES `sanpham` (`ma_sp`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk2_ma_kh` FOREIGN KEY (`ma_kh`) REFERENCES `khachhang` (`ma_kh`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --

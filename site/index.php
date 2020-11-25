@@ -180,10 +180,13 @@ ob_start();
                                         <span class="counter-number"><?php 
                                         $dem=0;
                                         $tongtien=0;
-                                            foreach ($_SESSION['carts'] as  $p) {
+                                        if(isset($_SESSION['carts'])){
+                                                foreach ($_SESSION['carts'] as  $p) {
                                                 $dem= $dem + $p['quantity'];
                                                 $tongtien= $tongtien+ $p['quantity']*$p['price'];
                                             };
+                                        }
+                                            
                                             echo $dem;
                                         ?></span>
 
