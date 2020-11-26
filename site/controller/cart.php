@@ -10,20 +10,24 @@
         break;
         case 'addtocart':
             //lay product theo id cate
-           $id=$_GET['id'];
-           addToCart($id);
-           echo '<script type="text/javascript">
-                 window.location="index.php?ctrl=cart";
-        </script>';
+                if (!$_SESSION['username']) {
+                    header('location: ../admin/login.php');
+                    break;
+                }
+                else{
+                    $id=$_GET['id'];
+                    addToCart($id);
+                    echo '<script type="text/javascript">
+                    window.location="index.php?ctrl=cart";
+                    </script>';
+                }
         break;
         case 'checkout':
             //luu thong tin don hang
-            $fname=$_POST['fullName'];
-            $add=$_POST['address'];
-            $email=$_POST['email'];
             $phone=$_POST['phone'];
+            $diachi=$_POST['diachi'];
             $ngay=date('Y-m-d H:i:s');//ngay thang nam, gio,.. hien tai
-            $ma_donhang=addToOrder($fname,$add,$email,$phone,$ngay);
+            $ma_donhang=addToOrder($madh,$soluong,$diachi,$phone,$ngay);
             //luu chi tiet don hang
             addToOrderDetail($ma_donhang);
             unset($_SESSION['carts']);//xoa gio hang

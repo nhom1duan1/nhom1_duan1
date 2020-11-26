@@ -2,6 +2,9 @@
 <?php
 ob_start();
     session_start();
+    if(isset($_GET['user'])){
+        $_SESSION['username']=$_GET['user'];
+    }
 ?>
 <html lang="en">
 
@@ -126,7 +129,7 @@ ob_start();
                             </li>
                         </ul>
                     </li>
-                    <li><a href="../admin/login.php"><i class="flaticon-profile" aria-hidden="true"></i>Đăng nhập</a></li>
+                    <li><a href="../admin/login.php"><i class="flaticon-profile" aria-hidden="true"></i><?php echo (!isset($_SESSION['username']))?'Đăng nhập':$_SESSION['username']; ?></a></li>
                 </ul><!-- heder links -->
             </div>
         </div> <!-- header-top -->
@@ -180,10 +183,12 @@ ob_start();
                                         <span class="counter-number"><?php 
                                         $dem=0;
                                         $tongtien=0;
+                                        if(isset($_SESSION['carts'])){
                                             foreach ($_SESSION['carts'] as  $p) {
                                                 $dem= $dem + $p['quantity'];
                                                 $tongtien= $tongtien+ $p['quantity']*$p['price'];
                                             };
+                                        }
                                             echo $dem;
                                         ?></span>
 

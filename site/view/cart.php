@@ -74,21 +74,9 @@
                                     </table>
                                 </div>
                                 <div class="cart-actions">
-<<<<<<< HEAD
-                                    <button type="button" class="btn-continue">
-                                        <span><a href="index.php?ctrl=product">Tiếp tục mua sắm</a> </span>
-                                    </button>
-                                    <button type="submit" class="btn-clean">
-                                        <span>Update Shopping Cart</span>
-=======
                                     <button  type="submit" class="btn-continue">
                                     <span> <a href="index.php?ctrl=product">Tiếp tục mua sắm</a></span>
->>>>>>> 488e4cbc3865e74289afe32edfb5d3686ce6a360
-                                    </button>
-                                   
-                                    <button type="submit" class="btn-update">
-                                        <span> <a href="index.php?ctrl=product&action=deleteCart">Xóa giỏ hàng</a></span>
-                                    </button>
+                                    </button>   
                                 </div>
                             </form>
                         </div>
@@ -100,262 +88,38 @@
                                     <span class="order-left">Phí ship:<span>Miễn phí</span></span>
                                     <span class="order-left">Tổng:<span>$<?php echo $tongtien ?></span></span>
                                     
-                                    <button type="submit" class="btn-checkout">
-                                        <span>Xác nhận</span>
-                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="block-recent-view single">
-                    <div class="container">
-                        <div class="title-of-section">You may be also interested</div>
-                        <div class="owl-carousel nav-style2 border-background equal-container" data-nav="true"
-                            data-autoplay="false" data-dots="false" data-loop="true" data-margin="30"
-                            data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4},"1200":{"items":4}}'>
-                            <div class="product-item style1">
-                                <div class="product-inner equal-elem">
-                                    <div class="product-thumb">
-                                        <div class="thumb-inner">
-                                            <a href="#"><img src="assets/images/home1/r1.jpg" alt="r1"></a>
-                                        </div>
-                                        <span class="onsale">-50%</span>
-                                        <a href="#" class="quick-view">Quick View</a>
-                                    </div>
-                                    <div class="product-innfo">
-                                        <div class="product-name"><a href="#">Modern Watches</a></div>
-                                        <span class="price">
-
-                                                <ins>$229.00</ins>
-
-                                                <del>$259.00</del>
-
-                                            </span>
-                                        <span class="star-rating">
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <span class="review">5 Review(s)</span>
-
-                                            </span>
-                                        <div class="group-btn-hover style2">
-                                            <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                            aria-hidden="true"></i></a>
-                                            <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-item style1">
-                                <div class="product-inner equal-elem">
-                                    <div class="product-thumb">
-                                        <div class="thumb-inner">
-                                            <a href="#"><img src="assets/images/home1/r2.jpg" alt="r2"></a>
-                                        </div>
-                                        <span class="onnew">new</span>
-                                        <a href="#" class="quick-view">Quick View</a>
-                                    </div>
-                                    <div class="product-innfo">
-                                        <div class="product-name"><a href="#">Cellphone Factory</a></div>
-                                        <span class="price price-dark">
-
-                                                <ins>$229.00</ins>
-
-                                            </span>
-                                        <span class="star-rating">
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <span class="review">5 Review(s)</span>
-
-                                            </span>
-                                        <div class="group-btn-hover style2">
-                                            <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                            aria-hidden="true"></i></a>
-                                            <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-item style1">
-                                <div class="product-inner equal-elem">
-                                    <div class="product-thumb">
-                                        <div class="thumb-inner">
-                                            <a href="#"><img src="assets/images/home1/r3.jpg" alt="r3"></a>
-                                        </div>
-                                        <a href="#" class="quick-view">Quick View</a>
-                                    </div>
-                                    <div class="product-innfo">
-                                        <div class="product-name"><a href="#">Smartphone 4 GB</a></div>
-                                        <span class="price price-dark">
-
-                                                <ins>$229.00</ins>
-
-                                            </span>
-                                        <span class="star-rating">
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <span class="review">5 Review(s)</span>
-
-                                            </span>
-                                        <div class="group-btn-hover style2">
-                                            <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                            aria-hidden="true"></i></a>
-                                            <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-item style1">
-                                <div class="product-inner equal-elem">
-                                    <div class="product-thumb">
-                                        <div class="thumb-inner">
-                                            <a href="#"><img src="assets/images/home1/r4.jpg" alt="r4"></a>
-                                        </div>
-                                        <a href="#" class="quick-view">Quick View</a>
-                                    </div>
-                                    <div class="product-innfo">
-                                        <div class="product-name"><a href="#">Extra Bass On</a></div>
-                                        <span class="price price-dark">
-
-                                                <ins>$229.00</ins>
-
-                                            </span>
-                                        <span class="star-rating">
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <span class="review">5 Review(s)</span>
-
-                                            </span>
-                                        <div class="group-btn-hover style2">
-                                            <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                            aria-hidden="true"></i></a>
-                                            <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-item style1">
-                                <div class="product-inner equal-elem">
-                                    <div class="product-thumb">
-                                        <div class="thumb-inner">
-                                            <a href="#"><img src="assets/images/home1/r5.jpg" alt="r5"></a>
-                                        </div>
-                                        <span class="onsale">-50%</span>
-                                        <a href="#" class="quick-view">Quick View</a>
-                                    </div>
-                                    <div class="product-innfo">
-                                        <div class="product-name"><a href="#">Smartwatch</a></div>
-                                        <span class="price">
-
-                                                <ins>$229.00</ins>
-
-                                                <del>$259.00</del>
-
-                                            </span>
-                                        <span class="star-rating">
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <span class="review">5 Review(s)</span>
-
-                                            </span>
-                                        <div class="group-btn-hover style2">
-                                            <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                            aria-hidden="true"></i></a>
-                                            <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-item style1">
-                                <div class="product-inner equal-elem">
-                                    <div class="product-thumb">
-                                        <div class="thumb-inner">
-                                            <a href="#"><img src="assets/images/home1/r6.jpg" alt="r6"></a>
-                                        </div>
-                                        <a href="#" class="quick-view">Quick View</a>
-                                    </div>
-                                    <div class="product-innfo">
-                                        <div class="product-name"><a href="#">Modern Watches</a></div>
-                                        <span class="price price-dark">
-
-                                                <ins>$229.00</ins>
-
-                                            </span>
-                                        <span class="star-rating">
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                <span class="review">5 Review(s)</span>
-
-                                            </span>
-                                        <div class="group-btn-hover style2">
-                                            <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                            aria-hidden="true"></i></a>
-                                            <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            </div> 
+        </div>
+        <div class="container">
+            <form action="#" class="checkout" method="post" name="checkout">
+                <h4 class="title-checkout">Thông tin đơn hàng</h4>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label class="title">Họ và Tên *</label>
+                        <input type="text" class="form-control" id="forFName" placeholder="Your name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="title">Địa chỉ email:</label>
+                        <input type="email" class="form-control" id="forEmail" placeholder="Type your email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="title">Số điện thoại*</label>
+                        <input type="text" class="form-control" placeholder="10 digits format">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="title">Địa chỉ giao hàng:</label>
+                        <input type="text" class="form-control" placeholder="Street at apartment number">
+                    </div>
+                    </div>
+                        <span class="grand-total">Tổng cộng<span>$100.00</span></span>
+                        <button type="submit" class="btn-order">Đặt hàng</button>
                     </div>
                 </div>
+            </form>
+        </div>
             </main><!-- end MAIN -->

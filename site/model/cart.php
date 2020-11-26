@@ -26,10 +26,10 @@ function addToCart($id){
      }
    }
 }
-function addToOrder($fname,$add,$email,$phone,$ngay)
+function addToOrder($madh,$hinhanh,$gia,$soluong,$phone,$ngay,$gio,$diachi)
 {
-  $query="insert into donhang(hoten,diachi,email,dienthoai,ngaydat)
-  values('$fname','$add','$email','$phone','$ngay')";
+  $query="insert into donhang(ma_donhang,hinhanh,gia,soluong,ngay_dat,diachi,phone,gio_dat)
+  values('$madh','$hinhanh','$gia','$soluong','$diachi','$phone','$ngay','$gio')";
   $lastId = executeReturnID($query);
   return $lastId;//tra ve ma don hang moi vua them
 }
