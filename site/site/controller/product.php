@@ -22,6 +22,8 @@ $action='index';
             include 'view/productbyId.php';
         break;
         case 'detail':
+            $id= $_GET['id'];
+            $product= showProductbyId($id);
             include 'view/detail_product.php';
         break;
         case 'home':
