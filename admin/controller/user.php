@@ -1,19 +1,5 @@
 <?php 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-	include 'model/user.php';
-	$act='index';
-	if (isset($_GET['act'])) {
-		$act=$_GET['act'];
-	}
-	switch ($act) {
-		case 'index':
-			$users=getShowUser();
-			include 'view/user/showAccount.php';
-			break;
-=======
->>>>>>> 41ecdeb097924fd40eb68bcc6e2acd67e2636125
+	
 include 'model/user.php';
 $act='index';
 if (isset($_GET['act'])) {
@@ -39,10 +25,6 @@ switch ($act) {
 				//sua sql laij unde
 				$diaChi=$_POST['txtDC'];
 				($_POST['avatar']!=null)?$avatar=$_POST['avatar']:$avatar='1.img';
-<<<<<<< HEAD
-=======
->>>>>>> ebcbdec1fd2fd22efc1c4b83dbbbc5ff43986bdb
->>>>>>> 41ecdeb097924fd40eb68bcc6e2acd67e2636125
 
 				$path='../images/'.$avatar;
 				$soDienThoai=$_POST['txtSDT'];
@@ -103,48 +85,8 @@ switch ($act) {
 			$txtSDT=$users['so_dt'];
 			$phanQuyen=$users['phan_quyen'];
 			include 'view/user/updateUser.php';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 			break;
 			
-	break;
-	case 'edit':
-	$email='';
-	if (isset($_GET['email'])) {
-		$email=$_GET['email'];
-	}
-	$users=getShowUserID($email);
-	
-	if (isset($_POST['add'])) {
-		$fullName=$_POST['fullName'];
-		$password=$_POST['password'];
-		$password2=$_POST['password2'];
-		$diaChi=$_POST['txtDC'];
-		$avatar=$_POST['avatar'];
-		$soDienThoai=$_POST['txtSDT'];
-		$phanQuyen=$_POST['phanQuyen'];
-		if ($password==$password2&& $password!='') {
-			$pass_mahoa=password_hash($password, PASSWORD_BCRYPT,['cost'=>12]);
-			updateUser($fullName,$pass_mahoa,$diaChi,$avatar,$soDienThoai,$phanQuyen,$email);
-			header("localhost:index.php?ctrl=user");
-			break;
-		}
-		else{
-			echo "<script>alert('vui long kiem tra mat khau');</script>";
-		}
-	}
-	$id=$users['ma_kh'];
-	$fullName=$users['ho_ten'];
-	$txtEmail=$users['email'];
-	$txtDC=$users['dia_chi'];
-	$avatar=$users['anh_daidien'];
-	$txtSDT=$users['so_dt'];
-	$phanQuyen=$users['phan_quyen'];
-	include 'view/user/updateUser.php';
-=======
->>>>>>> ebcbdec1fd2fd22efc1c4b83dbbbc5ff43986bdb
->>>>>>> 41ecdeb097924fd40eb68bcc6e2acd67e2636125
 	break;
 	case 'delete':
 		$id=$_GET['ma_kh'];

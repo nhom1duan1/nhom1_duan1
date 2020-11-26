@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-=======
-        
->>>>>>> ebcbdec1fd2fd22efc1c4b83dbbbc5ff43986bdb
           <form action="index.php?ctrl=product&act=insert" method="post" class="container d-flex justify-content-center">
             <div class="card container">
               <div class="card-header info">
