@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
+=======
         
+>>>>>>> ebcbdec1fd2fd22efc1c4b83dbbbc5ff43986bdb
           <form action="index.php?ctrl=product&act=insert" method="post" class="container d-flex justify-content-center">
             <div class="card container">
               <div class="card-header info">
@@ -42,7 +45,7 @@
                     <select name="brand" class="form-control" id="">
                         <?php
                       foreach($hang as $ceta){
-                        echo '<option>'.$ceta['hang'].'</option>';
+                        echo '<option value='.$ceta['ma_hang'].' >'.$ceta['hang'].'</option>';
                       }
                     ?>     
                     </select>

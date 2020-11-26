@@ -4,10 +4,13 @@
         </div>
         <div class="card-body">
           <form action="index.php?ctrl=brand&action=update"  method="post">
-  
+              <div class="form-group">
+                <label for="">Mã Hãng</label>
+                <input type="text"  name="id" class="form-control" readonly value="<?php echo $id;?>">
+              </div>
             <div class="form-group">
                 <label for="">Hãng</label>
-                <input type="text"  name="hang" class="form-control"  value="<?php echo $hang;?>">
+                <input type="text"  name="hang" class="form-control" >
               </div>
               <div class="form-group">
                   <button type="submit" name='btn' class="btn btn-primary" >Lưu</button>

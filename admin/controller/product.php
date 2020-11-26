@@ -31,12 +31,11 @@
 				$imgProduct=$_FILES['imgProduct']['name'];
 				 $path='../images/'.$imgProduct;
 				$truycap=$_POST['truycap'];
-				$danhgia=$_POST['danhgia'];
 				$mota=$_POST['mota'];
 				$anhien=$_POST['anhien'];
 				$thutu=$_POST['thutu'];
 				
-				updateProduct($id,$cataid,$productName,$giaGoc,$giaGiam,$brand,$path,$truycap,$danhgia,$mota,$anhien,$thutu);
+				updateProduct($id,$cataid,$productName,$giaGoc,$giaGiam,$brand,$path,$truycap,$mota,$anhien,$thutu);
 				
 			header('location: index.php?ctrl=product');
 			break;
@@ -57,12 +56,11 @@
 				$imgProduct=$_POST['imgProduct'];
 				 $path='../images/'.$imgProduct;
 				$truycap=$_POST['truycap'];
-				$danhgia=$_POST['danhgia'];
 				$mota=$_POST['mota'];
 				$anhien=$_POST['anhien'];
 				$thutu=$_POST['thutu'];
 				
-				addNewProduct($id,$cataid,$productName,$giaGoc,$giaGiam,$brand,$path,$truycap,$danhgia,$mota,$anhien,$thutu);
+				addNewProduct($id,$cataid,$productName,$giaGoc,$giaGiam,$brand,$path,$truycap,$mota,$anhien,$thutu);
 				echo "<script>
 				alert('THÊM THÀNH CÔNG')
 			</script>";

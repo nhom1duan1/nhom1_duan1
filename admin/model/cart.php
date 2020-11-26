@@ -13,8 +13,12 @@
         $sql="UPDATE donhang set tinh_trang='$tinhtrang' where ma_donhang='$id'";
           execute($sql);
     }
-    function getDetail(){
-        $sql="select * from chitietdonhang order by ma_donhang";
+    function getDetail($id){
+        $sql="select * from chitietdonhang where ma_donhang='$id' ";
         return query($sql);
+    }
+    function getKhById($id){
+        $sql="SELECT * from khachhang where ma_kh='$id'";
+        return queryOne($sql);
     }
 ?>

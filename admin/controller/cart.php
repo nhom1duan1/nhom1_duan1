@@ -29,7 +29,8 @@
             break;
 
               case 'detail':
-            $catalogs =getDetail();
+            $id=$_GET['ma_donhang'];
+            $catalogs =getDetail($id);
             include 'view/cart/chitietCart.php';
             break;
             default;

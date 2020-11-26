@@ -30,9 +30,13 @@
               </thead>
               <tbody>
               <?php
-                foreach ($products as $key ) {
+                foreach ($products as $key )
+                  {
+                    
                   $id=$key['ma_loai'];
                   $loaisp=getCatalogById($id);
+                   $idhang=$key['ma_hang'];
+                  $hangsp=getBrandById($idhang);
                   if($key['an_hien']==1){
                     $anhien='Hiện';
                   }
@@ -48,7 +52,7 @@
                       <td>'.$key['ten_sp'].'</td>
                       <td>'.$key['gia_goc'].'</td>
                       <td>'.$key['gia_giam'].'</td>
-                      <td>'.$key['hang'].'</td>
+                      <td>'.$hangsp['hang'].'</td>
                       <td>'.$key['mo_ta'].'</td>
                       <td>'.$key['truy_cap'].'</td>
                       <td>'.$key['thu_tu'].'</td>

@@ -1,5 +1,11 @@
 <?php
   ob_start();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+?>
+=======
+>>>>>>> 41ecdeb097924fd40eb68bcc6e2acd67e2636125
   //include 'model/user.php';
   session_start();
   if (!isset($_GET['ad'])&&!isset($_SESSION['username'])) {
@@ -13,6 +19,10 @@
     header('location:login.php');
   }
   ?>
+<<<<<<< HEAD
+=======
+>>>>>>> ebcbdec1fd2fd22efc1c4b83dbbbc5ff43986bdb
+>>>>>>> 41ecdeb097924fd40eb68bcc6e2acd67e2636125
 <!DOCTYPE html>
 <html lang="en">
   <head>
