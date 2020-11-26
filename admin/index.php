@@ -5,10 +5,14 @@
   if (!isset($_GET['ad'])&&!isset($_SESSION['username'])) {
     header('location:login.php');
   }
-  if (!isset($_SESSION['username'])) {
-    $_SESSION['username']=$_GET['ad'];
+  // if (!isset($_SESSION['username'])) {
+  //   $_SESSION['username']=$_GET['ad'];
+  // }
+  if (isset($_GET['logout'])) {
+    session_destroy();
+    header('location:login.php');
   }
-?>
+  ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -266,7 +270,7 @@
                 <a class="dropdown-item" href="#"><i class="fas fa-language"></i> language</a>
                 <a class="dropdown-item" href="#"><i class="fas fa-users-cog"></i> Setting</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Log out</a>
+                <a class="dropdown-item" href="index.php?logout"><i class="fas fa-sign-out-alt"></i> Log out</a>
               </div>
             </div>
           </nav>

@@ -13,11 +13,11 @@
             
                   <div class="form-group">
                     <label for="">Tên sản phẩm</label>
-                    <input type="text" name="productName" class="form-control" placeholder="Tên sản phẩm">
+                    <input type="text" name="productName" class="form-control" placeholder="Tên sản phẩm" required>
                   </div>
                   <div class="form-group">
                     <label for="">Loại sản phẩm</label>
-                    <select name="loai" class="form-control" id="">
+                    <select name="loai" class="form-control" id=""  required>
                         <?php
                       foreach($catalogs as $cate){
                         echo '<option value='.$cate['ma_loai'].' >'.$cate['ten_loai'].'</option>';
@@ -27,11 +27,11 @@
                   </div>
                   <div class="form-group">
                     <label for="">Giá gốc</label>
-                  <input type="text" name="giaGoc" class="form-control" placeholder="Giá gốc">
+                  <input type="text" name="giaGoc" class="form-control" placeholder="Giá gốc" required>
                   </div>
                   <div class="form-group">
                     <label for="">Giá giảm</label>
-                  <input type="text" name="giaGiam" class="form-control" placeholder="Giá Giảm">
+                  <input type="text" name="giaGiam" class="form-control" placeholder="Giá Giảm" required>
                   </div>
                   <div class="form-group">
                     <label for="">Mô tả</label>
@@ -57,13 +57,13 @@
                   </div>
                   <div class="form-group">
                     <label for="">Thứ tự</label>
-                  <input type="text" name="thutu" class="form-control" placeholder="Thứ tự">
+                  <input type="text" name="thutu" class="form-control" placeholder="Thứ tự" required>
                   </div>
                   <div class="form-group">
                     <label for="">Ẩn hiện</label>
                   <select name="anhien" id="" class="form-control">
                   <option value="0">Ẩn</option>
-                  <option value="1">Hiện</option>
+                  <option value="1" selected>Hiện</option>
                 </select>
                   </div>
                   <div class="form-group">

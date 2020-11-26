@@ -38,7 +38,7 @@
 						<td>'.$key['email'].'</td>
 						<td>'.$key['dia_chi'].'</td>
 						<td>'.$key['so_dt'].'</td>
-						<td>'.(($key['phan_quyen']=='0')?'khách hàng':'admin').'</td>
+						<td>'.(($key['phan_quyen']!='0')?'khách hàng':'admin').'</td>
                   
 						<td>
             <a class="btn btn-warning" href="index.php?ctrl=user&act=edit&email='.$key['email'].'">Sửa</a>

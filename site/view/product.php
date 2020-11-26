@@ -46,7 +46,7 @@
                                             <div class="product-inner">
                                                 <div class="product-thumb">
                                                     <div class="thumb-inner">
-                                                        <a href="index.php?ctrl=product&action=detail"><img src="'.$value['hinh_anh'].'" alt="p8"></a>
+                                                        <a href="index.php?ctrl=product&action=detail&id='.$value['ma_sp'].'"><img src="'.$value['hinh_anh'].'" alt="p8"></a>
                                                     </div>
                                                     <span class="onsale">-50%</span>
                                                     <a href="#" class="quick-view">Quick View</a>

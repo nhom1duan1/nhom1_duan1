@@ -10,8 +10,8 @@
                     <div class="col-md-6 col-sm-12 padding-right">
                         <div class="product-media">
                             <div class="image-preview-container image-thick-box image_preview_container">
-                                <img id="img_zoom" data-zoom-image="assets/images/detail/thick-box-1.jpg"
-                                     src="assets/images/detail/thick-box.jpg" alt="">
+                                <img id="img_zoom" data-zoom-image="<?php echo $product['hinh_anh'] ?>"
+                                     src="<?php echo $product['hinh_anh'] ?>" alt="">
                                 <a href="#" class="btn-zoom open_qv"><i class="flaticon-magnifying-glass"
                                                                         aria-hidden="true"></i></a>
                             </div>
@@ -19,30 +19,30 @@
                                 <div id="thumbnails" class="thumbnails_carousel owl-carousel nav-style4" data-nav="true"
                                      data-autoplay="false" data-dots="false" data-loop="true" data-margin="10"
                                      data-responsive='{"0":{"items":3},"480":{"items":5},"600":{"items":5},"1000":{"items":5}}'>
-                                    <a href="#" data-image="assets/images/detail/thick-box-1.jpg"
-                                       data-zoom-image="assets/images/detail/thick-box-1.jpg">
-                                        <img src="assets/images/detail/i1.jpg"
-                                             data-large-image="assets/images/detail/thick-box-1.jpg" alt="i1">
+                                    <a href="#" data-image="<?php echo $product['hinh_anh'] ?>"
+                                       data-zoom-image="<?php echo $product['hinh_anh'] ?>">
+                                        <img src="<?php echo $product['hinh_anh'] ?>"
+                                             data-large-image="<?php echo $product['hinh_anh'] ?>" alt="i1">
                                     </a>
-                                    <a href="#" data-image="assets/images/detail/thick-box-1.jpg"
-                                       data-zoom-image="assets/images/detail/thick-box-1.jpg">
-                                        <img src="assets/images/detail/i2.jpg"
-                                             data-large-image="assets/images/detail/thick-box-1.jpg" alt="i1">
+                                    <a href="#" data-image="<?php echo $product['hinh_anh'] ?>"
+                                       data-zoom-image="<?php echo $product['hinh_anh'] ?>">
+                                        <img src="<?php echo $product['hinh_anh'] ?>"
+                                             data-large-image="<?php echo $product['hinh_anh'] ?>" alt="i1">
                                     </a>
-                                    <a href="#" data-image="assets/images/detail/thick-box-1.jpg"
-                                       data-zoom-image="assets/images/detail/thick-box-1.jpg">
-                                        <img src="assets/images/detail/i11.jpg"
-                                             data-large-image="assets/images/detail/thick-box-1.jpg" alt="i1">
+                                    <a href="#" data-image="<?php echo $product['hinh_anh'] ?>"
+                                       data-zoom-image="<?php echo $product['hinh_anh'] ?>">
+                                        <img src="<?php echo $product['hinh_anh'] ?>"
+                                             data-large-image="<?php echo $product['hinh_anh'] ?>" alt="i1">
                                     </a>
-                                    <a href="#" data-image="assets/images/detail/thick-box-1.jpg"
-                                       data-zoom-image="assets/images/detail/thick-box-1.jpg">
-                                        <img src="assets/images/detail/i12.jpg"
-                                             data-large-image="assets/images/detail/thick-box-1.jpg" alt="i1">
+                                    <a href="#" data-image="<?php echo $product['hinh_anh'] ?>"
+                                       data-zoom-image="<?php echo $product['hinh_anh'] ?>">
+                                        <img src="<?php echo $product['hinh_anh'] ?>"
+                                             data-large-image="<?php echo $product['hinh_anh'] ?>" alt="i1">
                                     </a>
-                                    <a href="#" data-image="assets/images/detail/thick-box-1.jpg"
-                                       data-zoom-image="assets/images/detail/thick-box-1.jpg">
-                                        <img src="assets/images/detail/i13.jpg"
-                                             data-large-image="assets/images/detail/thick-box-1.jpg" alt="i1">
+                                    <a href="#" data-image="<?php echo $product['hinh_anh'] ?>"
+                                       data-zoom-image="<?php echo $product['hinh_anh'] ?>">
+                                        <img src="<?php echo $product['hinh_anh'] ?>"
+                                             data-large-image="<?php echo $product['hinh_anh'] ?>" alt="i1">
                                     </a>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="product-info-main">
-                            <div class="product-name"><a href="#">Tai nghe XT-100</a></div>
+                            <div class="product-name"><a href="#"><?php echo $product['ten_sp'] ?></a></div>
                             <span class="star-rating">
 
                                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -81,9 +81,9 @@
                             <div class="product-info-price">
                                 <span class="price">
 
-                                    <ins>$229.00</ins>
+                                    <ins>$<?php echo $product['gia_giam'] ?></ins>
 
-                                    <del>$259.00</del>
+                                    <del>$<?php echo $product['gia_goc'] ?></del>
 
                                 </span>
                                 <div class="quantity">
@@ -95,7 +95,7 @@
                                     </div>
                                 </div>
                                 <div class="single-add-to-cart">
-                                    <a href="#" class="btn-add-to-cart">Thêm vào giỏ hàng</a>
+                                    <a href="index.php?ctrl=cart&action=addtocart&id=<?php echo $product['ma_sp'] ?>" class="btn-add-to-cart">Thêm vào giỏ hàng</a>
                                     <a href="compare.html" class="compare"><i class="fa fa-exchange"></i>So sánh</a>
                                     <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i>Danh sách yêu thích</a>
                                 </div>
