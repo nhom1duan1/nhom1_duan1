@@ -11,6 +11,7 @@ $action='index';
             include 'model/catalogs.php';
             $catalogs= getAllCatalog();
             $product= showAllProduct();
+          
             include 'view/product.php';
         break;
         case 'showbyId':
@@ -22,6 +23,9 @@ $action='index';
         break;
         case 'detail':
             include 'view/detail_product.php';
+        break;
+        case 'home':
+              include 'view/home.php';
         break;
         default:
             # code...

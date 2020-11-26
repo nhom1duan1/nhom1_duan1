@@ -15,25 +15,27 @@
             break;
 
             case 'insert':
+              $id=$_POST['id'];
             $hang=$_POST['hang'];
-            addBrand($hang);
+            addBrand($id,$hang);
              header('location:index.php?ctrl=brand&action=index');
             break;
             
             case 'delete':
-              $hang=$_GET['hang'];
-              deleteBrand($hang);
+              $id=$_GET['ma_hang'];
+              deleteBrand($id);
             header('location:index.php?ctrl=brand&action=index');
             break;
 
             case 'edit':
-              $hang=$_GET['hang'];
+              $id=$_GET['ma_hang'];
               $key=getAllBrand();
             include 'view/brand/edit.php';
             break;
                 case 'update':
+            $id=$_POST['id'];
             $hang=$_POST['hang'];
-            updateBrand($hang);
+            updateBrand($id,$hang);
              header('location:index.php?ctrl=brand&action=index');
             break;
         default;

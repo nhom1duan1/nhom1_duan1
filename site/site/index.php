@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+ob_start();
     session_start();
 ?>
 <html lang="en">
@@ -179,10 +180,13 @@
                                         <span class="counter-number"><?php 
                                         $dem=0;
                                         $tongtien=0;
-                                            foreach ($_SESSION['carts'] as  $p) {
+                                        if(isset($_SESSION['carts'])){
+                                                foreach ($_SESSION['carts'] as  $p) {
                                                 $dem= $dem + $p['quantity'];
                                                 $tongtien= $tongtien+ $p['quantity']*$p['price'];
                                             };
+                                        }
+                                            
                                             echo $dem;
                                         ?></span>
 
@@ -355,3 +359,6 @@
 
 <!-- Mirrored from ledthanhdat.vn/html/dagon/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 09:37:35 GMT -->
 </html>
+<?php
+ob_flush();
+?>

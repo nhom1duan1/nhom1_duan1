@@ -4,7 +4,10 @@
         </div>
         <div class="card-body">
           <form action="index.php?ctrl=brand&action=insert"  method="post">
-  
+              <div class="form-group">
+                <label for="">Mã Hãng</label>
+                <input type="text"  name="id" class="form-control"  placeholder="Mã hãng tự tăng">
+              </div>
             <div class="form-group">
                 <label for="">Hãng</label>
                 <input type="text"  name="hang" class="form-control" placeholder="Thêm 1 hãng" >

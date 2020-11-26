@@ -42,7 +42,7 @@
                             <?php
                                 foreach ($product as $value) {
                                     echo '
-                                        <div class="product-item style1 width-33 col-md-12 col-sm-6 col-xs-6 equal-elem">
+                                        <div class="product-item style1 width-33 col-md-6 col-sm-6 col-xs-6 equal-elem">
                                             <div class="product-inner">
                                                 <div class="product-thumb">
                                                     <div class="thumb-inner">

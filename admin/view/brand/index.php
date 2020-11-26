@@ -13,6 +13,7 @@
               <thead>
                 <tr class="bg-info">
 				 <th scope="col"></th>
+         <th>Mã hãng</th>
                  <th scope="col">Hãng</th>
 					<th scope="col"></th>
                   <th scope="col"></th>
@@ -25,14 +26,15 @@
                   echo'
                     <tr>
                       <th scope="row"><input type="checkbox" id="chonX" name="chonX[]"></th>
+                      <td>'.$key['ma_hang'].'</td>
             <td>'.$key['hang'].'</td>
             
           
                  <td>
-						<a class="btn btn-warning" href="index.php?ctrl=brand&action=delete&hang='.$key['hang'].'">Xóa</a>
+						<a class="btn btn-warning" href="index.php?ctrl=brand&action=delete&ma_hang='.$key['ma_hang'].'">Xóa</a>
 						</td>
               <td>
-						  <a class="btn btn-info" href="index.php?ctrl=brand&action=edit&hang='.$key['hang'].'">Sửa</a>
+						  <a class="btn btn-info" href="index.php?ctrl=brand&action=edit&ma_hang='.$key['ma_hang'].'">Sửa</a>
 						</td>
            
                     </tr>

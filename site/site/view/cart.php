@@ -60,7 +60,7 @@
                                                         <span class="price">'.$p['price']*$p['quantity'].'</span>
                                                     </td>
                                                     <td class="tb-remove">
-                                                        <a href="index.php?ctrl=cart&action=remove&id='.$p['id'].'" class="action-remove"><span><i class="flaticon-close"
+                                                        <a href="index.php?ctrl=cart&action=deleteCart&id='.$p['id'].'" class="action-remove"><span><i class="flaticon-close"
                                                                                                 aria-hidden="true"></i></span></a>
                                                     </td>
                                                 </tr>
@@ -70,20 +70,24 @@
                                             } 
                                             } 
                                         ?>
-                                        
-                                    
                                         </tbody>
                                     </table>
                                 </div>
                                 <div class="cart-actions">
-                                    <button type="submit" class="btn-continue">
-                                        <span>Tiếp tục mua sắm</span>
+<<<<<<< HEAD
+                                    <button type="button" class="btn-continue">
+                                        <span><a href="index.php?ctrl=product">Tiếp tục mua sắm</a> </span>
                                     </button>
                                     <button type="submit" class="btn-clean">
                                         <span>Update Shopping Cart</span>
+=======
+                                    <button  type="submit" class="btn-continue">
+                                    <span> <a href="index.php?ctrl=product">Tiếp tục mua sắm</a></span>
+>>>>>>> 488e4cbc3865e74289afe32edfb5d3686ce6a360
                                     </button>
+                                   
                                     <button type="submit" class="btn-update">
-                                        <span>Xóa toàn bộ giỏ hàng</span>
+                                        <span> <a href="index.php?ctrl=product&action=deleteCart">Xóa giỏ hàng</a></span>
                                     </button>
                                 </div>
                             </form>

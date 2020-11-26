@@ -27,5 +27,13 @@
     {
         $sql="delete from sanpham where ma_sp='$id'";
         execute($sql);
-    }
+	}
+	function showLowPrice(){
+		 $sql="SELECT * from sanpham order by gia_goc limit 12";
+          return query($sql);
+	}
+	function showTruyCap(){
+		$sql="SELECT * from sanpham order by truy_cap limit 12";
+		return query($sql);
+	}
 ?>
