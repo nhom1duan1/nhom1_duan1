@@ -69,7 +69,8 @@ switch ($act) {
 				$soDienThoai=$_POST['txtSDT'];
 				$phanQuyen=$_POST['phanQuyen'];
 				if ($password==$password2) {
-					updateUser($fullName,$password,$diaChi,$path,$soDienThoai,$phanQuyen,$email);
+					$pass_mahoa=password_hash($password, PASSWORD_BCRYPT,['cost']=>12);
+					updateUser($fullName,$pass_mahoa,$diaChi,$path,$soDienThoai,$phanQuyen,$email);
 					header("location:index.php?ctrl=user");
 					break;
 				}
