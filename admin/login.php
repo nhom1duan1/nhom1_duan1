@@ -104,7 +104,7 @@
     background-color: #666666de;
 } -->
     <div class="forgot-pass">
-      <form class="form-group" action="" method="POST" class="container d-flex justify-content-center">
+      <form class="form-group" action="controller/login.php?act=forgetpass" method="POST" class="container d-flex justify-content-center">
         <div class="card container ">
           <div class="card-header info">
             quen mật khẩu
@@ -113,7 +113,7 @@
             <!-- nhap dia chi  -->
             <div class="form-group">
               <label>email của bạn</label><br>
-              <input aria-describedby="emailHelp" class="form-control" type="email" name="email" placeholder="nhạp địa chỉ email của bạn"><br>
+              <input aria-describedby="emailHelp" class="form-control" type="email" name="userEmail" placeholder="nhạp địa chỉ email của bạn"><br>
             </div>
             <input class="btn btn-primary" type="submit" name="sb-pass" value="thêm tài khoản">
           </div>
