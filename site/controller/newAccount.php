@@ -28,11 +28,11 @@
 			$pass_mahoa=password_hash($password, PASSWORD_BCRYPT,["cost"=>12]);
 			//password_hash chi su dung duoc cho sever co php 5.5.0 tro len
 			//tao 1 chuoi hash
-			addAccount($fullName,$pass_mahoa,$email,$diaChi,$path,$soDienThoai,$phanQuyen);
+			addAccount($fullName,$pass_mahoa,$email,$diaChi,$path,$soDienThoai);
 			header('location:index.php?ctrl=user');
 		}
 		else{
 			echo "<script>alert('vui long kiem tra mat khau');</script>";
 		}
-		}
+	}
 ?>

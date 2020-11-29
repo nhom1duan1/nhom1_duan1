@@ -37,15 +37,8 @@
 			<!-- SDT -->
 			<div class="form-group">
 				<label>Số điện thoại</label><br>
-				<input class="form-control" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required type="tel" name="txtSDT" placeholder="nhập số điện thoại của bạn"><br>
+				<input class="form-control" pattern="[0][0-9]{3}-[0-9]{3}-[0-9]{3}" required type="tel" name="txtSDT" placeholder="nhập số điện thoại của bạn"><br>
 			</div>
-			<!-- phan quyen -->
-			<div class="form-group">
-				<select name="phanQuyen" class="form-control">
-					<option value="1" >Khach Hang</option>
-					<?php $Aoption=($phanQuyen=='0') ? '<option value="0" selected>Admin</option>':'<option value="0">Admin</option>';echo $Aoption.$phanQuyen ?>
-				</select>
-			</div><br>
 			<input class="btn btn-primary" type="submit" name="add" value="thêm tài khoản">
 		</div>
 	</div>
