@@ -28,6 +28,7 @@
               <tbody>
               <?php
                 foreach($users as $key){
+               
                   echo'
                     <tr>
 					  <th scope="row"><input type="checkbox" id="chonX" name="chonX[]"></th>
@@ -61,7 +62,7 @@
             <input type="button" class="btn btn-info" onclick='selectAll()' value="Chọn tất cả" >
             <input type="button" class="btn btn-info" onclick='UnSelectAll()' value="bỏ Chọn tất cả" >
             <button type="submit" class="btn btn-info">Xoá danh mục đã chọn</button>
-			  <a href="index.php?ctrl=user&act=add" class="btn btn-danger">Thêm mới</a>
+			  <a href="index.php?ctrl=user&act=newAccount" class="btn btn-danger">Thêm mới</a>
         </div>
       </div>
 </form>

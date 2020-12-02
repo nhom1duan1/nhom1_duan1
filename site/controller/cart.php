@@ -6,6 +6,8 @@
     }
     switch($action){
         case 'index':
+            include_once 'model/product.php';
+             $all=showAllProduct();
             include('view/cart.php');
         break;
         case 'addtocart':

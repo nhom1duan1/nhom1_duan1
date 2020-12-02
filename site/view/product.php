@@ -84,7 +84,7 @@
                                                     <div class="single-add-to-cart">
                                                         <a href="index.php?ctrl=cart&action=addtocart&id='.$value['ma_sp'].'" class="btn-add-to-cart">Thêm vào giỏ hàng</a>
                                                         <a href="compare.html" class="compare"><i class="fa fa-exchange"></i>Compare</a>
-                                                        <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
+                                                        <a href="index.php?ctrl=wishlist&action=addtowish&id='.$value['ma_sp'].'" class="wishlist"><i class="fa fa-heart-o"
                                                                                         aria-hidden="true"></i>Wishlist</a>
                                                     </div>
                                                 </div>
