@@ -7,43 +7,51 @@
 			<!-- hot ten -->
 			<div class="form-group">
 				<label>Họ và tên</label><br>
-				<input class="form-control" type="text" name="fullName" placeholder="nhập Họ và tên"><br>
+				<input class="form-control" type="text" name="fullName" placeholder required="nhập Họ và tên"><br>
 			</div>
 			<!-- mat khau -->
 			<div class="form-group">
-				<label>mật khẩu</label><br>
-				<input class="form-control" type="password" name="password" placeholder="mật khẩu đăng nhập của bạn"><br>
+				<label>Mật khẩu</label><br>
+				<input pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Mật khẩu phải có tối thiểu 8 ký tự, ít nhất một chữ cái và một số" class="form-control" type="password" name="password" placeholder="mật khẩu đăng nhập của bạn"><br>
 			</div>
 			<!-- nhap lai mat khau -->
 			<div class="form-group">
-				<label>nhập lại mật khẩu</label><br>
+				<label>Nhập lại mật khẩu</label><br>
 				<input class="form-control" type="password" name="password2" placeholder="nhập lại mật khẩu"><br>
 			</div>
 			<!-- email -->
 			<div class="form-group">
-				<label>địa chỉ email</label><br>
-				<input class="form-control" type="text" name="txtEmail" placeholder="nhập địa chỉ email của bạn"><br>
+				<label>Địa chỉ email</label><br>
+				<input pattern='/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i' class="form-control" type="text" title="Email không hợp lệ" name="txtEmail" placeholder="nhập địa chỉ email của bạn" required><br>
 			</div>
 			<!-- dia chi cua ban -->
 			<div class="form-group">
-				<label>địa chỉ của bạn</label><br>
+				<label>Địa chỉ của bạn</label><br>
 				<textarea class="form-control" name="txtDC" placeholder="địa chỉ của bạn" maxlength="200"></textarea><br>	
 			</div>
 			<!-- anh dai dien -->
 			<div class="form-group">
-				<label>ảnh đại diện</label><br>
+				<label>Ảnh đại diện</label><br>
 				<input type="file" name="avatar">
 			</div>
 			<!-- SDT -->
 			<div class="form-group">
 				<label>Số điện thoại</label><br>
+<<<<<<< HEAD
 				<input class="form-control" pattern="[0][1-9]{1}[0-9]{8}" required type="tel" name="txtSDT" placeholder="nhập số điện thoại của bạn"><br>
+=======
+<<<<<<< HEAD
+				<input class="form-control" pattern="[0][0-9]{9}" required type="tel" name="txtSDT" placeholder="nhập số điện thoại của bạn"><br>
+=======
+				<input class="form-control" pattern="[0][0-9]{3}-[0-9]{3}-[0-9]{3}" required type="tel" name="txtSDT" placeholder="nhập số điện thoại của bạn"><br>
+>>>>>>> 8009efaa36b030ea0d05d723b445cd98800d71ba
+>>>>>>> 1b7c26a28b11c8cf187e03be66438dd9644f5f43
 			</div>
 			<!-- phan quyen -->
 			<div class="form-group">
 				<select name="phanQuyen" class="form-control">
-					<option value="1" >Khach Hang</option>
-					<?php $Aoption=($phanQuyen=='0') ? '<option value="0" selected>Admin</option>':'<option value="0">Admin</option>';echo $Aoption.$phanQuyen ?>
+					<option value="1" >Khách hàng</option>
+					<?php $Aoption=($phanQuyen=='0') ? '<option value="0" selected>Quản trị viên</option>':'<option value="0">Quản trị viên</option>';echo $Aoption.$phanQuyen ?>
 				</select>
 			</div><br>
 			<input class="btn btn-primary" type="submit" name="add" value="thêm tài khoản">

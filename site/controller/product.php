@@ -1,17 +1,14 @@
 <?php
-
-include 'model/product.php';
-
+include 'model/product.php'; 
 $action='index';
     if(isset($_GET['action'])){
         $action= $_GET['action'];
     }
     switch ($action) {
-        case 'index':  
+        case 'index':
             include 'model/catalogs.php';
             $catalogs= getAllCatalog();
             $product= showAllProduct();
-          
             include 'view/product.php';
         break;
         case 'showbyId':
@@ -23,9 +20,11 @@ $action='index';
         break;
         case 'detail':
             $id= $_GET['id'];
+            $all= showAllProduct();
             $product= showProductbyId($id);
             include 'view/detail_product.php';
         break;
+<<<<<<< HEAD
         case 'home':// cái này không cần thiết
               include 'view/home.php';
         break;
@@ -68,6 +67,16 @@ $action='index';
             include 'view/product.php';
 
         break;
+=======
+        case 'home': 
+              include 'view/home.php';  
+        break;
+       case 'quickview':
+             $id= $_GET['id'];
+            $product= showProductbyId($id);
+            include 'view/quickview.php';
+       break;
+>>>>>>> 1b7c26a28b11c8cf187e03be66438dd9644f5f43
         default:
             # code...
             break;

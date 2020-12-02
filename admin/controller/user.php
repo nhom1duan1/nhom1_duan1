@@ -1,5 +1,4 @@
 <?php 
-	
 include 'model/user.php';
 $act='index';
 if (isset($_GET['act'])) {
@@ -87,13 +86,15 @@ switch ($act) {
 			$txtSDT=$users['so_dt'];
 			$phanQuyen=$users['phan_quyen'];
 			include 'view/user/updateUser.php';
-			break;
-			
 	break;
 	case 'delete':
 		$id=$_GET['ma_kh'];
 		deleteAccount($id);
-		header("locaion:index.php?ctrl=user");
+		echo '
+			<script>
+				window.location="index.php?ctrl=user";
+			</script>
+		';
 	break;
 }
 ?>
