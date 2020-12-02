@@ -29,11 +29,16 @@
         execute($sql);
 	}
 	function showLowPrice(){
-		 $sql="SELECT * from sanpham order by gia_goc limit 12";
+		 $sql="SELECT * from sanpham order by gia_goc limit 8";
+          return query($sql);
+	}
+	function showHighSale(){
+		 $sql="SELECT * from sanpham order by gia_giam limit 8";
           return query($sql);
 	}
 	function showTruyCap(){
-		$sql="SELECT * from sanpham order by truy_cap limit 12";
+		$sql="SELECT * from sanpham order by truy_cap limit 8";
 		return query($sql);
 	}
+	
 ?>

@@ -11,7 +11,7 @@
                                     <div class="container-inner">
                                         <div class="p-primary">Nguồn cảm hứng đằng sau xu thế</div>
                                         <p>Fshop đặt chất lượng lên đầu</p>
-                                        <a href="grid-product.html" class="btn-shop-now">Xem ngay</a>
+                                        <a href="index.php?ctrl=product" class="btn-shop-now">Xem ngay</a>
                                     </div>
                                 </div>
                             </div>
@@ -22,7 +22,7 @@
                                     <div class="container-inner">
                                         <div class="p-primary">Hãy tạo ra thế giới kỹ thuật số của bạn</div>
                                         <p>Để cho chúng tôi phục vụ bạn</p>
-                                        <a href="grid-product.html" class="btn-shop-now">Xem ngay</a>
+                                        <a href="index.php?ctrl=product" class="btn-shop-now">Xem ngay</a>
                                     </div>
                                 </div>
                             </div>
@@ -33,7 +33,7 @@
                                     <div class="container-inner">
                                         <div class="p-primary">Lựa chọn hàng đầu Việt Nam</div>
                                         <p>Chế độ bảo hành tốt nhất</p>
-                                        <a href="grid-product.html" class="btn-shop-now">Xem ngay</a>
+                                        <a href="index.php?ctrl=product" class="btn-shop-now">Xem ngay</a>
                                     </div>
                                 </div>
                             </div>
@@ -44,28 +44,24 @@
         </div>
         <div class="block-top-categori">
             <div class="container">
-                <div class="title-of-section main-title"><span>Loại sản phẩm bán chạy</span></div>
+                <div class="title-of-section main-title"><span>Loại sản phẩm</span></div>
                 <div class="owl-carousel nav-style2" data-nav="true" data-autoplay="false" data-dots="false"
                      data-loop="true" data-margin="30"
                      data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4}}'>
                     <div class="block-top-categori-item">
-                        <a href="#"><img src="assets/images/home1/c1.jpg" alt="c1"></a>
+                        <a href="index.php?ctrl=product&action=showbyId&id=18"><img src="assets/images/home1/c1.jpg" alt="c1"></a>
                         <div class="block-top-categori-title">Đồng hồ</div>
                     </div>
                     <div class="block-top-categori-item">
-                        <a href="#"><img src="assets/images/home1/c2.jpg" alt="c2"></a>
-                        <div class="block-top-categori-title">Game & Consoles</div>
+                        <a href="index.php?ctrl=product&action=showbyId&id=19"><img src="assets/images/home1/c3.jpg" alt="c3"></a>
+                        <div class="block-top-categori-title">Phụ kiện</div>
                     </div>
                     <div class="block-top-categori-item">
-                        <a href="#"><img src="assets/images/home1/c3.jpg" alt="c3"></a>
-                        <div class="block-top-categori-title">Chuột chơi game</div>
-                    </div>
-                    <div class="block-top-categori-item">
-                        <a href="#"><img src="assets/images/home1/c4.jpg" alt="c4"></a>
+                        <a href="index.php?ctrl=product&action=showbyId&id=1"><img src="assets/images/home1/c4.jpg" alt="c4"></a>
                         <div class="block-top-categori-title">Điện thoại di động</div>
                     </div>
                     <div class="block-top-categori-item">
-                        <a href="#"><img src="assets/images/home1/c5.jpg" alt="c5"></a>
+                        <a href="index.php?ctrl=product&action=showbyId&id=2"><img src="assets/images/home1/c5.jpg" alt="c5"></a>
                         <div class="block-top-categori-title">Máy tính</div>
                     </div>
                 </div>
@@ -74,579 +70,91 @@
         <div class="block-promotion-banner">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-7">
+                    <div class="col-sm-6">
                         <div class="promotion-banner style-5">
-                            <a href="#" class="banner-img"><img src="assets/images/home1/banner3.jpg" alt="banner3"></a>
+                            <a href="index.php?ctrl=product" class="banner-img"><img src="assets/images/home1/background-product.jpg" alt="banner3"></a>
                             <div class="promotion-banner-inner">
-                                <h4>Flycam</h4>
+                                <h4>Điện thoại</h4>
                                 <h3>Sale <strong>40%</strong> Off</h3>
-                                <a class="banner-link" href="grid-product.html">Xem ngay</a>
+                                <a class="banner-link" href="index.php?ctrl=product">Xem ngay</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm-6">
                         <div class="promotion-banner style-5">
-                            <a href="#" class="banner-img"><img src="assets/images/home1/banner4.jpg" alt="banner4"></a>
+                            <a href="index.php?ctrl=product" class="banner-img"><img src="assets/images/home1/banner4.jpg" alt="banner4"></a>
                             <div class="promotion-banner-inner">
                                 <h4>Tai nghe</h4>
                                 <h3>Get <strong>25%</strong> Flat Off</h3>
-                                <a class="banner-link" href="grid-product.html">Xem ngay</a>
+                                <a class="banner-link" href="index.php?ctrl=product">Xem ngay</a>
                             </div>
                         </div>
                     </div>
-                </div>
+                    </div>
             </div>
         </div>
-        <div class="block-feature-product">
+        <div class="block-recent-view">
             <div class="container">
-                <div class="title-of-section main-title"><span>Sản phẩm giá rẻ</span></div>
-                <div class="tab-product tab-product-fade-effect">
-                    <ul class="box-tabs nav-tab">
-                        <li><a data-toggle="tab" href="#tab-2">Điện thoại</a></li>
-                        <li><a data-toggle="tab" href="#tab-2">Tv & Phụ kiện âm nhạc</a></li>
-                        <li><a data-toggle="tab" href="#tab-1">Phụ kiện điện thoại</a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-container">
-                            <div id="tab-1" class="tab-panel active">
-                                <div class="owl-carousel nav-style2 border-background equal-container" data-nav="false"
-                                     data-autoplay="false" data-dots="false" data-loop="true" data-margin="30"
-                                     data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4},"1200":{"items":4}}'>
-                                   
-                                        
-                                         <?php
-                                                        include 'model/product.php';
-                                                        $lowprice=showLowPrice();
-                                                        foreach ($lowprice as $key){
-                                                            echo '
-                                                             <div class="owl-one-row">
-                                                            <div class="product-item style1">
-                                            <div class="product-inner equal-elem ">
-                                                <div class="product-thumb">
-                                                    <div class="thumb-inner">
-                                                   
-                                                        <a href="#">'.$key['hinh_anh'].'</a>
-                                                    </div>
-                                                     <span class="onsale">-20%</span>
-                                                    <a href="#" class="quick-view">Quick View</a>
-                                                </div>
-                                                <div class="product-innfo">
-                                                    <div class="product-name"><a href="#">'.$key['ten_sp'].'</a>
-                                                    </div>
-                                                    <span class="price price-dark">
-
-                                                            <ins>$'.$key['gia_giam'].'</ins>
-                                                             <del>$'.$key['gia_goc'].'</del>
-
-                                                        </span>
-                                                        
-                                                    <span class="star-rating">
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <span class="review">5 Review(s)</span>
-
-                                                        </span>
-                                                        
-                                                    <div class="group-btn-hover">
-                                                        <div class="inner">
-                                                            <a href="compare.html" class="compare"><i
-                                                                    class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Mua ngay</a>
-                                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
-                                                                                            aria-hidden="true"></i></a>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                        </div>';
-                                                        }
-                                                    ?>
-                                        
-                                           
-                                                          
-                                       
-                                       
-                            <div id="tab-2" class="tab-panel">
-                                <div class="owl-carousel nav-style2 border-background equal-container" data-nav="false"
-                                     data-autoplay="false" data-dots="false" data-loop="true" data-margin="30"
-                                     data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4},"1200":{"items":4}}'>
-                                    <div class="owl-one-row">
-                                        <div class="product-item style1">
-                                            <div class="product-inner equal-elem">
-                                                <div class="product-thumb">
-                                                    <div class="thumb-inner">
-                                                        <a href="#"><img src="assets/images/home1/f1.jpg" alt="f1"></a>
-                                                    </div>
-                                                    <a href="#" class="quick-view">Quick View</a>
-                                                </div>
-                                                <div class="product-innfo">
-                                                    <div class="product-name"><a href="#">Smartphone X seri</a>
-                                                    </div>
-                                                    <span class="price price-dark">
-
-                                                            <ins>$229.00</ins>
-
-                                                        </span>
-                                                    <span class="star-rating">
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <span class="review">5 Review(s)</span>
-
-                                                        </span>
-                                                    <div class="group-btn-hover">
-                                                        <div class="inner">
-                                                            <a href="compare.html" class="compare"><i
-                                                                    class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Mua ngay</a>
-                                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
-                                                                                            aria-hidden="true"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item style1">
-                                            <div class="product-inner equal-elem">
-                                                <div class="product-thumb">
-                                                    <div class="thumb-inner">
-                                                        <a href="#"><img src="assets/images/home1/f6.jpg" alt="f6"></a>
-                                                    </div>
-                                                    <span class="onnew style2">New</span>
-                                                    <a href="#" class="quick-view">Quick View</a>
-                                                </div>
-                                                <div class="product-innfo">
-                                                    <div class="product-name"><a href="#">Photo Camera
-                                                    </a></div>
-                                                    <span class="price price-dark">
-
-                                                            <ins>$229.00</ins>
-
-                                                        </span>
-                                                    <span class="star-rating">
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <span class="review">5 Review(s)</span>
-
-                                                        </span>
-                                                    <div class="group-btn-hover">
-                                                        <div class="inner">
-                                                            <a href="compare.html" class="compare"><i
-                                                                    class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Mua ngay</a>
-                                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
-                                                                                            aria-hidden="true"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-one-row">
-                                        <div class="product-item style1">
-                                            <div class="product-inner equal-elem">
-                                                <div class="product-thumb">
-                                                    <div class="thumb-inner">
-                                                        <a href="#"><img src="assets/images/home1/f2.jpg" alt="f2"></a>
-                                                    </div>
-                                                    <span class="onnew">New</span>
-                                                    <a href="#" class="quick-view">Quick View</a>
-                                                </div>
-                                                <div class="product-innfo">
-                                                    <div class="product-name"><a href="#">Cellphone Factory</a>
-                                                    </div>
-                                                    <span class="price price-dark">
-
-                                                            <ins>$229.00</ins>
-
-                                                        </span>
-                                                    <span class="star-rating">
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <span class="review">5 Review(s)</span>
-
-                                                        </span>
-                                                    <div class="group-btn-hover">
-                                                        <div class="inner">
-                                                            <a href="compare.html" class="compare"><i
-                                                                    class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Mua ngay</a>
-                                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
-                                                                                            aria-hidden="true"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item style1">
-                                            <div class="product-inner equal-elem">
-                                                <div class="product-thumb">
-                                                    <div class="thumb-inner">
-                                                        <a href="#"><img src="assets/images/home1/f7.jpg" alt="f7"></a>
-                                                    </div>
-                                                    <span class="onsale style2">-50%</span>
-                                                    <a href="#" class="quick-view">Quick View</a>
-                                                </div>
-                                                <div class="product-innfo">
-                                                    <div class="product-name"><a href="#">Security Camera
-                                                    </a></div>
-                                                    <span class="price">
-
-                                                            <ins>$229.00</ins>
-
-                                                            <del>$259.00</del>
-
-                                                        </span>
-                                                    <span class="star-rating">
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <span class="review">5 Review(s)</span>
-
-                                                        </span>
-                                                    <div class="group-btn-hover">
-                                                        <div class="inner">
-                                                            <a href="compare.html" class="compare"><i
-                                                                    class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Mua ngay</a>
-                                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
-                                                                                            aria-hidden="true"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-one-row">
-                                        <div class="product-item style1">
-                                            <div class="product-inner equal-elem">
-                                                <div class="product-thumb">
-                                                    <div class="thumb-inner">
-                                                        <a href="#"><img src="assets/images/home1/f3.jpg" alt="f3"></a>
-                                                    </div>
-                                                    <span class="onsale">-50%</span>
-                                                    <a href="#" class="quick-view">Quick View</a>
-                                                </div>
-                                                <div class="product-innfo">
-                                                    <div class="product-name"><a href="#">Modern Watches
-                                                        </a></div>
-                                                    <span class="price">
-
-                                                            <ins>$229.00</ins>
-
-                                                            <del>$259.00</del>
-
-                                                        </span>
-                                                    <span class="star-rating">
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <span class="review">5 Review(s)</span>
-
-                                                        </span>
-                                                    <div class="group-btn-hover">
-                                                        <div class="inner">
-                                                            <a href="compare.html" class="compare"><i
-                                                                    class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Mua ngay</a>
-                                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
-                                                                                            aria-hidden="true"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item style1">
-                                            <div class="product-inner equal-elem">
-                                                <div class="product-thumb">
-                                                    <div class="thumb-inner">
-                                                        <a href="#"><img src="assets/images/home1/f8.jpg" alt="f8"></a>
-                                                    </div>
-                                                    <a href="#" class="quick-view">Quick View</a>
-                                                </div>
-                                                <div class="product-innfo">
-                                                    <div class="product-name"><a href="#">Classic Mouse
-                                                    </a></div>
-                                                    <span class="price price-dark">
-
-                                                            <ins>$229.00</ins>
-
-                                                        </span>
-                                                    <span class="star-rating">
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <span class="review">5 Review(s)</span>
-
-                                                        </span>
-                                                    <div class="group-btn-hover">
-                                                        <div class="inner">
-                                                            <a href="compare.html" class="compare"><i
-                                                                    class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Mua ngay</a>
-                                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
-                                                                                            aria-hidden="true"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-one-row">
-                                        <div class="product-item style1">
-                                            <div class="product-inner equal-elem">
-                                                <div class="product-thumb">
-                                                    <div class="thumb-inner">
-                                                        <a href="#"><img src="assets/images/home1/f4.jpg" alt="f4"></a>
-                                                    </div>
-                                                    <a href="#" class="quick-view">Quick View</a>
-                                                </div>
-                                                <div class="product-innfo">
-                                                    <div class="product-name"><a href="#">Retina Laptop
-                                                    </a></div>
-                                                    <span class="price price-dark">
-
-                                                            <ins>$229.00</ins>
-
-                                                        </span>
-                                                    <span class="star-rating">
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <span class="review">5 Review(s)</span>
-
-                                                        </span>
-                                                    <div class="group-btn-hover">
-                                                        <div class="inner">
-                                                            <a href="compare.html" class="compare"><i
-                                                                    class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Mua ngay</a>
-                                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
-                                                                                            aria-hidden="true"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item style1">
-                                            <div class="product-inner equal-elem">
-                                                <div class="product-thumb">
-                                                    <div class="thumb-inner">
-                                                        <a href="#"><img src="assets/images/home1/f9.jpg" alt="f9"></a>
-                                                    </div>
-                                                    <span class="onsale style2">-50%</span>
-                                                    <a href="#" class="quick-view">Quick View</a>
-                                                </div>
-                                                <div class="product-innfo">
-                                                    <div class="product-name"><a href="#">Smartphone New
-                                                    </a></div>
-                                                    <span class="price">
-
-                                                            <ins>$229.00</ins>
-
-                                                            <del>$259.00</del>
-
-                                                        </span>
-                                                    <span class="star-rating">
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <span class="review">5 Review(s)</span>
-
-                                                        </span>
-                                                    <div class="group-btn-hover">
-                                                        <div class="inner">
-                                                            <a href="compare.html" class="compare"><i
-                                                                    class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Mua ngay</a>
-                                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
-                                                                                            aria-hidden="true"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-one-row">
-                                        <div class="product-item style1">
-                                            <div class="product-inner equal-elem">
-                                                <div class="product-thumb">
-                                                    <div class="thumb-inner">
-                                                        <a href="#"><img src="assets/images/home1/f5.jpg" alt="f5"></a>
-                                                    </div>
-                                                    <span class="onsale">-50%</span>
-                                                    <a href="#" class="quick-view">Quick View</a>
-                                                </div>
-                                                <div class="product-innfo">
-                                                    <div class="product-name"><a href="#">Program Monitor
-                                                        </a></div>
-                                                    <span class="price">
-
-                                                            <ins>$229.00</ins>
-
-                                                            <del>$259.00</del>
-
-                                                        </span>
-                                                    <span class="star-rating">
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <span class="review">5 Review(s)</span>
-
-                                                        </span>
-                                                    <div class="group-btn-hover">
-                                                        <div class="inner">
-                                                            <a href="compare.html" class="compare"><i
-                                                                    class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Mua ngay</a>
-                                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
-                                                                                            aria-hidden="true"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-item style1">
-                                            <div class="product-inner equal-elem">
-                                                <div class="product-thumb">
-                                                    <div class="thumb-inner">
-                                                        <a href="#"><img src="assets/images/home1/f10.jpg"
-                                                                         alt="f10"></a>
-                                                    </div>
-                                                    <a href="#" class="quick-view">Quick View</a>
-                                                </div>
-                                                <div class="product-innfo">
-                                                    <div class="product-name"><a href="#">Notebook Pro
-                                                    </a></div>
-                                                    <span class="price">
-
-                                                            <ins>$229.00</ins>
-
-                                                            <del>$259.00</del>
-
-                                                        </span>
-                                                    <span class="star-rating">
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                                                            <span class="review">5 Review(s)</span>
-
-                                                        </span>
-                                                    <div class="group-btn-hover">
-                                                        <div class="inner">
-                                                            <a href="compare.html" class="compare"><i
-                                                                    class="fa fa-exchange"></i></a>
-                                                            <a href="#" class="add-to-cart">Mua ngay</a>
-                                                            <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
-                                                                                            aria-hidden="true"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="title-of-section"><span>Sản phẩm giá rẻ</span></div>
+                <div class="owl-carousel nav-style2 border-background equal-container" data-nav="true"
+                     data-autoplay="false" data-dots="false" data-loop="true" data-margin="30"
+                     data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4},"1000":{"items":4}}'>
+                      <?php       
+                       include_once 'model/product.php';
+             $low=showLowPrice();
+                             
+                     foreach ($low as $key){  
+                     echo '
+                      <div class="product-item style1">
+                        <div class="product-inner equal-elem">
+                            <div class="product-thumb">
+                                <div class="thumb-inner">
+                                    <a href="index.php?ctrl=product&action=detail&id='.$key['ma_sp'].'"><img src="../images/'.$key['hinh_anh'].'" alt=""></a>
+                                </div>
+                            </div>
+                              <a href="" class="quick-view">Quick View</a>
+                            <div class="product-innfo">
+                                <div class="product-name"><a href="#">'.$key['ten_sp'].'</a></div>
+                                <span class="price">
+
+                                        <ins>$'.$key['gia_giam'].'</ins>
+
+                                        <del>$'.$key['gia_goc'].'</del>
+
+                                    </span>
+                                <span class="star-rating">
+
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+
+                                        <span class="review">5 Review(s)</span>
+
+                                    </span>
+                                <div class="group-btn-hover style2">
+                                    <a href="index.php?ctrl=cart&action=addtocart&id='.$key['ma_sp'].'" class="add-to-cart"><i class="flaticon-shopping-cart"
+                                                                       aria-hidden="true"></i></a>
+                                    <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
+                                    <a href="index.php?ctrl=wishlist&action=addtowish&id='.$key['ma_sp'].'" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                   ';
+                     }?>
+                   </div>
+       </div>
+       </div>
         </div>
+                                      
+                                       
+                           
         <div class="block-sale-product full-width block-background">
             <div class="container">
                 <div class="title-of-section"><span>Sản phẩm nhiều lượt xem</span></div>
@@ -654,8 +162,8 @@
                      data-autoplay="false" data-dots="false" data-loop="true" data-margin="30"
                      data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"1200":{"items":3}}'>
                      <?php
-                     
-                     $truycap=showTruyCap();
+                       $truycap=showTruyCap();
+           
                      foreach ($truycap as $kay){
 
                      echo '
@@ -663,10 +171,9 @@
                         <div class="product-inner equal-elem">
                             <div class="product-thumb">
                                 <div class="thumb-inner">
-                                    <a href="#"><img src="assets/images/home1/s1.jpg" alt="s1"></a>
+                                   <a href="index.php?ctrl=product&action=detail&id='.$kay['ma_sp'].'"><img src="../images/'.$kay['hinh_anh'].'" alt=""></a>
                                 </div>
                                 <span class="onsale">-50%</span>
-                                <a href="#" class="quick-view">Quick View</a>
                             </div>
                             <div class="product-innfo">
                                 <div class="product-name"><a href="#">'.$kay['ten_sp'].'</a></div>
@@ -693,10 +200,10 @@
 
                                     </span>
                                 <div class="group-btn-hover style2">
-                                    <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
+                                    <a href="index.php?ctrl=cart&action=addtocart&id='.$key['ma_sp'].'" class="add-to-cart"><i class="flaticon-shopping-cart"
                                                                        aria-hidden="true"></i></a>
                                     <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                    <a href="index.php?ctrl=wishlist&action=addtowish&id='.$key['ma_sp'].'" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -711,65 +218,35 @@
         
         <div class="block-recent-view">
             <div class="container">
-                <div class="title-of-section"><span>Sản phẩm xem gần đây</span></div>
+                <div class="title-of-section"><span>Sản phẩm đang giảm giá cao</span></div>
                 <div class="owl-carousel nav-style2 border-background equal-container" data-nav="true"
                      data-autoplay="false" data-dots="false" data-loop="true" data-margin="30"
                      data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4},"1000":{"items":4}}'>
-                    <div class="product-item style1">
+                      <?php
+                       $sale=showHighSale();     
+                     foreach ($sale as $koy){
+
+                     echo '
+                       
+                      <div class="product-item style1">
                         <div class="product-inner equal-elem">
                             <div class="product-thumb">
                                 <div class="thumb-inner">
-                                    <a href="#"><img src="assets/images/home1/r1.jpg" alt="r1"></a>
+                                    <a href="index.php?ctrl=product&action=detail&id='.$koy['ma_sp'].'"><img src="../images/'.$koy['hinh_anh'].'" alt=""></a>
                                 </div>
                                 <span class="onsale">-50%</span>
-                                <a href="#" class="quick-view">Quick View</a>
+                                  <a href="#" class="quick-view">Quick View</a> 
                             </div>
                             <div class="product-innfo">
-
-                                    <span class="star-rating">
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <span class="review">5 Review(s)</span>
-
-                                    </span>
-                                <div class="product-name"><a href="#">Modern Watches</a></div>
+                                <div class="product-name"><a href="#">'.$koy['ten_sp'].'</a></div>
                                 <span class="price">
 
-                                        <ins>$229.00</ins>
+                                        <ins>$'.$koy['gia_giam'].'</ins>
 
-                                        <del>$259.00</del>
+                                        <del>$'.$koy['gia_goc'].'</del>
 
                                     </span>
-                                <div class="group-btn-hover style2">
-                                    <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                       aria-hidden="true"></i></a>
-                                    <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item style1">
-                        <div class="product-inner equal-elem">
-                            <div class="product-thumb">
-                                <div class="thumb-inner">
-                                    <a href="#"><img src="assets/images/home1/r2.jpg" alt="r2"></a>
-                                </div>
-                                <span class="onnew">new</span>
-                                <a href="#" class="quick-view">Quick View</a>
-                            </div>
-                            <div class="product-innfo">
-
-                                    <span class="star-rating">
+                                <span class="star-rating">
 
                                         <i class="fa fa-star" aria-hidden="true"></i>
 
@@ -784,184 +261,18 @@
                                         <span class="review">5 Review(s)</span>
 
                                     </span>
-                                <div class="product-name"><a href="#">Cellphone Factory</a></div>
-                                <span class="price price-dark">
-
-                                        <ins>$229.00</ins>
-
-                                    </span>
                                 <div class="group-btn-hover style2">
-                                    <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
+                                    <a href="index.php?ctrl=cart&action=addtocart&id='.$key['ma_sp'].'" class="add-to-cart"><i class="flaticon-shopping-cart"
                                                                        aria-hidden="true"></i></a>
                                     <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                    <a href="index.php?ctrl=wishlist&action=addtowish&id='.$key['ma_sp'].'" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="product-item style1">
-                        <div class="product-inner equal-elem">
-                            <div class="product-thumb">
-                                <div class="thumb-inner">
-                                    <a href="#"><img src="assets/images/home1/r3.jpg" alt="r3"></a>
-                                </div>
-                                <a href="#" class="quick-view">Quick View</a>
-                            </div>
-                            <div class="product-innfo">
-
-                                    <span class="star-rating">
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <span class="review">5 Review(s)</span>
-
-                                    </span>
-                                <div class="product-name"><a href="#">Smartphone 4 GB</a></div>
-                                <span class="price price-dark">
-
-                                        <ins>$229.00</ins>
-
-                                    </span>
-                                <div class="group-btn-hover style2">
-                                    <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                       aria-hidden="true"></i></a>
-                                    <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item style1">
-                        <div class="product-inner equal-elem">
-                            <div class="product-thumb">
-                                <div class="thumb-inner">
-                                    <a href="#"><img src="assets/images/home1/r4.jpg" alt="r4"></a>
-                                </div>
-                                <a href="#" class="quick-view">Quick View</a>
-                            </div>
-                            <div class="product-innfo">
-                                    <span class="star-rating">
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <span class="review">5 Review(s)</span>
-
-                                    </span>
-                                <div class="product-name"><a href="#">Extra Bass On</a></div>
-                                <span class="price price-dark">
-
-                                        <ins>$229.00</ins>
-
-                                    </span>
-                                <div class="group-btn-hover style2">
-                                    <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                       aria-hidden="true"></i></a>
-                                    <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item style1">
-                        <div class="product-inner equal-elem">
-                            <div class="product-thumb">
-                                <div class="thumb-inner">
-                                    <a href="#"><img src="assets/images/home1/r5.jpg" alt="r5"></a>
-                                </div>
-                                <span class="onsale">-50%</span>
-                                <a href="#" class="quick-view">Quick View</a>
-                            </div>
-                            <div class="product-innfo">
-
-                                    <span class="star-rating">
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <span class="review">5 Review(s)</span>
-
-                                    </span>
-                                <div class="product-name"><a href="#">Smartwatch</a></div>
-                                <span class="price">
-
-                                        <ins>$229.00</ins>
-
-                                        <del>$259.00</del>
-
-                                    </span>
-                                <div class="group-btn-hover style2">
-                                    <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                       aria-hidden="true"></i></a>
-                                    <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item style1">
-                        <div class="product-inner equal-elem">
-                            <div class="product-thumb">
-                                <div class="thumb-inner">
-                                    <a href="#"><img src="assets/images/home1/r6.jpg" alt="r6"></a>
-                                </div>
-                                <a href="#" class="quick-view">Quick View</a>
-                            </div>
-                            <div class="product-innfo">
-                                    <span class="star-rating">
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <span class="review">5 Review(s)</span>
-
-                                    </span>
-                                <div class="product-name"><a href="#">Modern Watches</a></div>
-                                <span class="price price-dark">
-
-                                        <ins>$229.00</ins>
-
-                                    </span>
-                                <div class="group-btn-hover style2">
-                                    <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                       aria-hidden="true"></i></a>
-                                    <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+                   ';
+                     }?>
+                   </div>
+       </div>
+       </div>
         </div>

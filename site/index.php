@@ -2,6 +2,9 @@
 <?php
 ob_start();
     session_start();
+    if(isset($_GET['user'])){
+        $_SESSION['username']=$_GET['user'];
+    }
 ?>
 <html lang="en">
 
@@ -37,10 +40,11 @@ ob_start();
             </div>
         </div>
     </form>
-    <div id="block-quick-view-popup" class="block-quick-view-popup">
+<div id="block-quick-view-popup" class="block-quick-view-popup">
         <div class="quick-view-content">
             <a href="#" class="popup-btn-close"><span class="flaticon-close"></span></a>
             <div class="product-items">
+            
                 <div class="product-image">
                     <a href="#"><img src="assets/images/popup-pro.jpg" alt="p1"></a>
                 </div>
@@ -127,7 +131,7 @@ ob_start();
                             </li>
                         </ul>
                     </li>
-                    <li><a href="../admin/login.php"><i class="flaticon-profile" aria-hidden="true"></i>Đăng nhập</a></li>
+                    <li><a href="../admin/login.php"><i class="flaticon-profile" aria-hidden="true"></i><?php echo (!isset($_SESSION['username'])?'Đăng nhập':$_SESSION['username'])?></a></li>
                 </ul><!-- heder links -->
             </div>
         </div> <!-- header-top -->
@@ -182,12 +186,11 @@ ob_start();
                                         $dem=0;
                                         $tongtien=0;
                                         if(isset($_SESSION['carts'])){
-                                                foreach ($_SESSION['carts'] as  $p) {
+                                            foreach ($_SESSION['carts'] as  $p) {
                                                 $dem= $dem + $p['quantity'];
                                                 $tongtien= $tongtien+ $p['quantity']*$p['price'];
                                             };
                                         }
-                                            
                                             echo $dem;
                                         ?></span>
 
@@ -256,7 +259,7 @@ ob_start();
         
     <!-- FOOTER -->
     <footer class="site-footer footer-opt-2">
-        <div class="footer-column equal-container">
+        <div class="footer-column equal-container" style="margin-bottom: 30px;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-6 equal-elem">

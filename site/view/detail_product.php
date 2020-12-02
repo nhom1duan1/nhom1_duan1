@@ -1,6 +1,6 @@
 <div class="container">
             <ol class="breadcrumb-page">
-                <li><a href="index-2.html">Trang chủ</a></li>
+                <li><a href="index.php">Trang chủ</a></li>
                 <li class="active"><a href="#">Chi tiết sản phẩm</a></li>
             </ol>
         </div>
@@ -72,11 +72,11 @@
                                 </div>
                             </div>
                             <div class="product-infomation">
-                                22” class screen full LED TV<br>
-                                Hight precision lens provides a clearer picture and a better view.<br>
-                                With stand: 50.23”W x 30.1”H x 15.5”D<br>
-                                Dispay type: Resolution: 1170 x 768<br>
-                                Motion Rate: 130
+                               <?php
+                                    echo '
+                                        <p>'.$product['mo_ta'].'<p>
+                                    ';
+                               ?>
                             </div>
                             <div class="product-info-price">
                                 <span class="price">
@@ -121,25 +121,11 @@
                 <div class="tab-container">
                     <div id="tab-1" class="tab-panel active">
                         <div class="box-content">
-                            <p>Lorem ipsum dolor sit amet, an munere tibique consequat mel, congue albucius no qui, at
-                                everti meliore erroribus sea. Vero graeco cotidieque ea duo, in eirmod insolens
-                                interpretaris nam. Pro at nostrud percipit definitiones, eu tale porro cum. Sea ne
-                                accusata voluptatibus. Ne cum falli dolor voluptua, duo ei sonet choro facilisis,
-                                labores officiis torquatos cum ei.</p>
-                            <p>Cum altera mandamus in, mea verear disputationi et. Vel regione discere ut, legere
-                                expetenda ut eos. In nam nibh invenire similique. Atqui mollis ea his, ius graecis
-                                accommodare te. No eam tota nostrum cotidieque. Est cu nibh clita. Sed an nominavi, et
-                                duo corrumpit constituto, duo id rebum lucilius. Te eam iisque deseruisse, ipsum euismod
-                                his at. Eu putent habemus voluptua sit, sit cu rationibus scripserit, modus voluptaria
-                                ex per. Aeque dicam consulatu eu his, probatus neglegentur disputationi sit et. Ei nec
-                                ludus epicuri petentium, vis appetere maluisset ad. Et hinc exerci utinam cum. Sonet
-                                saperet nominavi est at, vel eu sumo tritani. Cum ex minim legere.</p>
-                            <p>Eos cu utroque inermis invenire, eu pri alterum antiopam. Nisl erroribus definitiones nec
-                                an, ne mutat scripserit est. Eros veri ad pri. An soleat maluisset per. Has eu idque
-                                similique, et blandit scriptorem necessitatibus mea. Vis quaeque ocurreret ea.cu bus
-                                scripserit, modus voluptaria ex per. Aeque dicam consulatu eu his, probatus neentur
-                                disputationi sit et. Ei nec ludus epicuri petentium, vis appetere maluisset ad. Et hinc
-                                exerci utinam cum. Sonet saperet nominavi est at, vel eu sumo tritani.</p>
+                            <?php
+                                    echo '
+                                        <p>'.$product['mo_ta'].'<p>
+                                    ';
+                               ?>
                         </div>
                     </div>
                     <div id="tab-2" class="tab-panel">
@@ -244,68 +230,34 @@
                 </div>
             </div>
         </div>
-        <div class="block-recent-view single">
+       <div class="block-recent-view">
             <div class="container">
-                <div class="title-of-section">Có thể bạn thích:</div>
+                <div class="title-of-section"><span>Có thể bạn thích</span></div>
                 <div class="owl-carousel nav-style2 border-background equal-container" data-nav="true"
                      data-autoplay="false" data-dots="false" data-loop="true" data-margin="30"
-                     data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4},"1200":{"items":4}}'>
-                    <div class="product-item style1">
+                     data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4},"1000":{"items":4}}'>
+                      <?php
+                      
+                     foreach ($all as $koy){
+
+                     echo '
+                       
+                      <div class="product-item style1">
                         <div class="product-inner equal-elem">
                             <div class="product-thumb">
                                 <div class="thumb-inner">
-                                    <a href="#"><img src="assets/images/home1/r1.jpg" alt="r1"></a>
+                                    <a href="index.php?ctrl=product&action=detail&id='.$koy['ma_sp'].'"><img src="../images/'.$koy['hinh_anh'].'" alt=""></a>
                                 </div>
                                 <span class="onsale">-50%</span>
-                                <a href="#" class="quick-view">Quick View</a>
+                                  <a href="#" class="quick-view">Quick View</a> 
                             </div>
                             <div class="product-innfo">
-                                <div class="product-name"><a href="#">Modern Watches</a></div>
+                                <div class="product-name"><a href="#">'.$koy['ten_sp'].'</a></div>
                                 <span class="price">
 
-                                        <ins>$229.00</ins>
+                                        <ins>$'.$koy['gia_giam'].'</ins>
 
-                                        <del>$259.00</del>
-
-                                    </span>
-                                <span class="star-rating">
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <span class="review">5 Review(s)</span>
-
-                                    </span>
-                                <div class="group-btn-hover style2">
-                                    <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                       aria-hidden="true"></i></a>
-                                    <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item style1">
-                        <div class="product-inner equal-elem">
-                            <div class="product-thumb">
-                                <div class="thumb-inner">
-                                    <a href="#"><img src="assets/images/home1/r2.jpg" alt="r2"></a>
-                                </div>
-                                <span class="onnew">new</span>
-                                <a href="#" class="quick-view">Quick View</a>
-                            </div>
-                            <div class="product-innfo">
-                                <div class="product-name"><a href="#">Cellphone Factory</a></div>
-                                <span class="price price-dark">
-
-                                        <ins>$229.00</ins>
+                                        <del>$'.$koy['gia_goc'].'</del>
 
                                     </span>
                                 <span class="star-rating">
@@ -332,165 +284,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product-item style1">
-                        <div class="product-inner equal-elem">
-                            <div class="product-thumb">
-                                <div class="thumb-inner">
-                                    <a href="#"><img src="assets/images/home1/r3.jpg" alt="r3"></a>
-                                </div>
-                                <a href="#" class="quick-view">Quick View</a>
-                            </div>
-                            <div class="product-innfo">
-                                <div class="product-name"><a href="#">Smartphone 4 GB</a></div>
-                                <span class="price price-dark">
-
-                                        <ins>$229.00</ins>
-
-                                    </span>
-                                <span class="star-rating">
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <span class="review">5 Review(s)</span>
-
-                                    </span>
-                                <div class="group-btn-hover style2">
-                                    <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                       aria-hidden="true"></i></a>
-                                    <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item style1">
-                        <div class="product-inner equal-elem">
-                            <div class="product-thumb">
-                                <div class="thumb-inner">
-                                    <a href="#"><img src="assets/images/home1/r4.jpg" alt="r4"></a>
-                                </div>
-                                <a href="#" class="quick-view">Quick View</a>
-                            </div>
-                            <div class="product-innfo">
-                                <div class="product-name"><a href="#">Extra Bass On</a></div>
-                                <span class="price price-dark">
-
-                                        <ins>$229.00</ins>
-
-                                    </span>
-                                <span class="star-rating">
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <span class="review">5 Review(s)</span>
-
-                                    </span>
-                                <div class="group-btn-hover style2">
-                                    <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                       aria-hidden="true"></i></a>
-                                    <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item style1">
-                        <div class="product-inner equal-elem">
-                            <div class="product-thumb">
-                                <div class="thumb-inner">
-                                    <a href="#"><img src="assets/images/home1/r5.jpg" alt="r5"></a>
-                                </div>
-                                <span class="onsale">-50%</span>
-                                <a href="#" class="quick-view">Quick View</a>
-                            </div>
-                            <div class="product-innfo">
-                                <div class="product-name"><a href="#">Smartwatch</a></div>
-                                <span class="price">
-
-                                        <ins>$229.00</ins>
-
-                                        <del>$259.00</del>
-
-                                    </span>
-                                <span class="star-rating">
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <span class="review">5 Review(s)</span>
-
-                                    </span>
-                                <div class="group-btn-hover style2">
-                                    <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                       aria-hidden="true"></i></a>
-                                    <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item style1">
-                        <div class="product-inner equal-elem">
-                            <div class="product-thumb">
-                                <div class="thumb-inner">
-                                    <a href="#"><img src="assets/images/home1/r6.jpg" alt="r6"></a>
-                                </div>
-                                <a href="#" class="quick-view">Quick View</a>
-                            </div>
-                            <div class="product-innfo">
-                                <div class="product-name"><a href="#">Modern Watches</a></div>
-                                <span class="price price-dark">
-
-                                        <ins>$229.00</ins>
-
-                                    </span>
-                                <span class="star-rating">
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-                                        <span class="review">5 Review(s)</span>
-
-                                    </span>
-                                <div class="group-btn-hover style2">
-                                    <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
-                                                                       aria-hidden="true"></i></a>
-                                    <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                   ';
+                     }?>
+                   </div>
+       </div>
+       </div>
         </div>
