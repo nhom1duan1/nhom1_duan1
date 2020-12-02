@@ -116,7 +116,7 @@
                 <ul class="box-tab nav-tab">
                     <li class="active"><a data-toggle="tab" href="#tab-1">Mô tả sản phẩm</a></li>
                     <li><a data-toggle="tab" href="#tab-2">Thông tin sản phẩm</a></li>
-                    <li><a data-toggle="tab" href="#tab-3">Bình luận & đánh giá</a></li>
+                    <li><a data-toggle="tab" href="#tab-3">Bình luận khách hàng</a></li>
                 </ul>
                 <div class="tab-container">
                     <div id="tab-1" class="tab-panel active">
@@ -159,35 +159,86 @@
                     </div>
                     <div id="tab-3" class="tab-panel">
                         <div class="box-content">
-                            <form method="post" action="#" class="new-review-form">
-                                <a href="#" class="form-title">Write a review</a>
                                 <div class="form-content">
-                                    <p class="form-row form-row-wide">
-                                        <label>Name</label>
-                                        <input type="text" value="" name="text" placeholder="Enter your name"
-                                               class="input-text">
-                                    </p>
-                                    <p class="form-row form-row-wide">
-                                        <label>Email</label>
-                                        <input type="text" name="text" placeholder="admin@example.com"
-                                               class="input-text">
-                                    </p>
-                                    <p class="form-row form-row-wide">
-                                        <label>Review Title<span class="required">*</span></label>
-                                        <input type="email" name="email" placeholder="Give your review a title"
-                                               class="input-text">
-                                    </p>
-                                    <p class="form-row form-row-wide">
-                                        <label>Body of Review (1500)</label>
-                                        <textarea title="message" aria-invalid="false" class="textarea-control" rows="5"
-                                                  cols="40"
-                                                  name="message"></textarea>
-                                    </p>
-                                    <p class="form-row">
-                                        <input type="submit" value="Submit Review" name="Submit" class="button-submit">
-                                    </p>
+                                    <?php
+                                        include 'model/comment.php';
+                                        $ma_sp=$product['ma_sp'];
+                                        $binhluan=getAllComment($ma_sp);
+                                        $dem=0;
+                                        foreach ($binhluan as $value) {
+                                            $dem= $dem+1;
+                                        };
+                                    ?>
+                                    
+                                    <h1 class="comments-title">Bình Luận (<?php echo $dem?>)</h1>
+                                    <?php
+                                        $ma_sp=$product['ma_sp'];
+                                        $binhluan=getAllComment($ma_sp);
+                                        foreach ($binhluan as $value) {
+                                            $ma_kh= $value['ma_kh'];
+                                            $khachhang=getKhachhang($ma_kh);
+                                            echo '
+                                            <div class="be-comment">
+                                                <div class="be-img-comment">	
+                                                    <a href="#">
+                                                        <img src="'.$khachhang['anh_daidien'].'" alt="" class="be-ava-comment">
+                                                    </a>
+                                                </div>
+                                                <div class="be-comment-content">
+                                                    
+                                                        <span class="be-comment-name">
+                                                            <a href="blog-detail-2.html">'.$khachhang['ho_ten'].'</a>
+                                                            </span>
+                                                        <span class="be-comment-time">
+                                                            <i class="fa fa-clock-o"></i>
+                                                            '.$value['thoigian'].'
+                                                        </span>
+
+                                                    <p class="be-comment-text">
+                                                        '.$value['noi_dung'].'
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            ';
+                                        };
+                                    ?>
+                                    
+                                    <h1 class="comments-title">Gửi bình luận</h1>
+                                    
+                                    <form class="form-block" action="index.php?ctrl=comment&action=addcomment" method="post">
+                                        <div class="row">
+                                            <div class="col-xs-12">									
+                                                <div class="form-group">
+                                                    <textarea name="noi_dung" class="form-input" required="" placeholder="Nhập bình luận tại đây"></textarea>
+                                                    <input name="ma_kh" hidden type="text" value="<?php echo $_SESSION['id'] ?>">
+                                                    <input name="ma_sp" hidden type="text" value="<?php echo $product['ma_sp']?>">
+                                                </div>
+                                            </div>
+                                            <?php
+                                                if(!isset($_SESSION['username'])){
+                                                    echo '
+                                                    <div class="col-xs-12">
+                                                        <div class="alert alert-warning">
+                                                            <strong>Cảnh báo!</strong> Bạn phải đăng nhập để gửi được bình luận. <a href="../admin/login.php">Đăng nhập ngay</a>
+        
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    ';
+                                                    
+                                                }
+                                                else{
+                                                    echo'
+                                                    <button class="btn btn-danger pull-right" id="btn_binhluan">Gửi</button>
+                                                    ';
+                                                }
+                                            ?>
+                                    
+                                            
+                                        </div>
+                                    </form>
                                 </div>
-                            </form>
+                            
                         </div>
                     </div>
                 </div>

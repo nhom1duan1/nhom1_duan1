@@ -22,6 +22,7 @@ ob_start();
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;display=swap"
           rel="stylesheet">
+          
 </head>
 <body class="index-opt-1">
 <div class="wrapper">
@@ -272,7 +273,7 @@ ob_start();
                             <h3 class="title-of-section">Tài khoản</h3>
                             <ul>
                                 <li><a href="#">Đăng kí</a></li>
-                                <li><a href="#">Xem giỏ hàng</a></li>
+                                <li><a href="index.php?ctrl=cart">Xem giỏ hàng</a></li>
                                 <li><a href="#">Liên hệ</a></li>
                                 <li><a href="#">Kiểm tra đơn hàng</a></li>
                                 <li><a href="#">Trợ giúp</a></li>

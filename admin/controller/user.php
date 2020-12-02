@@ -91,7 +91,11 @@ switch ($act) {
 	case 'delete':
 		$id=$_GET['ma_kh'];
 		deleteAccount($id);
-		header("locaion:index.php?ctrl=user");
+		echo '
+			<script>
+				window.location="index.php?ctrl=user";
+			</script>
+		';
 	break;
 }
 ?>

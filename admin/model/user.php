@@ -4,6 +4,10 @@
 		$sql="select * from khachhang";
 		return query($sql);
 	}
+	function getUserbyId($ma_kh){
+		$sql="select * from khachhang where ma_kh='$ma_kh'";
+		return queryOne($sql);
+	}
 	function getShowUserID($email){
 		$sql="select*from khachhang where email='$email'";
 		return queryOne($sql);

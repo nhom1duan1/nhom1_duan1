@@ -48,7 +48,7 @@
               <td>'.$key['gio_dat'].'</td>
                 <td>'.$key['tinh_trang'].'</td>
                  <td>
-						<a class="btn btn-warning" href="index.php?ctrl=cart&action=delete&ma_donhang='.$key['ma_donhang'].'">Xóa</a>
+						<a onclick="return canhbao()" class="btn btn-warning" href="index.php?ctrl=cart&action=delete&ma_donhang='.$key['ma_donhang'].'">Xóa</a>
 						</td>
               <td>
 						  <a class="btn btn-info" href="index.php?ctrl=cart&action=edit&ma_donhang='.$key['ma_donhang'].'">Sửa</a>
@@ -66,7 +66,7 @@
         <div class="card-footer">
             <input type="button" class="btn btn-info" onclick='selectAll()' value="Chọn tất cả" >
             <input type="button" class="btn btn-info" onclick='UnSelectAll()' value="bỏ Chọn tất cả" >
-            <button type="submit" class="btn btn-info">Xoá danh mục đã chọn</button>
+            <button onclick="return canhbao()" type="submit" class="btn btn-info">Xoá danh mục đã chọn</button>
          
         </div>
       </div>

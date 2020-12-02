@@ -44,7 +44,7 @@
             <a class="btn btn-warning" href="index.php?ctrl=user&act=edit&email='.$key['email'].'">Sửa</a>
             </td>
             <td>
-						<a class="btn btn-info" href="index.php?ctrl=user&act=delete&ma_kh='.$key['ma_kh'].'">Xóa</a>
+						<a onclick="return canhbao()" class="btn btn-info" href="index.php?ctrl=user&act=delete&ma_kh='.$key['ma_kh'].'">Xóa</a>
 						</td>
                     </tr>
                   ';
@@ -56,7 +56,7 @@
         <div class="card-footer">
             <input type="button" class="btn btn-info" onclick='selectAll()' value="Chọn tất cả" >
             <input type="button" class="btn btn-info" onclick='UnSelectAll()' value="bỏ Chọn tất cả" >
-            <button type="submit" class="btn btn-info">Xoá danh mục đã chọn</button>
+            <button onclick="return canhbao()" type="submit" class="btn btn-info">Xoá danh mục đã chọn</button>
 			  <a href="index.php?ctrl=user&act=add" class="btn btn-danger">Thêm mới</a>
         </div>
       </div>

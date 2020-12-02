@@ -3,6 +3,7 @@
 		color:white;
 	}
 </style>
+
 <form action="#" method="post" class="container d-flex justify-content-center">
       <div class="card container">
         <div class="card-header">
@@ -38,7 +39,7 @@
                        <td>'.$cate['thu_tu'].'</td>
                          <td>'.$anhien.'</td>
                       <td>
-                        <a href="index.php?ctrl=catalogs&action=delete&ma_loai='.$cate['ma_loai'].'" class="btn btn-warning" >Xoá</a>
+                        <a onclick="return canhbao()" href="index.php?ctrl=catalogs&action=delete&ma_loai='.$cate['ma_loai'].'" class="btn btn-warning" >Xoá</a>
                         <a href="index.php?ctrl=catalogs&action=edit&ma_loai='.$cate['ma_loai'].'"class="btn btn-info">Sửa</a>
                       </td>
                     </tr>
@@ -51,7 +52,7 @@
         <div class="card-footer">
             <input type="button" class="btn btn-info" onclick='selectAll()' value="Chọn tất cả" >
             <input type="button" class="btn btn-info" onclick='UnSelectAll()' value="bỏ Chọn tất cả" >
-            <button type="submit" class="btn btn-info">Xoá danh mục đã chọn</button>
+            <button onclick="return canhbao()" type="submit" class="btn btn-info">Xoá danh mục đã chọn</button>
             <a href="index.php?ctrl=catalogs&action=addnew" class="btn btn-danger">Thêm mới</a>
         </div>
       </div>

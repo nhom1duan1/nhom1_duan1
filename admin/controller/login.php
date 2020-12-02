@@ -22,7 +22,8 @@
 		            		$_SESSION['username']= $account['email'];
 		            		
 				            $_SESSION['password']= $account['mat_khau'];
-				            $_SESSION['phanquyen']= $account['phan_quyen']; 
+							$_SESSION['phanquyen']= $account['phan_quyen']; 
+							$_SESSION['id']= $account['ma_kh'];
 					        if($_SESSION['phanquyen']!=0){
 					            header('location: ../../site/index.php?'.$_SESSION['username']);
 					        }

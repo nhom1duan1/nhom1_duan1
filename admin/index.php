@@ -35,6 +35,16 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <script>
+      function canhbao(){
+        if(confirm('Bạn có thưc sự muốn xóa mục này')==true){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+    </script>
   </head>
   <body id="page-top">
     <div id="wrapper">
@@ -265,12 +275,8 @@
               >
               <i class="fas fa-user-lock"></i>
               </a>
-              <div class="dropdown-menu" style="left: 30%;right: 1vw;padding: .5rem 1rem;">
-                <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> About</a>
-                <a class="dropdown-item" href="#"><i class="fas fa-language"></i> language</a>
-                <a class="dropdown-item" href="#"><i class="fas fa-users-cog"></i> Setting</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="index.php?logout"><i class="fas fa-sign-out-alt"></i> Log out</a>
+              <div class="dropdown-menu" style="right: 2%;padding: .5rem 1rem;">
+                <a class="dropdown-item" href="index.php?logout"><i class="fas fa-sign-out-alt"></i>  Đăng Xuất</a>
               </div>
             </div>
           </nav>
