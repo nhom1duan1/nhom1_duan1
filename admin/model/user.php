@@ -10,9 +10,9 @@
 	}
 	function updateUser($fullName,$password,$diaChi,$path,$soDienThoai,$phanQuyen,$email){
 		if($path==""){
-			$sql="update khachhang set mat_khau='$password',ho_ten='$fullName', dia_chi='$diaChi',anh_daidien='$path', so_dt='$soDienThoai', phan_quyen='$phanQuyen' where email='$email';";
-		}else{
 			$sql="update khachhang set mat_khau='$password',ho_ten='$fullName', dia_chi='$diaChi', so_dt='$soDienThoai', phan_quyen='$phanQuyen' where email='$email';";
+		}else{
+			$sql="update khachhang set mat_khau='$password',ho_ten='$fullName', dia_chi='$diaChi', anh_daidien='$path', so_dt='$soDienThoai', phan_quyen='$phanQuyen' where email='$email';";
 		}
 		
 		execute($sql);

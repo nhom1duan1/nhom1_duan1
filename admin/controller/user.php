@@ -37,7 +37,7 @@ switch ($act) {
 					//$mahoa=sha1("nhom2");
 					//788c213624f90a0d32fe6d4b2e057c14dfaf1280
 					//$option=['cost'=>12];
-					$pass_mahoa=password_hash($password, PASSWORD_BCRYPT,["cost"=>12]);
+					$pass_mahoa=password_hash($password, PASSWORD_BCRYPT,["cost" => 12]);
 					//password_hash chi su dung duoc cho sever co php 5.5.0 tro len
 					//tao 1 chuoi hash
 					addAccount($fullName,$pass_mahoa,$email,$diaChi,$path,$soDienThoai,$phanQuyen);
@@ -45,6 +45,7 @@ switch ($act) {
 				}
 				else{
 					echo "<script>alert('vui long kiem tra mat khau');</script>";
+					break;
 				}
 			}
 		}
@@ -69,7 +70,8 @@ switch ($act) {
 				$soDienThoai=$_POST['txtSDT'];
 				$phanQuyen=$_POST['phanQuyen'];
 				if ($password==$password2) {
-					updateUser($fullName,$password,$diaChi,$path,$soDienThoai,$phanQuyen,$email);
+					$$pass_mahoa=password_hash($password, PASSWORD_BCRYPT,["cost" => 12]);
+					updateUser($fullName,$pass_mahoa,$diaChi,$path,$soDienThoai,$phanQuyen,$email);
 					header("location:index.php?ctrl=user");
 					break;
 				}
