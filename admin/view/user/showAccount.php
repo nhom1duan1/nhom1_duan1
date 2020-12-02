@@ -38,7 +38,11 @@
 						<td>'.$key['email'].'</td>
 						<td>'.$key['dia_chi'].'</td>
 						<td>'.$key['so_dt'].'</td>
+<<<<<<< HEAD
 						<td>'.(($key['phan_quyen']=='0')?'admin':'khách hàng').'</td>
+=======
+						<td>'.(($key['phan_quyen']!='0')?'khách hàng':'admin').'</td>
+>>>>>>> 529f895a0adc35f04f2a8ceb16454ac8bb232725
                   
 						<td>
             <a class="btn btn-warning" href="index.php?ctrl=user&act=edit&email='.$key['email'].'">Sửa</a>

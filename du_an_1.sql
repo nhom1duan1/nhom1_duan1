@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
+<<<<<<< HEAD
 -- Thời gian đã tạo: Th10 26, 2020 lúc 03:21 PM
+=======
+-- Thời gian đã tạo: Th10 26, 2020 lúc 03:42 PM
+>>>>>>> 529f895a0adc35f04f2a8ceb16454ac8bb232725
 -- Phiên bản máy phục vụ: 10.4.13-MariaDB
 -- Phiên bản PHP: 7.4.7
 
@@ -103,6 +107,16 @@ CREATE TABLE `hang` (
   `hang` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+<<<<<<< HEAD
+=======
+--
+-- Đang đổ dữ liệu cho bảng `hang`
+--
+
+INSERT INTO `hang` (`ma_hang`, `hang`) VALUES
+(1, 'Apple');
+
+>>>>>>> 529f895a0adc35f04f2a8ceb16454ac8bb232725
 -- --------------------------------------------------------
 
 --
@@ -145,7 +159,7 @@ CREATE TABLE `sanpham` (
   `ten_sp` varchar(20) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
   `gia_goc` decimal(20,0) NOT NULL,
   `gia_giam` decimal(20,0) NOT NULL,
-  `hang` int(20) NOT NULL,
+  `ma_hang` int(11) NOT NULL,
   `hinh_anh` varchar(100) NOT NULL,
   `mo_ta` varchar(100) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
   `truy_cap` int(11) DEFAULT NULL,
@@ -157,13 +171,13 @@ CREATE TABLE `sanpham` (
 -- Đang đổ dữ liệu cho bảng `sanpham`
 --
 
-INSERT INTO `sanpham` (`ma_sp`, `ma_loai`, `ten_sp`, `gia_goc`, `gia_giam`, `hang`, `hinh_anh`, `mo_ta`, `truy_cap`, `thu_tu`, `an_hien`) VALUES
-(4, 4, 'IMAC 100', '3000', '1000', 0, '../images/c5.jpg', '', 200, 0, 0),
-(5, 1, 'Samsung 20', '3000', '2500', 0, '../images/r3.jpg', '', 68, 0, 0),
-(7, 4, 'Máy tính 450', '4999', '2999', 0, '../images/f5.jpg', '', 400, 0, 0),
-(8, 7, 'Chuột chơi game X11', '200', '100', 0, '../images/c3.jpg', '', 13, 0, 0),
-(9, 5, 'Đồng hồ thông minh X', '599', '499', 0, '../images/c1.jpg', '', 234, 1, 0),
-(10, 1, 'Samsung galaxy S20', '5990', '4990', 0, '../images/s1.jpg', '', 654, 1, 0);
+INSERT INTO `sanpham` (`ma_sp`, `ma_loai`, `ten_sp`, `gia_goc`, `gia_giam`, `ma_hang`, `hinh_anh`, `mo_ta`, `truy_cap`, `thu_tu`, `an_hien`) VALUES
+(4, 4, 'IMAC 100', '3000', '1000', 1, '../images/c5.jpg', '', 200, 0, 0),
+(5, 1, 'Samsung 20', '3000', '2500', 1, '../images/r3.jpg', '', 68, 0, 0),
+(7, 4, 'Máy tính 450', '4999', '2999', 1, '../images/f5.jpg', '', 400, 0, 0),
+(8, 7, 'Chuột chơi game X11', '200', '100', 1, '../images/c3.jpg', '', 13, 0, 0),
+(9, 5, 'Đồng hồ thông minh X', '599', '499', 1, '../images/c1.jpg', '', 234, 1, 0),
+(10, 1, 'Samsung galaxy S20', '5990', '4990', 1, '../images/s1.jpg', '', 654, 1, 0);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -214,7 +228,8 @@ ALTER TABLE `khachhang`
 --
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`ma_sp`),
-  ADD KEY `fk1_ma_loai` (`ma_loai`);
+  ADD KEY `fk1_ma_loai` (`ma_loai`),
+  ADD KEY `fk_mahang` (`ma_hang`);
 
 --
 -- AUTO_INCREMENT cho các bảng đã đổ
@@ -242,7 +257,11 @@ ALTER TABLE `donhang`
 -- AUTO_INCREMENT cho bảng `hang`
 --
 ALTER TABLE `hang`
+<<<<<<< HEAD
   MODIFY `ma_hang` int(11) NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `ma_hang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+>>>>>>> 529f895a0adc35f04f2a8ceb16454ac8bb232725
 
 --
 -- AUTO_INCREMENT cho bảng `khachhang`
@@ -284,7 +303,8 @@ ALTER TABLE `donhang`
 -- Các ràng buộc cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
-  ADD CONSTRAINT `fk1_ma_loai` FOREIGN KEY (`ma_loai`) REFERENCES `catalogs` (`ma_loai`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk1_ma_loai` FOREIGN KEY (`ma_loai`) REFERENCES `catalogs` (`ma_loai`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_mahang` FOREIGN KEY (`ma_hang`) REFERENCES `hang` (`ma_hang`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

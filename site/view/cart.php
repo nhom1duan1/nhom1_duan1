@@ -76,7 +76,7 @@
                                 <div class="cart-actions">
                                     <button  type="submit" class="btn-continue">
                                     <span> <a href="index.php?ctrl=product">Tiếp tục mua sắm</a></span>
-                                    </button>   
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -96,28 +96,29 @@
             </div> 
         </div>
         <div class="container">
-            <form action="#" class="checkout" method="post" name="checkout">
+            <form action="index.php?ctrl=cart&action=checkout" class="checkout" method="post" name="checkout">
                 <h4 class="title-checkout">Thông tin đơn hàng</h4>
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label class="title">Họ và Tên *</label>
-                        <input type="text" class="form-control" id="forFName" placeholder="Your name">
+                        <input type="text" name="name" class="form-control" id="forFName" placeholder="Họ và tên">
                     </div>
                     <div class="form-group col-md-6">
-                        <label class="title">Địa chỉ email:</label>
-                        <input type="email" class="form-control" id="forEmail" placeholder="Type your email">
+                        <label class="title">ghi chú :</label>
+                        <input type="text" name="ghichu" class="form-control" id="forName" placeholder="nhập ghi chú (nếu có)">
                     </div>
                     <div class="form-group col-md-6">
                         <label class="title">Số điện thoại*</label>
-                        <input type="text" class="form-control" placeholder="10 digits format">
+                        <input type="text" name="phone" pattern="[0][1-9]{1}[0-9]{8}" required class="form-control" placeholder="nhập số điện thọai">
                     </div>
                     <div class="form-group col-md-6">
                         <label class="title">Địa chỉ giao hàng:</label>
-                        <input type="text" class="form-control" placeholder="Street at apartment number">
+                        <input type="text" name="diachi" class="form-control" placeholder="Địa chỉ nhận hàng">
+                        <input hidden name="thanhtien" value="<?php echo $tongtien ?>">
+                        <input hidden name="ma_kh" value="<?php echo $_SESSION['ma_kh'] ?>">
                     </div>
                     </div>
-                        <span class="grand-total">Tổng cộng<span>$100.00</span></span>
-                        <button type="submit" class="btn-order">Đặt hàng</button>
+                        <button type="submit" name="submit" class="btn-order">Đặt hàng</button>
                     </div>
                 </div>
             </form>

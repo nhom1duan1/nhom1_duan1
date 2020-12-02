@@ -13,16 +13,17 @@
 	        if(isset($_POST['btn_login'])){
 		        $username= $_POST['user'];
 		        $password= $_POST['pass'];
-		        $account= getAllAccount($username);
+				$account= getAllAccount($username);
 		        if ($account['email']!='') {
 		        	if (password_verify($password, $account['mat_khau'])) {
 		        		if($account!=null){
 			        		session_start();
-			        		session_destroy();
+			        		//session_destroy();
 		            		$_SESSION['username']= $account['email'];
 		            		
 				            $_SESSION['password']= $account['mat_khau'];
-				            $_SESSION['phanquyen']= $account['phan_quyen']; 
+							$_SESSION['phanquyen']= $account['phan_quyen'];
+							$_SESSION['ma_kh']= $account['ma_kh']; 
 					        if($_SESSION['phanquyen']!=0){
 					            header('location: ../../site/index.php?user='.$_SESSION['username']);
 					        }
@@ -39,9 +40,13 @@
 				        }
 	        		}
 	        		else{
-	        			header('location:../login.php');
+						echo'
+							<script>
+								alert("Sai mật khẩu !");
+								window.location="../index.php";
+				            </script>';
 	        		}
-		        }
+				}
 		    }
 			break;
 		
@@ -50,3 +55,6 @@
 			break;
 	}
 ?>
+<script>
+	<windown class="location"></windown>
+</script>

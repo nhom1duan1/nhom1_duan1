@@ -15,6 +15,7 @@
 
                  <th>Mã đơn hàng</th>
 					<th scope="col">Mã sản phẩm</th>
+          	<th scope="col">Số lượng</th>
 				
 
                 </tr>
@@ -27,7 +28,7 @@
                     <tr>
             <td>'.$key['ma_donhang'].'</td>
             <td>'.$key['ma_sp'].'</td>
-           
+             <td>'.$key['soluong'].'</td>
                     </tr>
                   ';
                 }
