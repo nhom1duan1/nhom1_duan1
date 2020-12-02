@@ -36,10 +36,11 @@ ob_start();
             </div>
         </div>
     </form>
-    <div id="block-quick-view-popup" class="block-quick-view-popup">
+<div id="block-quick-view-popup" class="block-quick-view-popup">
         <div class="quick-view-content">
             <a href="#" class="popup-btn-close"><span class="flaticon-close"></span></a>
             <div class="product-items">
+            
                 <div class="product-image">
                     <a href="#"><img src="assets/images/popup-pro.jpg" alt="p1"></a>
                 </div>
@@ -255,7 +256,7 @@ ob_start();
         
     <!-- FOOTER -->
     <footer class="site-footer footer-opt-2">
-        <div class="footer-column equal-container">
+        <div class="footer-column equal-container" style="margin-bottom: 30px;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-6 equal-elem">

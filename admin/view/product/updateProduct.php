@@ -41,7 +41,7 @@
                 <select name="brand" class="form-control" id="">
                      <?php
                   foreach($hang as $ceta){
-                    echo '<option  value='.$cate['ma_hang'].'>'.$ceta['hang'].'</option>';
+                    echo '<option  value='.$ceta['ma_hang'].'>'.$ceta['hang'].'</option>';
                   }
                 ?>     
                 </select>

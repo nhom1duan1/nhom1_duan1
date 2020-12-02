@@ -1,18 +1,8 @@
 <?php
   ob_start();
-<<<<<<< HEAD
-?>
-=======
   //include 'model/user.php';
-  session_start();
-  if (!isset($_GET['ad'])&&!isset($_SESSION['username'])) {
-    header('location:login.php');
-  }
-  if (!isset($_SESSION['username'])) {
-    $_SESSION['username']=$_GET['ad'];
-  }
+  
   ?>
->>>>>>> ebcbdec1fd2fd22efc1c4b83dbbbc5ff43986bdb
 <!DOCTYPE html>
 <html lang="en">
   <head>
