@@ -85,7 +85,7 @@
                       <a class="small" href="#">Forgot Password?</a>
                     </div>
                     <div class="text-center">
-                      <a class="small" href="#">Create an Account!</a>
+                      <a class="small" href="../site/index.php?ctrl=newAccount">Create an Account!</a>
                     </div>
                   </div>
                 </div>
@@ -95,7 +95,31 @@
         </div>
       </div>
     </div>
-
+    <!-- Forgot Password -->
+    <!-- position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: #666666de;
+} -->
+    <div class="forgot-pass">
+      <form class="form-group" action="controller/login.php?act=forgetpass" method="POST" class="container d-flex justify-content-center">
+        <div class="card container ">
+          <div class="card-header info">
+            quen mật khẩu
+          </div>
+          <div class="card-body">
+            <!-- nhap dia chi  -->
+            <div class="form-group">
+              <label>email của bạn</label><br>
+              <input aria-describedby="emailHelp" class="form-control" type="email" name="userEmail" placeholder="nhạp địa chỉ email của bạn"><br>
+            </div>
+            <input class="btn btn-primary" type="submit" name="sb-pass" value="thêm tài khoản">
+          </div>
+        </div>
+      </form>
+    </div>
     <!-- Bootstrap core JavaScript-->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

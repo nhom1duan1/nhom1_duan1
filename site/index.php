@@ -127,7 +127,7 @@ ob_start();
                             </li>
                         </ul>
                     </li>
-                    <li><a href="../admin/login.php"><i class="flaticon-profile" aria-hidden="true"></i>Đăng nhập</a></li>
+                    <li><a href="../admin/login.php"><i class="flaticon-profile" aria-hidden="true"></i><?php echo ((!isset($_SESSION['username']))?"Đăng Nhập":$_SESSION['username']); ?></a></li>
                 </ul><!-- heder links -->
             </div>
         </div> <!-- header-top -->

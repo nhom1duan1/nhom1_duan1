@@ -1,7 +1,21 @@
 <?php
   ob_start();
   //include 'model/user.php';
+<<<<<<< HEAD
   
+=======
+  session_start();
+  if (!isset($_GET['ad'])&&!isset($_SESSION['username'])||$_SESSION['phanquyen']!=0) {
+    header('location:login.php');
+  }
+  // if (!isset($_SESSION['username'])) {
+  //   $_SESSION['username']=$_GET['ad'];
+  // }
+  if (isset($_GET['logout'])) {
+    session_destroy();
+    header('location:login.php');
+  }
+>>>>>>> 093b38c51cdcc5c27089be3e84394111cd7ec3b3
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -260,7 +274,7 @@
                 <a class="dropdown-item" href="#"><i class="fas fa-language"></i> language</a>
                 <a class="dropdown-item" href="#"><i class="fas fa-users-cog"></i> Setting</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Log out</a>
+                <a class="dropdown-item" href="index.php?logout"><i class="fas fa-sign-out-alt"></i> Log out</a>
               </div>
             </div>
           </nav>
