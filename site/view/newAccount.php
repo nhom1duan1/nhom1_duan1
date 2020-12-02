@@ -37,7 +37,7 @@
 			<!-- SDT -->
 			<div class="form-group">
 				<label>Số điện thoại</label><br>
-				<input class="form-control" pattern="[0][0-9]{3}-[0-9]{3}-[0-9]{3}" required type="tel" name="txtSDT" placeholder="nhập số điện thoại của bạn (0123-456-789)"><br>
+				<input class="form-control" pattern="[0][1-9]{1}[0-9]{8}" required type="tel" name="txtSDT" placeholder="nhập số điện thoại của bạn (0123-456-789)"><br>
 			</div>
 			<input class="btn btn-primary" type="submit" name="add" value="thêm tài khoản">
 		</div>
