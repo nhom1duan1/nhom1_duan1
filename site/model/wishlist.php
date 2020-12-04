@@ -1,9 +1,12 @@
 <?php
    include 'product.php';
    
-function addToWish($id){
-  
-    
+
+  function addToWish($id ,$hinh,$tensp,$gia){
+     $sql="INSERT INTO wishlist(ma,hinh_anh,ten_sp,gia_giam)
+     values(null,'$hinh','$tensp','$gia') ";
+      $lastId = executeReturnID($sql);
+      return $lastId;
    //lay thong tin san pham can them vao gio hang
    $product=showProductbyId($id);
    $bool=false;
@@ -25,7 +28,7 @@ function addToWish($id){
        array_push($_SESSION['wishlist'],array("id"=>$id,"name"=> $product['ten_sp'],  "price"=> $product['gia_giam'],"image"=> $product['hinh_anh'],"quantity"=>1));
      }
    }
-}
+  }
 
 function deleteWish($id){
     $product=showProductbyId($id);

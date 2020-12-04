@@ -1,21 +1,7 @@
 <?php
   ob_start();
   //include 'model/user.php';
-<<<<<<< HEAD
   
-=======
-  session_start();
-  if (!isset($_GET['ad'])&&!isset($_SESSION['username'])||$_SESSION['phanquyen']!=0) {
-    header('location:login.php');
-  }
-  // if (!isset($_SESSION['username'])) {
-  //   $_SESSION['username']=$_GET['ad'];
-  // }
-  if (isset($_GET['logout'])) {
-    session_destroy();
-    header('location:login.php');
-  }
->>>>>>> 093b38c51cdcc5c27089be3e84394111cd7ec3b3
   ?>
 <!DOCTYPE html>
 <html lang="en">

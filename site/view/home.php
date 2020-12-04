@@ -112,7 +112,7 @@
                                     <a href="index.php?ctrl=product&action=detail&id='.$key['ma_sp'].'"><img src="../images/'.$key['hinh_anh'].'" alt=""></a>
                                 </div>
                             </div>
-                              <a href="" class="quick-view">Quick View</a>
+                              <a href="" id="quick-view" class="quick-view">Quick View</a>
                             <div class="product-innfo">
                                 <div class="product-name"><a href="#">'.$key['ten_sp'].'</a></div>
                                 <span class="price">

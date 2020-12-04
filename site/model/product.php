@@ -1,13 +1,17 @@
 <?php 
 	include 'database.php';
-	function showAllProduct()
+	function showAllProduct($start,$limit)
 	{
-		$sql='select * from sanpham';
+		$sql="select * from sanpham order by ma_sp limit $start,$limit";
 		return query($sql);
 	}
-	function showProductbyId_loai($ma_loai)
+	function showProductbyId_loai($ma_loai,$start,$limit )
 	{
-		$sql="select * from sanpham where ma_loai='$ma_loai'";
+		$sql="select * from sanpham  where ma_loai='$ma_loai' limit $start, $limit";
+		return query($sql);
+	}
+	function  showProductbyBrand_loai($ma_hang,$start,$limit){
+		$sql="select * from sanpham where ma_hang='$ma_hang' limit $start, $limit";
 		return query($sql);
 	}
 	function addNewProduct($productName,$catalogID,$giaGoc,$giaGiam,$brand,$imgProduct){
@@ -40,5 +44,13 @@
 		$sql="SELECT * from sanpham order by truy_cap limit 8";
 		return query($sql);
 	}
-	
+	function quickview($id){
+		$sql="select *from sanpham where ma_sp='$id' ";
+		return queryOne($sql);
+		
+	}
+	function countProduct(){
+		$sql="select count(ma_sp) as totalrecord from sanpham";
+		return queryOne($sql);
+	}
 ?>

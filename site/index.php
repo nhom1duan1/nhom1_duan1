@@ -219,7 +219,7 @@ ob_start();
                                     <a href="index.php">Trang chủ</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="index.php?ctrl=product">sản phẩm</a>
+                                    <a href="index.php?ctrl=product&action=product">sản phẩm</a>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="">tin tức</a>
