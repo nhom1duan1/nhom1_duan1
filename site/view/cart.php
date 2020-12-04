@@ -74,25 +74,15 @@
                                     </table>
                                 </div>
                                 <div class="cart-actions">
-<<<<<<< HEAD:site/site/view/cart.php
-<<<<<<< HEAD
                                     <button type="button" class="btn-continue">
                                         <span><a href="index.php?ctrl=product">Tiếp tục mua sắm</a> </span>
                                     </button>
                                     <button type="submit" class="btn-clean">
                                         <span>Update Shopping Cart</span>
-=======
                                     <button  type="submit" class="btn-continue">
                                     <span> <a href="index.php?ctrl=product">Tiếp tục mua sắm</a></span>
->>>>>>> 488e4cbc3865e74289afe32edfb5d3686ce6a360
-=======
                                     <button  type="submit" class="btn-continue">
                                     <span> <a href="index.php?ctrl=product">Tiếp tục mua sắm</a></span>
->>>>>>> ebcbdec1fd2fd22efc1c4b83dbbbc5ff43986bdb:site/view/cart.php
-                                    </button>
-                                   
-                                    <button type="submit" class="btn-update">
-                                        <span> <a href="index.php?ctrl=product&action=deleteCart">Xóa giỏ hàng</a></span>
                                     </button>
                                 </div>
                             </form>
@@ -105,14 +95,42 @@
                                     <span class="order-left">Phí ship:<span>Miễn phí</span></span>
                                     <span class="order-left">Tổng:<span>$<?php echo $tongtien ?></span></span>
                                     
-                                    <button type="submit" class="btn-checkout">
-                                        <span>Xác nhận</span>
-                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div> 
+        </div>
+        <div class="container">
+            <form action="index.php?ctrl=cart&action=checkout" class="checkout" method="post" name="checkout">
+                <h4 class="title-checkout">Thông tin đơn hàng</h4>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label class="title">Họ và Tên *</label>
+                        <input type="text" name="name" class="form-control" id="forFName" placeholder="Họ và tên">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="title">ghi chú :</label>
+                        <input type="text" name="ghichu" class="form-control" id="forName" placeholder="nhập ghi chú (nếu có)">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="title">Số điện thoại*</label>
+                        <input type="text" name="phone" pattern="[0][1-9]{1}[0-9]{8}" required class="form-control" placeholder="nhập số điện thọai">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="title">Địa chỉ giao hàng:</label>
+                        <input type="text" name="diachi" class="form-control" placeholder="Địa chỉ nhận hàng">
+                        <input hidden name="thanhtien" value="<?php echo $tongtien ?>">
+                        <input hidden name="ma_kh" value="<?php echo $_SESSION['ma_kh'] ?>">
+                    </div>
+                    </div>
+                        <button type="submit" name="submit" class="btn-order">Đặt hàng</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+            </main><!-- end MAIN -->
                   <div class="block-recent-view">
             <div class="container">
                 <div class="title-of-section"><span>Có thể bạn thích</span></div>

@@ -31,7 +31,7 @@
             
           
                  <td>
-						<a class="btn btn-warning" href="index.php?ctrl=brand&action=delete&ma_hang='.$key['ma_hang'].'">Xóa</a>
+						<a onclick="return canhbao()" class="btn btn-warning" href="index.php?ctrl=brand&action=delete&ma_hang='.$key['ma_hang'].'">Xóa</a>
 						</td>
               <td>
 						  <a class="btn btn-info" href="index.php?ctrl=brand&action=edit&ma_hang='.$key['ma_hang'].'">Sửa</a>

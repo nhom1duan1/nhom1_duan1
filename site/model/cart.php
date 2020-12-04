@@ -26,10 +26,12 @@ function addToCart($id){
      }
    }
 }
-function addToOrder($fname,$add,$email,$phone,$ngay)
+function addToOrder($ma_kh,$name,$ghichu,$phone,$diachi,$thanhtien,$ngay)
 {
-  $query="insert into donhang(hoten,diachi,email,dienthoai,ngaydat)
-  values('$fname','$add','$email','$phone','$ngay')";
+  $query="insert into donhang(ma_donhang,ma_kh,thanh_tien,thoi_gian,ten_nguoinhan,dia_chi,sdt,ghi_chu)
+  values(null,'$ma_kh','$thanhtien','$ngay','$name','$diachi','$phone','$ghichu')";
+  //INSERT INTO `donhang`(`ma_donhang`, `ma_kh`, `thanh_tien`, `thoi_gian`, `ten_nguoinhan`, `dia_chi`, `sdt`, `ghi_chu`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8])
+  
   $lastId = executeReturnID($query);
   return $lastId;//tra ve ma don hang moi vua them
 }
@@ -40,7 +42,7 @@ function addToOrderDetail($ma_donhang)
     $masp=$item['id'];
     $sl=$item['quantity'];
     $query="insert into chitietdonhang(ma_donhang,ma_sp,soluong)
-    values('$ma_donhang','$ma_sp','$soluong')";
+    values('$ma_donhang','$masp','$sl')";
     $STH = execute($query);
   }
 }

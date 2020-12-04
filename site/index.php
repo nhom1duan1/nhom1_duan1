@@ -2,6 +2,9 @@
 <?php
 ob_start();
     session_start();
+    if(isset($_GET['user'])){
+        $_SESSION['username']=$_GET['user'];
+    }
 ?>
 <html lang="en">
 
@@ -22,6 +25,7 @@ ob_start();
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;display=swap"
           rel="stylesheet">
+          
 </head>
 <body class="index-opt-1">
 <div class="wrapper">
@@ -127,7 +131,7 @@ ob_start();
                             </li>
                         </ul>
                     </li>
-                    <li><a href="../admin/login.php"><i class="flaticon-profile" aria-hidden="true"></i><?php echo ((!isset($_SESSION['username']))?"Đăng Nhập":$_SESSION['username']); ?></a></li>
+                    <li><a href="../admin/login.php"><i class="flaticon-profile" aria-hidden="true"></i><?php echo (!isset($_SESSION['username'])?'Đăng nhập':$_SESSION['username'])?></a></li>
                 </ul><!-- heder links -->
             </div>
         </div> <!-- header-top -->
@@ -182,12 +186,11 @@ ob_start();
                                         $dem=0;
                                         $tongtien=0;
                                         if(isset($_SESSION['carts'])){
-                                                foreach ($_SESSION['carts'] as  $p) {
+                                            foreach ($_SESSION['carts'] as  $p) {
                                                 $dem= $dem + $p['quantity'];
                                                 $tongtien= $tongtien+ $p['quantity']*$p['price'];
                                             };
                                         }
-                                            
                                             echo $dem;
                                         ?></span>
 
@@ -273,7 +276,7 @@ ob_start();
                             <h3 class="title-of-section">Tài khoản</h3>
                             <ul>
                                 <li><a href="#">Đăng kí</a></li>
-                                <li><a href="#">Xem giỏ hàng</a></li>
+                                <li><a href="index.php?ctrl=cart">Xem giỏ hàng</a></li>
                                 <li><a href="#">Liên hệ</a></li>
                                 <li><a href="#">Kiểm tra đơn hàng</a></li>
                                 <li><a href="#">Trợ giúp</a></li>

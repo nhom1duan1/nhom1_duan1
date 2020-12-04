@@ -2,7 +2,27 @@
   ob_start();
   //include 'model/user.php';
   
+<<<<<<< HEAD
+=======
+=======
+  session_start();
+  if (!isset($_GET['ad'])&&!isset($_SESSION['username'])||$_SESSION['phanquyen']!=0) {
+    header('location:login.php');
+  }
+  // if (!isset($_SESSION['username'])) {
+  //   $_SESSION['username']=$_GET['ad'];
+  // }
+  if (isset($_GET['logout'])) {
+    session_destroy();
+    header('location:login.php');
+  }
+<<<<<<< HEAD
+?>
+=======
+>>>>>>> 093b38c51cdcc5c27089be3e84394111cd7ec3b3
+>>>>>>> 99e19c055832f57c8e9fd10b4f5ddf9eccb6b033
   ?>
+>>>>>>> 17e5e6f2d87a47659bd8404808dc1b5aa8187d2a
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,6 +45,16 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <script>
+      function canhbao(){
+        if(confirm('Bạn có thưc sự muốn xóa mục này')==true){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+    </script>
   </head>
   <body id="page-top">
     <div id="wrapper">
@@ -255,12 +285,8 @@
               >
               <i class="fas fa-user-lock"></i>
               </a>
-              <div class="dropdown-menu" style="left: 30%;right: 1vw;padding: .5rem 1rem;">
-                <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> About</a>
-                <a class="dropdown-item" href="#"><i class="fas fa-language"></i> language</a>
-                <a class="dropdown-item" href="#"><i class="fas fa-users-cog"></i> Setting</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="index.php?logout"><i class="fas fa-sign-out-alt"></i> Log out</a>
+              <div class="dropdown-menu" style="right: 2%;padding: .5rem 1rem;">
+                <a class="dropdown-item" href="index.php?logout"><i class="fas fa-sign-out-alt"></i>  Đăng Xuất</a>
               </div>
             </div>
           </nav>

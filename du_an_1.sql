@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
+<<<<<<< HEAD
+-- Thời gian đã tạo: Th10 26, 2020 lúc 03:21 PM
+=======
 -- Thời gian đã tạo: Th10 26, 2020 lúc 03:42 PM
+>>>>>>> 529f895a0adc35f04f2a8ceb16454ac8bb232725
 -- Phiên bản máy phục vụ: 10.4.13-MariaDB
 -- Phiên bản PHP: 7.4.7
 
@@ -103,6 +107,8 @@ CREATE TABLE `hang` (
   `hang` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+<<<<<<< HEAD
+=======
 --
 -- Đang đổ dữ liệu cho bảng `hang`
 --
@@ -110,6 +116,7 @@ CREATE TABLE `hang` (
 INSERT INTO `hang` (`ma_hang`, `hang`) VALUES
 (1, 'Apple');
 
+>>>>>>> 529f895a0adc35f04f2a8ceb16454ac8bb232725
 -- --------------------------------------------------------
 
 --
@@ -250,7 +257,11 @@ ALTER TABLE `donhang`
 -- AUTO_INCREMENT cho bảng `hang`
 --
 ALTER TABLE `hang`
+<<<<<<< HEAD
+  MODIFY `ma_hang` int(11) NOT NULL AUTO_INCREMENT;
+=======
   MODIFY `ma_hang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+>>>>>>> 529f895a0adc35f04f2a8ceb16454ac8bb232725
 
 --
 -- AUTO_INCREMENT cho bảng `khachhang`

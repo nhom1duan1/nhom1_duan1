@@ -57,8 +57,8 @@
                       <td>'.$key['truy_cap'].'</td>
                       <td>'.$key['thu_tu'].'</td>
                       <td>'.$anhien.'</td>
-                      <td><a href="index.php?ctrl=product&act=delete&id='.$key['ma_sp'].'" class="btn btn-warning">delete</a></td>
-                      <td><a href="index.php?ctrl=product&act=update&id='.$key['ma_sp'].'" class="btn btn-info">edit</a></td>
+                      <td><a onclick="return canhbao()" href="index.php?ctrl=product&act=delete&id='.$key['ma_sp'].'" class="btn btn-warning">Xóa</a></td>
+                      <td><a href="index.php?ctrl=product&act=update&id='.$key['ma_sp'].'" class="btn btn-info">Sửa</a></td>
                     </tr>
                   ';
                 }
@@ -69,7 +69,7 @@
         <div class="card-footer">
             <input type="button" class="btn btn-info" onclick='selectAll()' value="Chọn tất cả" >
             <input type="button" class="btn btn-info" onclick='UnSelectAll()' value="bỏ Chọn tất cả" >
-            <button type="submit" class="btn btn-info">Xoá danh mục đã chọn</button>
+            <button onclick="return canhbao()" type="submit" class="btn btn-info">Xoá danh mục đã chọn</button>
             <a href="index.php?ctrl=product&act=addnew" class="btn btn-danger">Thêm mới</a>
         </div>
       </div>

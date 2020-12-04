@@ -28,7 +28,7 @@
                     <tr>
             <td>'.$key['ma_donhang'].'</td>
             <td>'.$key['ma_sp'].'</td>
-             <td>'.$key['so_luong'].'</td>
+             <td>'.$key['soluong'].'</td>
                     </tr>
                   ';
                 }

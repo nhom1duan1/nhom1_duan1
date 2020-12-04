@@ -1,8 +1,4 @@
 <?php 
-<<<<<<< HEAD
-=======
-	
->>>>>>> 093b38c51cdcc5c27089be3e84394111cd7ec3b3
 include 'model/user.php';
 $act='index';
 if (isset($_GET['act'])) {
@@ -90,16 +86,15 @@ switch ($act) {
 			$txtSDT=$users['so_dt'];
 			$phanQuyen=$users['phan_quyen'];
 			include 'view/user/updateUser.php';
-<<<<<<< HEAD
-=======
-			break;
-			
->>>>>>> 093b38c51cdcc5c27089be3e84394111cd7ec3b3
 	break;
 	case 'delete':
 		$id=$_GET['ma_kh'];
 		deleteAccount($id);
-		header("locaion:index.php?ctrl=user&action=index");
+		echo '
+			<script>
+				window.location="index.php?ctrl=user";
+			</script>
+		';
 	break;
 }
 ?>

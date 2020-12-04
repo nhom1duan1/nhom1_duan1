@@ -23,11 +23,36 @@
                             </h4>
                             <div class="toolbar-option">
                                 <div class="toolbar-sort">
-                                    <select title="sort" class="chosen-select sorter-options form-control">
-                                        <option selected="selected" value="position">Độ phổ biến</option>
-                                        <option value="name">Tên</option>
-                                        <option value="price">Giá</option>
+                                    <select title="sort" id="sort" class="chosen-select sorter-options form-control" onchange="locationSort();">
+                                        <option value="see">Độ phổ biến</option>
+                                        <option value="nameaz">Tên A-Z</option>
+                                        <option value="nameza">Tên Z-A</option>
+                                        <option value="pricetop">Giá từ cao đến thấp</option>
+                                        <option value="pricedown">Giá từ thấp đến cao</option>
                                     </select>
+                                    <script type="text/javascript">
+                                        function locationSort(){
+                                            var sort = document.getElementById('sort').value
+                                            switch(sort){
+                                                case "see":
+                                                    window.location="index.php?ctrl=product&action=sort&sort=see";
+                                                    break;
+                                                case "nameaz":
+                                                    window.location="index.php?ctrl=product&action=sort&sort=nameaz";
+
+                                                    break;
+                                                case "nameza":
+                                                    window.location="index.php?ctrl=product&action=sort&sort=nameza";
+                                                    break;
+                                                case "pricetop":
+                                                    window.location="index.php?ctrl=product&action=sort&sort=pricetop";
+                                                    break;
+                                                case "pricedown":
+                                                    window.location="index.php?ctrl=product&action=sort&sort=pricedown";
+                                                break;
+                                            }
+                                        }
+                                    </script>
                                 </div>
                                 <form action="index.php?ctrl=product&action=product" method="post">
                                 <div class="toolbar-per">

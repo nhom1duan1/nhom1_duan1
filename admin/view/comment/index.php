@@ -14,10 +14,10 @@
                 <tr class="bg-info">
                   <th scope="col"></th>
                   <th scope="col">Mã bình luận</th>
-                  <th scope="col">Mã khách hàng</th>
-                   <th scope="col">Mã sản phẩm</th>
+                  <th scope="col">Tên khách hàng</th>
+                   <th scope="col">Tên sản phẩm</th>
+                   <th scope="col">Hình ảnh</th>
                     <th scope="col">thời gian</th>
-                     <th scope="col">Ngày</th>
                      <th>Nội dung</th>
                   <th scope="col"></th>
 
@@ -25,15 +25,21 @@
               </thead>
               <tbody>
               <?php
+              //include 'model/product.php';
+              //include 'model/user.php';
                 foreach($comment as $cate){
+                  $ma_kh= $cate['ma_kh'];
+                  $id= $cate['ma_sp'];
+                  $product= showProductbyId($id);
+                  $khachhang= getUserbyId($ma_kh);
                   echo'
                     <tr>
                       <th scope="row"><input type="checkbox" id="chonX" name="chonX[]"></th>
                       <td>'.$cate['ma_binhluan'].'</td>
-                      <td>'.$cate['ma_kh'].'</td>
-                       <td>'.$cate['ma_sp'].'</td>
+                      <td>'.$khachhang['ho_ten'].'</td>
+                       <td>'.$product['ten_sp'].'</td>
+                       <td><img style="width: 100px" src="'.$product['hinh_anh'].'" > </td>
                         <td>'.$cate['thoigian'].'</td>
-                         <td>'.$cate['ngay'].'</td>
                           <td>'.$cate['noi_dung'].'</td>
                       <td>
                         <a href="index.php?ctrl=comment&action=delete&ma_binhluan='.$cate['ma_binhluan'].'" class="btn btn-warning" >Xoá</a>
