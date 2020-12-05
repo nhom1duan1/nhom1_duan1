@@ -77,13 +77,6 @@
                                     <button type="button" class="btn-continue">
                                         <span><a href="index.php?ctrl=product">Tiếp tục mua sắm</a> </span>
                                     </button>
-                                    <button type="submit" class="btn-clean">
-                                        <span>Update Shopping Cart</span>
-                                    <button  type="submit" class="btn-continue">
-                                    <span> <a href="index.php?ctrl=product">Tiếp tục mua sắm</a></span>
-                                    <button  type="submit" class="btn-continue">
-                                    <span> <a href="index.php?ctrl=product">Tiếp tục mua sắm</a></span>
-                                    </button>
                                 </div>
                             </form>
                         </div>

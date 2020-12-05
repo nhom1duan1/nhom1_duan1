@@ -10,7 +10,7 @@
           QUẢN LÝ LOẠI SẢN PHẨM
         </div>
         <div class="card-body">
-          <table class="table table-striped table"  >
+          <table class=""  >
               <thead>
                 <tr class="bg-primary">
                   <th scope="col"></th>

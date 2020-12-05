@@ -26,7 +26,6 @@
 	function showProductbyId($id){
 		$sql="select *from sanpham where ma_sp='$id' ";
 		return queryOne($sql);
-		
 	}
 	function deleteProduct($id)
     {

@@ -14,7 +14,7 @@
                             <div class="promotion-banner-inner">
                                 <h4>Lựa chọn hàng đầu</h4>
                                 <h3>Bộ sưu tập đồng hồ tốt nhất</h3>
-                                <a class="banner-link" href="grid-product.html">Xem ngay</a>
+                                <a class="banner-link" href="index.php?ctrl=product&action=showbyId&id=5">Xem ngay</a>
                             </div>
                         </div>
                         <div class="toolbar-products">
@@ -42,14 +42,13 @@
                             <?php
                                 foreach ($product as $value) {
                                     echo '
-                                        <div class="product-item style1 width-33 col-md-6 col-sm-6 col-xs-6 equal-elem">
+                                        <div class="product-item style1 width-33 col-md-4 col-sm-6 col-xs-6 equal-elem">
                                             <div class="product-inner">
                                                 <div class="product-thumb">
                                                     <div class="thumb-inner">
                                                     <a href="index.php?ctrl=product&action=detail&id='.$value['ma_sp'].'"><img src="'.$value['hinh_anh'].'" alt="p8"></a>
                                                     </div>
                                                     <span class="onsale">-50%</span>
-                                                    <a href="#" class="quick-view">Quick View</a>
                                                 </div>
                                                 <div class="product-innfo">
                                                     <div class="product-name"><a href="#">'.$value['ten_sp'].'
@@ -83,7 +82,6 @@
                                                     </div>
                                                     <div class="single-add-to-cart">
                                                         <a href="#" class="btn-add-to-cart">Thêm vào giỏ hàng</a>
-                                                        <a href="compare.html" class="compare"><i class="fa fa-exchange"></i>Compare</a>
                                                         <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o"
                                                                                         aria-hidden="true"></i>Wishlist</a>
                                                     </div>
