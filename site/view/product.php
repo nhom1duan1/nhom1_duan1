@@ -9,7 +9,7 @@
                 <div class="col-md-9 col-sm-8 float-none float-right">
                     <div class="main-content">
                         <div class="promotion-banner style-3">
-                            <a href="#" class="banner-img"><img src="assets/images/product/banner-product.jpg"
+                            <a href="#" class="banner-img"><img src="site/assets/images/product/banner-product.jpg"
                                                                 alt="banner-product"></a>
                             <div class="promotion-banner-inner">
                                 <h4>Lựa chọn hàng đầu</h4>
@@ -23,22 +23,10 @@
                             </h4>
                             <div class="toolbar-option">
                                 <div class="toolbar-sort">
-<<<<<<< HEAD
-                                    <select title="sor\
-                                    
-                                    
-                                    \t" class="chosen-select sorter-options form-control">
+                                    <select title="sort" class="chosen-select sorter-options form-control">
                                         <option selected="selected" value="position">Độ phổ biến</option>
                                         <option value="name">Tên</option>
                                         <option value="price">Giá</option>
-=======
-                                    <select title="sort" id="sort" class="chosen-select sorter-options form-control" onchange="locationSort();">
-                                        <option value="see">Độ phổ biến</option>
-                                        <option value="nameaz">Tên A-Z</option>
-                                        <option value="nameza">Tên Z-A</option>
-                                        <option value="pricetop">Giá từ cao đến thấp</option>
-                                        <option value="pricedown">Giá từ thấp đến cao</option>
->>>>>>> d9ad092ab95a838371679b597bd262e66e4929df
                                     </select>
                                     <script type="text/javascript">
                                         function locationSort(){
@@ -202,7 +190,7 @@
                             </div>
                         </div>
                         <div class="block-banner-sidebar">
-                            <a href="#"><img src="assets/images/product/banner-sidebar.jpg" alt="banner-sidebar"></a>
+                            <a href="#"><img src="site/assets/images/product/banner-sidebar.jpg" alt="banner-sidebar"></a>
                             <div class="promotion-banner-inner">
                                 <h4>Fly Drone</h4>
                                 <h3>Tincidunt interdum senectus fames sociis sem platea </h3>

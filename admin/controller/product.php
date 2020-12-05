@@ -54,7 +54,7 @@
 				$giaGiam=$_POST['giaGiam'];
 				$brand=$_POST['brand'];
 				$imgProduct=$_POST['imgProduct'];
-				 $path='../images/'.$imgProduct;
+				 $path='images/'.$imgProduct;
 				$truycap=$_POST['truycap'];
 				$mota=$_POST['mota'];
 				$anhien=$_POST['anhien'];

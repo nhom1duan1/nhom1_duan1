@@ -101,10 +101,10 @@
                                 </div>
                             </div>
                             <div class="group-btn-share">
-                                <a href="#"><img src="assets/images/detail/btn1.png" alt="btn1"></a>
-                                <a href="#"><img src="assets/images/detail/btn2.png" alt="btn1"></a>
-                                <a href="#"><img src="assets/images/detail/btn3.png" alt="btn1"></a>
-                                <a href="#"><img src="assets/images/detail/btn4.png" alt="btn1"></a>
+                                <a href="#"><img src="site/assets/images/detail/btn1.png" alt="btn1"></a>
+                                <a href="#"><img src="site/assets/images/detail/btn2.png" alt="btn1"></a>
+                                <a href="#"><img src="site/assets/images/detail/btn3.png" alt="btn1"></a>
+                                <a href="#"><img src="site/assets/images/detail/btn4.png" alt="btn1"></a>
                             </div>
                         </div>
                     </div>
@@ -147,7 +147,7 @@
                         <div class="box-content">
                                 <div class="form-content">
                                     <?php
-                                        include 'model/comment.php';
+                                        include 'site/model/comment.php';
                                         $ma_sp=$product['ma_sp'];
                                         $binhluan=getAllComment($ma_sp);
                                         $dem=0;

@@ -1,1 +1,1 @@
-<?php include 'view/about_us.php'?>
+<?php include 'site/view/about_us.php'?>

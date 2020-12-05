@@ -4,7 +4,7 @@
             <div class="product-items">
             
                 <div class="product-image">
-                    <a href="#"><img src="assets/images/popup-pro.jpg" alt="p1"></a>
+                    <a href="#"><img src="site/assets/images/popup-pro.jpg" alt="p1"></a>
                 </div>
                 <div class="product-info">
                     <div class="product-name"><a href="#">Photo Camera</a></div>
@@ -91,19 +91,19 @@
                      data-loop="true" data-margin="30"
                      data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4}}'>
                     <div class="block-top-categori-item">
-                        <a href="index.php?ctrl=product&action=showbyId&id=18"><img src="assets/images/home1/c1.jpg" alt="c1"></a>
+                        <a href="index.php?ctrl=product&action=showbyId&id=18"><img src="site/assets/images/home1/c1.jpg" alt="c1"></a>
                         <div class="block-top-categori-title">Đồng hồ</div>
                     </div>
                     <div class="block-top-categori-item">
-                        <a href="index.php?ctrl=product&action=showbyId&id=19"><img src="assets/images/home1/c3.jpg" alt="c3"></a>
+                        <a href="index.php?ctrl=product&action=showbyId&id=19"><img src="site/assets/images/home1/c3.jpg" alt="c3"></a>
                         <div class="block-top-categori-title">Phụ kiện</div>
                     </div>
                     <div class="block-top-categori-item">
-                        <a href="index.php?ctrl=product&action=showbyId&id=1"><img src="assets/images/home1/c4.jpg" alt="c4"></a>
+                        <a href="index.php?ctrl=product&action=showbyId&id=1"><img src="site/assets/images/home1/c4.jpg" alt="c4"></a>
                         <div class="block-top-categori-title">Điện thoại di động</div>
                     </div>
                     <div class="block-top-categori-item">
-                        <a href="index.php?ctrl=product&action=showbyId&id=2"><img src="assets/images/home1/c5.jpg" alt="c5"></a>
+                        <a href="index.php?ctrl=product&action=showbyId&id=2"><img src="site/assets/images/home1/c5.jpg" alt="c5"></a>
                         <div class="block-top-categori-title">Máy tính</div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="promotion-banner style-5">
-                            <a href="index.php?ctrl=product" class="banner-img"><img src="assets/images/home1/background-product.jpg" alt="banner3"></a>
+                            <a href="index.php?ctrl=product" class="banner-img"><img src="site/assets/images/home1/background-product.jpg" alt="banner3"></a>
                             <div class="promotion-banner-inner">
                                 <h4>Điện thoại</h4>
                                 <h3>Sale <strong>40%</strong> Off</h3>
@@ -124,7 +124,7 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="promotion-banner style-5">
-                            <a href="index.php?ctrl=product" class="banner-img"><img src="assets/images/home1/banner4.jpg" alt="banner4"></a>
+                            <a href="index.php?ctrl=product" class="banner-img"><img src="site/assets/images/home1/banner4.jpg" alt="banner4"></a>
                             <div class="promotion-banner-inner">
                                 <h4>Tai nghe</h4>
                                 <h3>Get <strong>25%</strong> Flat Off</h3>
@@ -142,8 +142,8 @@
                      data-autoplay="false" data-dots="false" data-loop="true" data-margin="30"
                      data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4},"1000":{"items":4}}'>
                       <?php       
-                       include_once 'model/product.php';
-             $low=showLowPrice();
+                       include_once 'site/model/product.php';
+                        $low=showLowPrice();
                              
                      foreach ($low as $key){  
                      echo '
@@ -151,13 +151,9 @@
                         <div class="product-inner equal-elem">
                             <div class="product-thumb">
                                 <div class="thumb-inner">
-                                    <a href="index.php?ctrl=product&action=detail&id='.$key['ma_sp'].'"><img src="../images/'.$key['hinh_anh'].'" alt=""></a>
+                                    <a href="index.php?ctrl=product&action=detail&id='.$key['ma_sp'].'"><img src="'.$key['hinh_anh'].'" alt=""></a>
                                 </div>
                             </div>
-<<<<<<< HEAD
-=======
-                              <a href="" id="quick-view" class="quick-view">Quick View</a>
->>>>>>> d9ad092ab95a838371679b597bd262e66e4929df
                             <div class="product-innfo">
                                 <div class="product-name"><a href="#">'.$key['ten_sp'].'</a></div>
                                 <span class="price">
@@ -215,7 +211,7 @@
                         <div class="product-inner equal-elem">
                             <div class="product-thumb">
                                 <div class="thumb-inner">
-                                   <a href="index.php?ctrl=product&action=detail&id='.$kay['ma_sp'].'"><img src="../images/'.$kay['hinh_anh'].'" alt=""></a>
+                                   <a href="index.php?ctrl=product&action=detail&id='.$kay['ma_sp'].'"><img src="'.$kay['hinh_anh'].'" alt=""></a>
                                 </div>
                                 <span class="onsale">-50%</span>
                             </div>
@@ -275,7 +271,7 @@
                         <div class="product-inner equal-elem">
                             <div class="product-thumb">
                                 <div class="thumb-inner">
-                                    <a href="index.php?ctrl=product&action=detail&id='.$koy['ma_sp'].'"><img src="../images/'.$koy['hinh_anh'].'" alt=""></a>
+                                    <a href="index.php?ctrl=product&action=detail&id='.$koy['ma_sp'].'"><img src="'.$koy['hinh_anh'].'" alt=""></a>
                                 </div>
                                 <span class="onsale">-50%</span>
                             </div>

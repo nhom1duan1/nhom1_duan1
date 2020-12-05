@@ -1,19 +1,28 @@
 <?php
-    include 'model/cart.php';
+    include 'site/model/cart.php';
     $action='index';
     if(isset($_GET['action'])){
         $action=$_GET['action'];
     }
     switch($action){
         case 'index':
-            include_once 'model/product.php';
-             $all=showAllProduct();
-            include('view/cart.php');
+            if(!$_SESSION['username']){
+                echo '<script> 
+                    alert("Bạn cần phải đăng nhập để vào được giỏ hàng")
+                    window.location="admin/login.php";
+                </script>';
+                    break;
+            }
+            else{
+                include_once 'site/model/product.php';
+                $all=showAllProduct();
+                include('site/view/cart.php');
+            }
         break;
         case 'addtocart':
             //lay product theo id cate
                 if (!$_SESSION['username']) {
-                    header('location: ../admin/login.php');
+                    header('location: admin/login.php');
                     break;
                 }
                 else{

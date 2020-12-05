@@ -1,7 +1,6 @@
 <?php
   ob_start();
   //include 'model/user.php';
-=======
   
   session_start();
   if (!isset($_GET['ad'])&&!isset($_SESSION['username'])||$_SESSION['phanquyen']!=0) {

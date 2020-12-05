@@ -25,7 +25,7 @@ switch ($act) {
 				$diaChi=$_POST['txtDC'];
 				($_POST['avatar']!=null)?$avatar=$_POST['avatar']:$avatar='1.img';
 
-				$path='../images/'.$avatar;
+				$path='images/'.$avatar;
 				$soDienThoai=$_POST['txtSDT'];
 				$phanQuyen=$_POST['phanQuyen'];
 				if ($password==$password2 && $password!='') {
@@ -65,7 +65,7 @@ switch ($act) {
 				$password2=$_POST['password2'];
 				$diaChi=$_POST['txtDC'];
 				$avatar=$_FILES['avatar']['name'];
-				$path='../images/'.$avatar;
+				$path='images/'.$avatar;
 				$soDienThoai=$_POST['txtSDT'];
 				$phanQuyen=$_POST['phanQuyen'];
 				if ($password==$password2) {

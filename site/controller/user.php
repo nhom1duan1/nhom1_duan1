@@ -1,5 +1,5 @@
 <?php 
-    include 'view/newAccount.php';
+    include 'site/view/newAccount.php';
     if(isset($_POST['addAccount'])){
         include '../model/database.php';
         $fullname=$_POST['fullname'];

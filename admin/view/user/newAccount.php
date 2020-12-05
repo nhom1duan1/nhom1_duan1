@@ -7,7 +7,7 @@
 			<!-- hot ten -->
 			<div class="form-group">
 				<label>Họ và tên</label><br>
-				<input class="form-control" type="text" name="fullName" placeholder required="nhập Họ và tên"><br>
+				<input class="form-control" type="text" name="fullName" placeholder required><br>
 			</div>
 			<!-- mat khau -->
 			<div class="form-group">
