@@ -29,20 +29,27 @@
                                         <option value="price">Giá</option>
                                     </select>
                                 </div>
+                                
+                                 <form action="index.php?ctrl=product&action=showbyId&id=1" method="post">
                                 <div class="toolbar-per">
-                                    <select title="limit" class="chosen-select limiter-options form-control">
-                                        <option selected="selected" value="6">Hiển thị 10</option>
-                                        <option value="15">Hiển thị 20</option>
+                                    <select name="select" title="limit" class="chosen-select limiter-options form-control">
+                                        <option  selected="selected" value="9">Hiển thị 9</option>
+                                        <option value="18">Hiển thị 18</option>
                                         <option value="30">Hiển thị 30</option>
                                     </select>
-                                </div>
+                                    <button type="submit">Loc</button>
+                                </div></form>
                             </div>
                         </div>
                         <div class="products products-list products-grid equal-container auto-clear">
                             <?php
                                 foreach ($product as $value) {
                                     echo '
+<<<<<<< HEAD
                                         <div class="product-item style1 width-33 col-md-4 col-sm-6 col-xs-6 equal-elem">
+=======
+                                        <div class="product-item style1 width-30 col-md-6 col-sm-6 col-xs-6 equal-elem">
+>>>>>>> d9ad092ab95a838371679b597bd262e66e4929df
                                             <div class="product-inner">
                                                 <div class="product-thumb">
                                                     <div class="thumb-inner">
@@ -94,10 +101,18 @@
                             
                         </div>
                         <div class="pagination">
-                            <ul class="nav-links">
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
+                             <ul class="nav-links">
+                            <?php
+                            $i=1;
+                            $total_page=ceil($total['totalrecord']/$limit);
+                            while($i<=$total_page){
+                                echo 
+                                '
+                                <li class="active"><a href="index.php?ctrl=product&action=showbyId&id='.$_GET['id'].'&current_page='.$i.'">'.$i.'</a></li>
+                                ';
+                                $i++;
+                            }
+                            ?>
                                 <li class="back-next"><a href="#">Next</a></li>
                             </ul>
                             <span class="show-resuilt">Showing 1-8 of 12 result</span>
@@ -127,16 +142,13 @@
                                     <div class="filter-options-title">Hãng sản xuất</div>
                                     <div class="filter-options-content">
                                         <ul>
-                                            <li><label class="inline"><input type="checkbox"><span class="input"></span>Apple</label>
-                                            </li>
-                                            <li><label class="inline"><input type="checkbox"><span class="input"></span>Samsung</label>
-                                            </li>
-                                            <li><label class="inline"><input type="checkbox"><span class="input"></span>Lenovo
-                                            </label></li>
-                                            <li><label class="inline"><input type="checkbox"><span class="input"></span>Dell
-                                            </label></li>
-                                            <li><label class="inline"><input type="checkbox"><span class="input"></span>Tosiba
-                                            </label></li>
+                                               <?php
+                                                foreach ($brand as $value) {
+                                                    echo '
+                                                        <li><label class="inline"><a href="index.php?ctrl=product&action=brand&id='.$value['ma_hang'].'">'.$value['hang'].'</a></label></li>
+                                                    ';
+                                                }
+                                            ?>
                                         </ul>
                                     </div>
                                 </div>

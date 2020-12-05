@@ -12,7 +12,10 @@
         case 'addtowish':
             //lay product theo id cate
            $id=$_GET['id'];
-           addtoWish($id);
+           $hinh =$_POST[''];
+           $tensp=$_POST[''];
+           $gia=$_POST[''];
+           addToWish($id ,$hinh,$tensp,$gia);
             include 'view/wishlist.php';
         break;
        
