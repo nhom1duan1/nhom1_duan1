@@ -10,7 +10,7 @@
               </div>
             <div class="form-group">
                 <label for="">Hãng</label>
-                <input type="text"  name="hang" class="form-control" placeholder="Thêm 1 hãng" >
+                <input type="text"  name="hang" class="form-control" placeholder="Thêm 1 hãng" required>
               </div>
               <div class="form-group">
                   <button type="submit" name='btn' class="btn btn-primary" >Lưu</button>

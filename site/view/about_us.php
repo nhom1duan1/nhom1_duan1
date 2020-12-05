@@ -6,7 +6,7 @@
         </div>
         <div class="container">
             <div class="banner-paralax">
-                <a href="#"><img src="assets/images/banner-paralax.jpg" alt="banner-paralax"></a>
+                <a href="#"><img src="site/assets/images/banner-paralax.jpg" alt="banner-paralax"></a>
             </div>
         </div>
         <div class="container">

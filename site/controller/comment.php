@@ -1,5 +1,5 @@
 <?php
-    include 'model/comment.php';
+    include 'site/model/comment.php';
     $action='index';
     if(isset($_GET['action'])){
         $action=$_GET['action'];

@@ -1,1 +1,1 @@
-<?php include 'view/contact.php'?>
+<?php include 'site/view/contact.php'?>

@@ -9,7 +9,7 @@
                 <div class="col-md-9 col-sm-8 float-none float-right">
                     <div class="main-content">
                         <div class="promotion-banner style-3">
-                            <a href="#" class="banner-img"><img src="assets/images/product/banner-product.jpg"
+                            <a href="#" class="banner-img"><img src="site/assets/images/product/banner-product.jpg"
                                                                 alt="banner-product"></a>
                             <div class="promotion-banner-inner">
                                 <h4>Lựa chọn hàng đầu</h4>
@@ -167,7 +167,7 @@
                             </div>
                         </div>
                         <div class="block-banner-sidebar">
-                            <a href="#"><img src="assets/images/product/banner-sidebar.jpg" alt="banner-sidebar"></a>
+                            <a href="#"><img src="site/assets/images/product/banner-sidebar.jpg" alt="banner-sidebar"></a>
                             <div class="promotion-banner-inner">
                                 <h4>Fly Drone</h4>
                                 <h3>Tincidunt interdum senectus fames sociis sem platea </h3>

@@ -1,6 +1,10 @@
 <?php
   ob_start();
   //include 'model/user.php';
+<<<<<<< HEAD
+=======
+  
+>>>>>>> b6ca1d742ac70cde9f786aee17f96cb78a0c4a46
   session_start();
   if (!isset($_GET['ad'])&&!isset($_SESSION['username'])||$_SESSION['phanquyen']!=0) {
     header('location:login.php');

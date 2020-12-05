@@ -1,6 +1,6 @@
 <?php 
-	include 'view/newAccount.php';
-	include 'model/user.php';
+	include 'site/view/newAccount.php';
+	include 'site/model/user.php';
 	if (isset($_POST['add'])) {
 		$fullName=$_POST['fullName'];
 		$password=$_POST['password'];
@@ -14,7 +14,7 @@
 		$diaChi=$_POST['txtDC'];
 		($_POST['avatar']!=null)?$avatar=$_POST['avatar']:$avatar='1.img';
 
-		$path='../images/'.$avatar;
+		$path='images/'.$avatar;
 		$soDienThoai=$_POST['txtSDT'];
 		if ($password==$password2 && $password!='') {
 			//$pass_mahoa=sha1("hehe");//kq 40 ký tự e24b801c310567e96f84c3c33ad20e38fb10a7ac

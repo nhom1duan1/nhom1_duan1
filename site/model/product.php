@@ -1,6 +1,11 @@
 <?php 
 	include 'database.php';
-	function showAllProduct($start,$limit)
+	function showAllProduct()
+	{
+		$sql="select * from sanpham where an_hien=1";
+		return query($sql);
+	}
+	function showProduct($start,$limit)
 	{
 		$sql="select * from sanpham where an_hien=1 order by ma_sp limit $start,$limit";
 		return query($sql);
