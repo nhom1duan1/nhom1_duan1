@@ -24,14 +24,48 @@ $action='index';
             $product= showProductbyId($id);
             include 'view/detail_product.php';
         break;
-        case 'home': 
-              include 'view/home.php';  
+        case 'home':// cái này không cần thiết
+              include 'view/home.php';
         break;
-       case 'quickview':
-             $id= $_GET['id'];
-            $product= showProductbyId($id);
-            include 'view/quickview.php';
-       break;
+        case 'sort':
+            include 'model/catalogs.php';
+            include 'model/search.php';
+            //SELECT * FROM sanpham ORDER BY gia_giam DESC
+            $sort="see";
+            if (isset($_GET['sort'])) {
+                $sort=$_GET['sort'];
+            }
+            // echo $sort;
+            switch ($sort) {
+                    case 'pricedown':
+                        $like="gia_giam ASC";
+                        $product= productSort($like);
+                        break;
+                    case 'pricetop':
+                        $like="gia_giam DESC";
+                        $product= productSort($like);
+                        break;
+                    case 'see':
+                        $like="truy_cap DESC";
+                        $product= productSort($like);
+                        break;
+                    case 'nameaz':
+                        $like="ten_sp ASC";
+                        $product= productSort($like);
+                        break;
+                    case 'nameza':
+                        $like="ten_sp DESC";
+                        $product= productSort($like);
+                        break;
+                    default:
+                        # code...
+                        break;
+                }
+             $catalogs= getAllCatalog();
+
+            include 'view/product.php';
+
+        break;
         default:
             # code...
             break;

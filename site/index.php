@@ -5,6 +5,10 @@ ob_start();
     if(isset($_GET['user'])){
         $_SESSION['username']=$_GET['user'];
     }
+    if (isset($_POST['sbs'])) {
+        $_SESSION['search']=$_POST['search'];
+    }
+
 ?>
 <html lang="en">
 
@@ -31,7 +35,7 @@ ob_start();
 <div class="wrapper">
     <form id="block-search-mobile" method="get" class="block-search-mobile">
         <div class="form-content">
-            <div class="control">
+            <div class="control" name="search">
                 <a href="#" class="close-block-serach"><span class="icon flaticon-close"></span></a>
                 <input type="text" name="search" placeholder="Search" class="input-subscribe">
                 <button type="submit" class="btn search">
@@ -150,14 +154,14 @@ ob_start();
                         <!-- block search -->
                         <div class="block-search">
                             <div class="block-content">
-                                
                                 <div class="form-search">
-                                    <form>
+                                    <form action="index.php?ctrl=search" method="get">
                                         <div class="box-group">
-                                            <input type="text" class="form-control"
-                                                   placeholder="Nhập từ khóa cần tìm">
-                                            <button class="btn btn-search" type="button"><span
-                                                    class="flaticon-magnifying-glass"></span></button>
+                                            <input type="hidden" name="ctrl" value="search">
+                                            <input type="search" id="user-search" class="form-control" name="search" placeholder="Nhập từ khóa cần tìm">
+                                            <button class="btn btn-search" name="sbs" type="submit" >
+                                                <span class="flaticon-magnifying-glass"></span>
+                                            </button>
                                         </div>
                                     </form>
                                 </div>
