@@ -9,7 +9,7 @@
           QUẢN LÝ BÌNH LUẬN
         </div>
         <div class="card-body">
-          <table class="table table-striped table"  >
+          <table class=""  >
               <thead>
                 <tr class="bg-info">
                   <th scope="col"></th>

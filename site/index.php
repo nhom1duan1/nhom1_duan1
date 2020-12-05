@@ -11,8 +11,6 @@ ob_start();
 
 ?>
 <html lang="en">
-
-<!-- Mirrored from ledthanhdat.vn/html/dagon/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 09:36:25 GMT -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
@@ -44,49 +42,7 @@ ob_start();
             </div>
         </div>
     </form>
-<div id="block-quick-view-popup" class="block-quick-view-popup">
-        <div class="quick-view-content">
-            <a href="#" class="popup-btn-close"><span class="flaticon-close"></span></a>
-            <div class="product-items">
-            
-                <div class="product-image">
-                    <a href="#"><img src="assets/images/popup-pro.jpg" alt="p1"></a>
-                </div>
-                <div class="product-info">
-                    <div class="product-name"><a href="#">Photo Camera</a></div>
-                    <span class="star-rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <span class="review">5 Review(s)</span>
-                        </span>
-                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i>Add to
-                        Wishlist</a>
-                    <div class="product-infomation">
-                        Description Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and
-                        Decker FireStorm line of 12V tools allowing...
-                    </div>
-                </div>
-                <div class="product-info-price">
-                        <span class="price">
-                            <ins>$229.00</ins>
-                            <del>$259.00</del>
-                        </span>
-                    <div class="quantity">
-                        <h6 class="quantity-title">Quantity:</h6>
-                        <div class="buttons-added">
-                            <input type="text" value="1" title="Qty" class="input-text qty text" size="1">
-                            <a href="#" class="sign plus"><i class="fa fa-plus"></i></a>
-                            <a href="#" class="sign minus"><i class="fa fa-minus"></i></a>
-                        </div>
-                    </div>
-                    <a href=""index.php?ctrl=cart"" class="btn-add-to-cart">Add to cart</a>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- HEADER -->
     <header class="site-header header-opt-1">
         <!-- header-top -->
@@ -135,7 +91,28 @@ ob_start();
                             </li>
                         </ul>
                     </li>
-                    <li><a href="../admin/login.php"><i class="flaticon-profile" aria-hidden="true"></i><?php echo (!isset($_SESSION['username'])?'Đăng nhập':$_SESSION['username'])?></a></li>
+                        <?php
+                            if(!isset($_SESSION['username'])){
+                                echo '<li><a href="../admin/login.php">
+                                    <i class="flaticon-profile" aria-hidden="true"></i>Đăng nhập
+                                </a></li>';
+                            }
+                            else{
+                                echo '<li class="menu-item-has-children">
+                                    <a href="../admin/login.php" class="dropdown-toggle">
+                                        <i class="flaticon-profile" aria-hidden="true"></i>'.$_SESSION['username'].'<i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="submenu parent-megamenu">
+                                        <li class="switcher-option">
+                                            <a href="#" class="switcher-flag icon">Quản lý tài khoản</a>
+                                        </li>
+                                        <li class="switcher-option">
+                                            <a href="index.php?logout" class="switcher-flag icon">Đăng xuất</a>
+                                        </li>
+                                    </ul>
+                                </li>';
+                            }
+                        ?>
                 </ul><!-- heder links -->
             </div>
         </div> <!-- header-top -->
@@ -226,19 +203,16 @@ ob_start();
                                     <a href="index.php">Trang chủ</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="index.php?ctrl=product">sản phẩm</a>
+                                    <a href="index.php?ctrl=product&action=product">sản phẩm</a>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="">tin tức</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="">liên hệ</a>
+                                    <a href="index.php?ctrl=contact">liên hệ</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="">giỏ hàng</a>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="">Giới thiệu</a>
+                                    <a href="index.php?ctrl=about_us">Giới thiệu</a>
                                 </li>
                                 
                             </ul>
@@ -364,8 +338,6 @@ ob_start();
 <script type="text/javascript" src="assets/js/jquery.plugin.js"></script>
 <script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
 </body>
-
-<!-- Mirrored from ledthanhdat.vn/html/dagon/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Nov 2020 09:37:35 GMT -->
 </html>
 <?php
 ob_flush();

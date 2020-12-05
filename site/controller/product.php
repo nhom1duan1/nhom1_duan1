@@ -5,17 +5,27 @@ $action='index';
         $action= $_GET['action'];
     }
     switch ($action) {
-        case 'index':
+        case 'product':
             include 'model/catalogs.php';
+            $total=countProduct();
+            $limit=isset($_POST['select'])?$_POST['select']:9;
+            $current_page=isset($_GET['current_page']) ? $_GET['current_page'] : 1;
+            $start=($current_page-1)*$limit;
+            $product= showAllProduct($start,$limit);   
             $catalogs= getAllCatalog();
-            $product= showAllProduct();
+            $brand = getBrand();        
             include 'view/product.php';
         break;
         case 'showbyId':
             include 'model/catalogs.php';
+             $total=countProduct();
+            $limit=isset($_POST['select'])?$_POST['select']:9;
+            $current_page=isset($_GET['current_page']) ? $_GET['current_page'] : 1;
+            $start=($current_page-1)*$limit;
             $catalogs= getAllCatalog();
+             $brand = getBrand();
             $ma_loai= $_GET['id'];
-            $product= showProductbyId_loai($ma_loai);
+            $product= showProductbyId_loai($ma_loai,$start,$limit );     
             include 'view/productbyId.php';
         break;
         case 'detail':

@@ -9,7 +9,7 @@
           QUẢN LÝ KHÁCH HÀNG
         </div>
         <div class="card-body">
-          <table class="table table-striped table"  >
+          <table class=""  >
               <thead>
                 <tr class="bg-info">
 				 <th scope="col"></th>
@@ -58,7 +58,7 @@
             <input type="button" class="btn btn-info" onclick='selectAll()' value="Chọn tất cả" >
             <input type="button" class="btn btn-info" onclick='UnSelectAll()' value="bỏ Chọn tất cả" >
             <button onclick="return canhbao()" type="submit" class="btn btn-info">Xoá danh mục đã chọn</button>
-			  <a href="index.php?ctrl=user&act=add" class="btn btn-danger">Thêm mới</a>
+			  <a href="index.php?ctrl=user&act=newAccount" class="btn btn-danger">Thêm mới</a>
         </div>
       </div>
 </form>

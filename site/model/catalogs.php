@@ -21,4 +21,8 @@
         execute($sql);
        
     }
+    function getBrand(){
+        $sql="SELECT * FROM hang order by ma_hang";
+        return query($sql);
+    }
 ?>
