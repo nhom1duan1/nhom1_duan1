@@ -5,17 +5,10 @@ ob_start();
     if(isset($_GET['user'])){
         $_SESSION['username']=$_GET['user'];
     }
-<<<<<<< HEAD:site/index.php
     if (isset($_POST['sbs'])) {
         $_SESSION['search']=$_POST['search'];
     }
 
-=======
-    if (isset($_GET['logout'])) {
-    session_destroy();
-    header('location: admin/login.php');
-  }
->>>>>>> b6ca1d742ac70cde9f786aee17f96cb78a0c4a46:index.php
 ?>
 <html lang="en">
 <head>

@@ -1,5 +1,5 @@
 <?php
-    include 'model/search.php';
+    include 'site/model/search.php';
     $action='index';
     if(isset($_GET['action'])){
         $action=$_GET['action'];
@@ -8,7 +8,7 @@
         case 'index':
             $search=$_GET['search'];
             $product=byName($search);
-            include ('view/search.php');
+            include ('site/view/search.php');
             break;
     }
 ?>
