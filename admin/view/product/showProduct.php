@@ -1,35 +1,52 @@
-<style>
-	th{
-		color:white;
-	}
-</style>
-<form action="#" method="post">
-      <div class="card container ">
-        <div class="card-header">
-          QUẢN LÝ SẢN PHẨM
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800">Sản phẩm </h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Danh sách hiển thị</h6>
         </div>
         <div class="card-body">
-          <table class=""  >
-              <thead>
-                <tr class="bg-primary">
-                <th name="chonX[]"></th>
-                  <th>Mã Sản Phẩm</th>
-                  <th>Loại sản phẩm</th>
-                  <th>Hình Ảnh</th>
-                  <th>Tên Sản Phẩm</th>
-                  <th>Giá Gốc</th>
-                  <th>Giá Giảm</th>
-                  <th>Hãng</th>
-                  <th>Mỏ tả</th>
-                  <th>Truy Cập</th>
-                  <th>Thứ tự</th>
-                  <th>Ẩn Hiện</th>
-                  <th></th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-              <?php
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th name="chonX[]"></th>
+                            <th>Mã Sản Phẩm</th>
+                            <th>Loại sản phẩm</th>
+                            <th>Hình Ảnh</th>
+                            <th>Tên Sản Phẩm</th>
+                            <th>Giá Gốc</th>
+                            <th>Giá Giảm</th>
+                            <th>Hãng</th>
+                            <th>Truy Cập</th>
+                            <th>Thứ tự</th>
+                            <th>Ẩn Hiện</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th name="chonX[]"></th>
+                            <th>Mã Sản Phẩm</th>
+                            <th>Loại sản phẩm</th>
+                            <th>Hình Ảnh</th>
+                            <th>Tên Sản Phẩm</th>
+                            <th>Giá Gốc</th>
+                            <th>Giá Giảm</th>
+                            <th>Hãng</th>
+                            <th>Truy Cập</th>
+                            <th>Thứ tự</th>
+                            <th>Ẩn Hiện</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <?php
                 foreach ($products as $key )
                   {
                     
@@ -53,7 +70,6 @@
                       <td>'.$key['gia_goc'].'</td>
                       <td>'.$key['gia_giam'].'</td>
                       <td>'.$hangsp['hang'].'</td>
-                      <td>'.$key['mo_ta'].'</td>
                       <td>'.$key['truy_cap'].'</td>
                       <td>'.$key['thu_tu'].'</td>
                       <td>'.$anhien.'</td>
@@ -63,33 +79,41 @@
                   ';
                 }
               ?>
-              </tbody>
-            </table>
-          </div>
+                    </tbody>
+                </table>
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="card-footer">
-            <input type="button" class="btn btn-info" onclick='selectAll()' value="Chọn tất cả" >
-            <input type="button" class="btn btn-info" onclick='UnSelectAll()' value="bỏ Chọn tất cả" >
+            <input type="button" class="btn btn-info" onclick='selectAll()' value="Chọn tất cả">
+            <input type="button" class="btn btn-info" onclick='UnSelectAll()' value="bỏ Chọn tất cả">
             <button onclick="return canhbao()" type="submit" class="btn btn-info">Xoá danh mục đã chọn</button>
             <a href="index.php?ctrl=product&act=addnew" class="btn btn-danger">Thêm mới</a>
         </div>
-      </div>
-</form>
+    </div>
+
+</div>
 <script language="JavaScript">
-              function selectAll(){
-				var items=document.getElementsByName('chonX[]');
-				for(var i=0; i<items.length; i++){
-					if(items[i].type=='checkbox')
-						items[i].checked=true;
-				}
-			}
+function selectAll() {
+    var items = document.getElementsByName('chonX[]');
+    for (var i = 0; i < items.length; i++) {
+        if (items[i].type == 'checkbox')
+            items[i].checked = true;
+    }
+}
 </script>
 <script>
-              function UnSelectAll(){
-                var items=document.getElementsByName('chonX[]');
-                for(var i=0; i<items.length; i++){
-                  if(items[i].type=='checkbox')
-                    items[i].checked=false;
-                }
-              }			
-            </script>
-
+function UnSelectAll() {
+    var items = document.getElementsByName('chonX[]');
+    for (var i = 0; i < items.length; i++) {
+        if (items[i].type == 'checkbox')
+            items[i].checked = false;
+    }
+}
+</script>

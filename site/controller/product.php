@@ -57,6 +57,59 @@ switch ($action) {
                   echo "<script>alert('vui')</script>";
             break;
         }
+<<<<<<< HEAD
+
+        include 'site/view/product.php';
+    break;
+    case 'showbyId':
+        include 'site/model/catalogs.php';
+        $ma_loai= $_GET['id'];       
+        $total=countProductId($ma_loai);
+        $limit=isset($_POST['select'])?$_POST['select']:9;
+        $current_page=isset($_GET['current_page']) ? $_GET['current_page'] : 1;
+        $start=($current_page-1)*$limit;
+        $catalogs= getAllCatalog();
+        $brand = getBrand();     
+        
+        $sort="see";
+        if (isset($_GET['sort'])) {
+            $sort=$_GET['sort'];
+        }
+        
+        switch ($sort) {
+            case 'pricedown':
+            $like="gia_giam ASC";
+            $product= showProductbyId_loai($ma_loai,$start,$limit,$like);
+            //include_once 'site/view/product.php';
+        
+            //echo '<script>Document.getElementByName("pricedown").selected==true;</script>';
+            break;
+            case 'pricetop':
+            $like="gia_giam DESC";
+            $product= showProductbyId_loai($ma_loai,$start,$limit,$like);
+            //include_once 'site/view/product.php';
+            break;
+            case 'see':
+            $like="truy_cap DESC";
+            $product= showProductbyId_loai($ma_loai,$start,$limit,$like);
+            //include_once 'site/view/product.php';
+            break;
+            case 'nameaz':
+            $like="ten_sp ASC";
+            $product= showProductbyId_loai($ma_loai,$start,$limit,$like);
+            //include_once 'site/view/product.php';
+            break;
+            case 'nameza':
+            $like="ten_sp DESC";
+            $product= showProductbyId_loai($ma_loai,$start,$limit,$like);
+            //include_once 'site/view/product.php';
+            break;
+            default:
+                $like="truy_cap DESC";
+                $product= showProductbyId_loai($ma_loai,$start,$limit,$like);
+            
+
+=======
         break;
         default:
             # code...
@@ -66,6 +119,7 @@ switch ($action) {
         break;
         default:
             # code...
+>>>>>>> 2465cf84655634b3f455bac68eafc81a1a608b76
             break;
         }
 
