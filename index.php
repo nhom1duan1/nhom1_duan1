@@ -5,17 +5,14 @@ ob_start();
     if(isset($_GET['user'])){
         $_SESSION['username']=$_GET['user'];
     }
-<<<<<<< HEAD
     if (isset($_POST['sbs'])) {
         $_SESSION['search']=$_POST['search'];
     }
 
-=======
     if (isset($_GET['logout'])) {
     session_destroy();
     header('location: admin/login.php');
   }
->>>>>>> 45f630aef2d06aff207840e4d4e72267c8460819
 ?>
 <html lang="en">
 <head>
@@ -213,7 +210,7 @@ ob_start();
                                     <a href="index.php?ctrl=product&action=product">sản phẩm</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="">tin tức</a>
+                                    <a href="index.php?ctrl=news">tin tức</a>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="index.php?ctrl=contact">liên hệ</a>
