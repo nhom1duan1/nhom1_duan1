@@ -5,24 +5,22 @@ ob_start();
     if(isset($_GET['user'])){
         $_SESSION['username']=$_GET['user'];
     }
-<<<<<<< HEAD
     if (isset($_POST['sbs'])) {
         $_SESSION['search']=$_POST['search'];
     }
 
-=======
     if (isset($_GET['logout'])) {
     session_destroy();
     header('location: admin/login.php');
   }
->>>>>>> 45f630aef2d06aff207840e4d4e72267c8460819
 ?>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Trang chủ</title>
-    <link rel="shortcut icon" type="image/x-icon" href="site/assets/images/favicon.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="site/assets/images/favicon.png" />
     <link rel="stylesheet" type="text/css" href="site/assets/fonts/flaticon/flaticon.css">
     <link rel="stylesheet" type="text/css" href="site/assets/css/animate.css">
     <link rel="stylesheet" type="text/css" href="site/assets/css/bootstrap.min.css">
@@ -32,72 +30,79 @@ ob_start();
     <link rel="stylesheet" type="text/css" href="site/assets/css/chosen.css">
     <link rel="stylesheet" type="text/css" href="site/assets/css/jquery.bxslider.css">
     <link rel="stylesheet" type="text/css" href="site/assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;display=swap"
-          rel="stylesheet">
-          
-</head>
-<body class="index-opt-1">
-<div class="wrapper">
-    <form id="block-search-mobile" method="get" class="block-search-mobile">
-        <div class="form-content">
-            <div class="control">
-                <a href="#" class="close-block-serach"><span class="icon flaticon-close"></span></a>
-                <input type="text" name="search" placeholder="Search" class="input-subscribe">
-                <button type="submit" class="btn search">
-                    <span><i class="flaticon-magnifying-glass" aria-hidden="true"></i></span>
-                </button>
-            </div>
-        </div>
-    </form>
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;display=swap"
+        rel="stylesheet">
 
-    <!-- HEADER -->
-    <header class="site-header header-opt-1">
-        <!-- header-top -->
-        <div class="header-top">
-            <div class="container">
-                <!-- hotline -->
-                <ul class="nav-top-left">
-                    <li><a href="#">Chào mừng bạn đến với Fshop</a></li>
-                </ul><!-- hotline -->
-                <!-- heder links -->
-                <ul class="nav-top-right dagon-nav">
-                    <li class="menu-item-has-children"><a href="#" class="dropdown-toggle"><img
-                            src="site/assets/images/general/vietnam.jpg" alt="flag">Việt Nam<i class="fa fa-angle-down"
-                                                                                    aria-hidden="true"></i></a>
-                        <ul class="submenu parent-megamenu">
-                            <li class="switcher-option">
-                                <a href="#" class="flag"><img src="site/assets/images/general/vietnam.jpg" alt="flag">Việt Nam</a>
-                            </li>
-                            <li class="switcher-option">
-                                <a href="#" class="flag"><img src="site/assets/images/general/l1.jpg" alt="flag">English</a>
-                            </li>
-                            <li class="switcher-option">
-                                <a href="#" class="flag"><img src="site/assets/images/general/l3.jpg" alt="flag">German</a>
-                            </li>
-                            <li class="switcher-option">
-                                <a href="#" class="flag"><img src="site/assets/images/general/l4.jpg" alt="flag">French</a>
-                            </li>
-                            <li class="switcher-option">
-                                <a href="#" class="flag"><img src="site/assets/images/general/l5.jpg" alt="flag">Canada</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#" class="dropdown-toggle">
-                            <span>VNĐ (VietNam)</span><i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </a>
-                        <ul class="submenu parent-megamenu">
-                            <li class="switcher-option">
-                                <a href="#" class="switcher-flag icon">VNĐ (VietNam)</a>
-                            </li>
-                            <li class="switcher-option">
-                                <a href="#" class="switcher-flag icon">Euro (EUR)</a>
-                            </li>
-                            <li class="switcher-option">
-                                <a href="#" class="switcher-flag icon">Dollar (USD)</a>
-                            </li>
-                        </ul>
-                    </li>
+</head>
+
+<body class="index-opt-1">
+    <div class="wrapper">
+        <form id="block-search-mobile" method="get" class="block-search-mobile">
+            <div class="form-content">
+                <div class="control">
+                    <a href="#" class="close-block-serach"><span class="icon flaticon-close"></span></a>
+                    <input type="text" name="search" placeholder="Search" class="input-subscribe">
+                    <button type="submit" class="btn search">
+                        <span><i class="flaticon-magnifying-glass" aria-hidden="true"></i></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- HEADER -->
+        <header class="site-header header-opt-1">
+            <!-- header-top -->
+            <div class="header-top">
+                <div class="container">
+                    <!-- hotline -->
+                    <ul class="nav-top-left">
+                        <li><a href="#">Chào mừng bạn đến với Fshop</a></li>
+                    </ul><!-- hotline -->
+                    <!-- heder links -->
+                    <ul class="nav-top-right dagon-nav">
+                        <li class="menu-item-has-children"><a href="#" class="dropdown-toggle"><img
+                                    src="site/assets/images/general/vietnam.jpg" alt="flag">Việt Nam<i
+                                    class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <ul class="submenu parent-megamenu">
+                                <li class="switcher-option">
+                                    <a href="#" class="flag"><img src="site/assets/images/general/vietnam.jpg"
+                                            alt="flag">Việt Nam</a>
+                                </li>
+                                <li class="switcher-option">
+                                    <a href="#" class="flag"><img src="site/assets/images/general/l1.jpg"
+                                            alt="flag">English</a>
+                                </li>
+                                <li class="switcher-option">
+                                    <a href="#" class="flag"><img src="site/assets/images/general/l3.jpg"
+                                            alt="flag">German</a>
+                                </li>
+                                <li class="switcher-option">
+                                    <a href="#" class="flag"><img src="site/assets/images/general/l4.jpg"
+                                            alt="flag">French</a>
+                                </li>
+                                <li class="switcher-option">
+                                    <a href="#" class="flag"><img src="site/assets/images/general/l5.jpg"
+                                            alt="flag">Canada</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" class="dropdown-toggle">
+                                <span>VNĐ (VietNam)</span><i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="submenu parent-megamenu">
+                                <li class="switcher-option">
+                                    <a href="#" class="switcher-flag icon">VNĐ (VietNam)</a>
+                                </li>
+                                <li class="switcher-option">
+                                    <a href="#" class="switcher-flag icon">Euro (EUR)</a>
+                                </li>
+                                <li class="switcher-option">
+                                    <a href="#" class="switcher-flag icon">Dollar (USD)</a>
+                                </li>
+                            </ul>
+                        </li>
                         <?php
                             if(!isset($_SESSION['username'])){
                                 echo '<li><a href="admin/login.php">
@@ -120,41 +125,41 @@ ob_start();
                                 </li>';
                             }
                         ?>
-                </ul><!-- heder links -->
-            </div>
-        </div> <!-- header-top -->
-        <!-- header-content -->
-        <div class="header-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2 nav-left">
-                        <!-- logo -->
-                        <strong class="logo">
-                            <a href="index.php?ctrl=home"><img src="site/assets/images/logo.png" alt="logo"></a>
-                        </strong>
-                        <!-- logo -->
-                    </div>
-                    <div class="col-md-8 nav-mind">
-                        <!-- block search -->
-                        <div class="block-search">
-                            <div class="block-content">
-                                
-                                <div class="form-search">
-                                    <form>
-                                        <div class="box-group">
-                                            <input type="text" class="form-control"
-                                                   placeholder="Nhập từ khóa cần tìm">
-                                            <button class="btn btn-search" type="button"><span
-                                                    class="flaticon-magnifying-glass"></span></button>
-                                        </div>
-                                    </form>
+                    </ul><!-- heder links -->
+                </div>
+            </div> <!-- header-top -->
+            <!-- header-content -->
+            <div class="header-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 nav-left">
+                            <!-- logo -->
+                            <strong class="logo">
+                                <a href="index.php?ctrl=home"><img src="site/assets/images/logo.png" alt="logo"></a>
+                            </strong>
+                            <!-- logo -->
+                        </div>
+                        <div class="col-md-8 nav-mind">
+                            <!-- block search -->
+                            <div class="block-search">
+                                <div class="block-content">
+
+                                    <div class="form-search">
+                                        <form>
+                                            <div class="box-group">
+                                                <input type="text" class="form-control"
+                                                    placeholder="Nhập từ khóa cần tìm">
+                                                <button class="btn btn-search" type="button"><span
+                                                        class="flaticon-magnifying-glass"></span></button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                            </div>
-                        </div><!-- block search -->
-                    </div>
-                    <div class="col-md-2 nav-right">
-                        <!-- block mini cart -->
-                        <span data-action="toggle-nav" class="menu-on-mobile hidden-md style2">
+                            </div><!-- block search -->
+                        </div>
+                        <div class="col-md-2 nav-right">
+                            <!-- block mini cart -->
+                            <span data-action="toggle-nav" class="menu-on-mobile hidden-md style2">
                                 <span class="btn-open-mobile home-page">
                                     <span></span>
                                     <span></span>
