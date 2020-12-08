@@ -1,7 +1,7 @@
-<?php session_start();?>
 <!DOCTYPE html>
 <?php
 ob_start();
+    session_start();
     if(isset($_GET['user'])){
         $_SESSION['username']=$_GET['user'];
     }
@@ -15,16 +15,16 @@ ob_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Trang chủ</title>
-    <link rel="shortcut icon" type="image/x-icon" href="site/assets/images/favicon.png"/>
-    <link rel="stylesheet" type="text/css" href="site/assets/fonts/flaticon/flaticon.css">
-    <link rel="stylesheet" type="text/css" href="site/assets/css/animate.css">
-    <link rel="stylesheet" type="text/css" href="site/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="site/assets/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="site/assets/css/pe-icon-7-stroke.css">
-    <link rel="stylesheet" type="text/css" href="site/assets/css/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="site/assets/css/chosen.css">
-    <link rel="stylesheet" type="text/css" href="site/assets/css/jquery.bxslider.css">
-    <link rel="stylesheet" type="text/css" href="site/assets/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="assets/fonts/flaticon/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/chosen.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;display=swap"
           rel="stylesheet">
           
@@ -33,7 +33,7 @@ ob_start();
 <div class="wrapper">
     <form id="block-search-mobile" method="get" class="block-search-mobile">
         <div class="form-content">
-            <div class="control">
+            <div class="control" name="search">
                 <a href="#" class="close-block-serach"><span class="icon flaticon-close"></span></a>
                 <input type="text" name="search" placeholder="Search" class="input-subscribe">
                 <button type="submit" class="btn search">
@@ -55,23 +55,23 @@ ob_start();
                 <!-- heder links -->
                 <ul class="nav-top-right dagon-nav">
                     <li class="menu-item-has-children"><a href="#" class="dropdown-toggle"><img
-                            src="site/assets/images/general/vietnam.jpg" alt="flag">Việt Nam<i class="fa fa-angle-down"
+                            src="assets/images/general/vietnam.jpg" alt="flag">Việt Nam<i class="fa fa-angle-down"
                                                                                     aria-hidden="true"></i></a>
                         <ul class="submenu parent-megamenu">
                             <li class="switcher-option">
-                                <a href="#" class="flag"><img src="site/assets/images/general/vietnam.jpg" alt="flag">Việt Nam</a>
+                                <a href="#" class="flag"><img src="assets/images/general/vietnam.jpg" alt="flag">Việt Nam</a>
                             </li>
                             <li class="switcher-option">
-                                <a href="#" class="flag"><img src="site/assets/images/general/l1.jpg" alt="flag">English</a>
+                                <a href="#" class="flag"><img src="assets/images/general/l1.jpg" alt="flag">English</a>
                             </li>
                             <li class="switcher-option">
-                                <a href="#" class="flag"><img src="site/assets/images/general/l3.jpg" alt="flag">German</a>
+                                <a href="#" class="flag"><img src="assets/images/general/l3.jpg" alt="flag">German</a>
                             </li>
                             <li class="switcher-option">
-                                <a href="#" class="flag"><img src="site/assets/images/general/l4.jpg" alt="flag">French</a>
+                                <a href="#" class="flag"><img src="assets/images/general/l4.jpg" alt="flag">French</a>
                             </li>
                             <li class="switcher-option">
-                                <a href="#" class="flag"><img src="site/assets/images/general/l5.jpg" alt="flag">Canada</a>
+                                <a href="#" class="flag"><img src="assets/images/general/l5.jpg" alt="flag">Canada</a>
                             </li>
                         </ul>
                     </li>
@@ -93,13 +93,13 @@ ob_start();
                     </li>
                         <?php
                             if(!isset($_SESSION['username'])){
-                                echo '<li><a href="admin/login.php">
+                                echo '<li><a href="../admin/login.php">
                                     <i class="flaticon-profile" aria-hidden="true"></i>Đăng nhập
                                 </a></li>';
                             }
                             else{
                                 echo '<li class="menu-item-has-children">
-                                    <a href="admin/login.php" class="dropdown-toggle">
+                                    <a href="../admin/login.php" class="dropdown-toggle">
                                         <i class="flaticon-profile" aria-hidden="true"></i>'.$_SESSION['username'].'<i class="fa fa-angle-down" aria-hidden="true"></i>
                                     </a>
                                     <ul class="submenu parent-megamenu">
@@ -123,7 +123,7 @@ ob_start();
                     <div class="col-md-2 nav-left">
                         <!-- logo -->
                         <strong class="logo">
-                            <a href="index.php?ctrl=home"><img src="site/assets/images/logo.png" alt="logo"></a>
+                            <a href="index.php?ctrl=home"><img src="assets/images/logo.png" alt="logo"></a>
                         </strong>
                         <!-- logo -->
                     </div>
@@ -131,9 +131,8 @@ ob_start();
                         <!-- block search -->
                         <div class="block-search">
                             <div class="block-content">
-                                
                                 <div class="form-search">
-                                <form action="index.php?ctrl=search" method="get">
+                                    <form action="index.php?ctrl=search" method="get">
                                         <div class="box-group">
                                             <input type="hidden" name="ctrl" value="search">
                                             <input type="search" id="user-search" class="form-control" name="search" placeholder="Nhập từ khóa cần tìm">
@@ -207,7 +206,7 @@ ob_start();
                                     <a href="index.php?ctrl=product&action=product">sản phẩm</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="index.php?ctrl=news">tin tức</a>
+                                    <a href="">tin tức</a>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="index.php?ctrl=contact">liên hệ</a>
@@ -232,7 +231,7 @@ ob_start();
             if(isset($_GET['ctrl'])){
                 $ctrl= $_GET['ctrl'];
             }
-            include 'site/controller/'.$ctrl.'.php';
+            include 'controller/'.$ctrl.'.php';
         ?>
     </main>
         
@@ -242,7 +241,7 @@ ob_start();
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-6 equal-elem">
-                        <div class="logo-footer"><img src="site/assets/images/logo-light.png" alt="logo"></div>
+                        <div class="logo-footer"><img src="assets/images/logo-light.png" alt="logo"></div>
                         <div class="contacts">
                             <p class="contacts-info">Fshop là một đơn vị uy tính chuyên cung cấp các mặt hàng công nghệ. Công ty có hệ thống phân phối với nhiều chi nhánh khắp cả nước.</p>
                             <span class="contacts-info info-address ">314/55, Tân Chánh Hiệp, Q12, TP.HCM</span>
@@ -266,45 +265,78 @@ ob_start();
                         <div class="links">
                             <h3 class="title-of-section">Thông tin</h3>
                             <ul>
-                                <li><a href="index.php#1">Sản phẩm giá tốt</a></li>
-                                <li><a href="index.php#2">Sản phẩm nhiều lượt xem</a></li>
-                                <li><a href="index.php#3">Sản phẩm đang giảm giá</a></li>
-                                <li><a href="index.php?ctrl=product">Tất cả sản phẩm</a></li>
-                                <li><a href="index.php?ctrl=contact">Địa chỉ</a></li>
+                                <li><a href="#">Đặc biệt</a></li>
+                                <li><a href="#">Sản phẩm mới</a></li>
+                                <li><a href="#">Sản phẩm bán chạy</a></li>
+                                <li><a href="#">Tất cả sản phẩm</a></li>
+                                <li><a href="#">Liên hệ</a></li>
+                                <li><a href="#">Địa chỉ</a></li>
+                                <li><a href="#">Blog</a></li>
                             </ul>
                         </div>
                     </div>
-                    
-                </div>
-                <div class="row">
-                    © Copyright 2020<span> Fshop</span>. All Rights Reserved.
+                    <div class="col-md-4 col-sm-6 equal-elem">
+                        <div class="links">
+                            <h3 class="title-of-section">Khách hàng thân thiết</h3>
+                            <span class="span-newsletter">Đăng kí trở thành khách hàng thân thiết để nhận được thông tin về sản phẩm mới.</span>
+                            <div class="newsletter-form">
+                                <form id="newsletter-validate-detail" class="form subscribe">
+                                    <div class="control">
+                                        <input type="email" placeholder="Nhập email" id="newsletter" name="email"
+                                               class="input-subscribe">
+                                        <button type="submit" title="Subscribe" class="btn subscribe">
+                                            <span>Đăng nhập</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="socials">
+                                <a href="#" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#" class="social"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                <a href="#" class="social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        
+        <div class="copyright full-width">
+            <div class="container">
+                <div class="copyright-right">
+                    © Copyright 2020<span> Fshop</span>. All Rights Reserved.
+                </div>
+                <div class="pay-men">
+                    <a href="#"><img src="assets/images/general/pay1.jpg" alt="pay1"></a>
+                    <a href="#"><img src="assets/images/general/pay2.jpg" alt="pay2"></a>
+                    <a href="#"><img src="assets/images/general/pay3.jpg" alt="pay3"></a>
+                    <a href="#"><img src="assets/images/general/pay4.jpg" alt="pay4"></a>
+                </div>
+            </div>
+        </div>
     </footer>
     <!-- end FOOTER -->
 </div>
 <a href="#" id="scrollup" title="Scroll to Top">Scroll</a>
 <!-- jQuery -->
-<script type="text/javascript" src="site/assets/js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="site/assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="site/assets/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="site/assets/js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="site/assets/js/wow.min.js"></script>
-<script type="text/javascript" src="site/assets/js/jquery.actual.min.js"></script>
-<script type="text/javascript" src="site/assets/js/chosen.jquery.min.js"></script>
-<script type="text/javascript" src="site/assets/js/jquery.bxslider.min.js"></script>
-<script type="text/javascript" src="site/assets/js/jquery.sticky.js"></script>
-<script type="text/javascript" src="site/assets/js/jquery.elevateZoom.min.js"></script>
-<script src="site/assets/js/fancybox/source/jquery.fancybox.pack.js"></script>
-<script src="site/assets/js/fancybox/source/helpers/jquery.fancybox-media.js"></script>
-<script src="site/assets/js/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="assets/js/wow.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.actual.min.js"></script>
+<script type="text/javascript" src="assets/js/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.sticky.js"></script>
+<script type="text/javascript" src="assets/js/jquery.elevateZoom.min.js"></script>
+<script src="assets/js/fancybox/source/jquery.fancybox.pack.js"></script>
+<script src="assets/js/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+<script src="assets/js/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC3nDHy1dARR-Pa_2jjPCjvsOR4bcILYsM'></script>
-<script type="text/javascript" src="site/assets/js/function.js"></script>
-<script type="text/javascript" src="site/assets/js/Modernizr.js"></script>
-<script type="text/javascript" src="site/assets/js/jquery.plugin.js"></script>
-<script type="text/javascript" src="site/assets/js/jquery.countdown.js"></script>
+<script type="text/javascript" src="assets/js/function.js"></script>
+<script type="text/javascript" src="assets/js/Modernizr.js"></script>
+<script type="text/javascript" src="assets/js/jquery.plugin.js"></script>
+<script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
 </body>
 </html>
 <?php

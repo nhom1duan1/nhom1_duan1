@@ -57,62 +57,15 @@ switch ($action) {
                   echo "<script>alert('vui')</script>";
             break;
         }
-
-<<<<<<< HEAD
         break;
         default:
             # code...
-=======
-        include 'site/view/product.php';
-    break;
-    case 'showbyId':
-        include 'site/model/catalogs.php';
-        $ma_loai= $_GET['id'];       
-        $total=countProductId($ma_loai);
-        $limit=isset($_POST['select'])?$_POST['select']:9;
-        $current_page=isset($_GET['current_page']) ? $_GET['current_page'] : 1;
-        $start=($current_page-1)*$limit;
-        $catalogs= getAllCatalog();
-        $brand = getBrand();     
-        
-        $sort="see";
-        if (isset($_GET['sort'])) {
-            $sort=$_GET['sort'];
-        }
-        
-        switch ($sort) {
-            case 'pricedown':
-            $like="gia_giam ASC";
-            $product= showProductbyId_loai($ma_loai,$start,$limit,$like);
-            //include_once 'site/view/product.php';
-        
-            //echo '<script>Document.getElementByName("pricedown").selected==true;</script>';
-            break;
-            case 'pricetop':
-            $like="gia_giam DESC";
-            $product= showProductbyId_loai($ma_loai,$start,$limit,$like);
-            //include_once 'site/view/product.php';
-            break;
-            case 'see':
-            $like="truy_cap DESC";
-            $product= showProductbyId_loai($ma_loai,$start,$limit,$like);
-            //include_once 'site/view/product.php';
-            break;
-            case 'nameaz':
-            $like="ten_sp ASC";
-            $product= showProductbyId_loai($ma_loai,$start,$limit,$like);
-            //include_once 'site/view/product.php';
-            break;
-            case 'nameza':
-            $like="ten_sp DESC";
-            $product= showProductbyId_loai($ma_loai,$start,$limit,$like);
-            //include_once 'site/view/product.php';
-            break;
-            default:
-                $like="truy_cap DESC";
-                $product= showProductbyId_loai($ma_loai,$start,$limit,$like);
-            
-
+        break;
+        default:
+            # code...
+        break;
+        default:
+            # code...
             break;
         }
 
@@ -165,7 +118,6 @@ switch ($action) {
             $like="ten_sp ASC";
             $product= productSort($like,$limit,$start);
             //include_once 'site/view/product.php';
->>>>>>> 45f630aef2d06aff207840e4d4e72267c8460819
             break;
             case 'nameza':
             $like="ten_sp DESC";
