@@ -10,9 +10,15 @@
 		$sql="select * from sanpham where an_hien=1 order by ma_sp limit $start,$limit";
 		return query($sql);
 	}
-	function showProductbyId_loai($ma_loai,$start,$limit )
+
+	function productSort($like,$limit,$start){
+		$sql="SELECT * from sanpham ORDER BY ".$like." limit ".$start.",".$limit;
+		return query($sql);
+	}
+
+	function showProductbyId_loai($ma_loai,$start,$limit,$like)
 	{
-		$sql="select * from sanpham  where ma_loai='$ma_loai' limit $start, $limit";
+		$sql="SELECT * from sanpham where ma_loai=".$ma_loai." ORDER BY ".$like." limit ".$start.",".$limit;
 		return query($sql);
 	}
 	function  showProductbyBrand_loai($ma_hang,$start,$limit){
@@ -56,6 +62,10 @@
 	}
 	function countProduct(){
 		$sql="select count(ma_sp) as totalrecord from sanpham";
+		return queryOne($sql);
+	}
+	function countProductId($ma_loai){
+		$sql="select count(ma_sp) as totalrecord from sanpham where ma_loai=".$ma_loai;
 		return queryOne($sql);
 	}
 ?>
