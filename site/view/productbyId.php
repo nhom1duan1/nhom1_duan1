@@ -22,23 +22,20 @@
                                 TẤT CẢ SẢN PHẨM
                             </h4>
                             <div class="toolbar-option">
-                                <div class="toolbar-sort">
-                                    <select title="sort" class="chosen-select sorter-options form-control">
-                                        <option selected="selected" value="position">Độ phổ biến</option>
-                                        <option value="name">Tên</option>
-                                        <option value="price">Giá</option>
+                                 <select title="sort" name="sort" id="sort" class="chosen-select sorter-options form-control" onchange="locationSort();">
+                                        <option  name="see" value="see">Độ phổ biến</option>
+                                        <option  name="nameaz" value="nameaz">Tên A-Z</option>
+                                        <option  name="nameza" value="nameza">Tên Z-A</option>
+                                        <option  name="pricetop" value="pricetop">Giá từ cao đến thấp</option>
+                                        <option  name="pricedown" value="pricedown">Giá từ thấp đến cao</option>
                                     </select>
-                                </div>
-                                
-                                 <form action="index.php?ctrl=product&action=showbyId&id=1" method="post">
-                                <div class="toolbar-per">
-                                    <select name="select" title="limit" class="chosen-select limiter-options form-control">
-                                        <option  selected="selected" value="9">Hiển thị 9</option>
-                                        <option value="18">Hiển thị 18</option>
-                                        <option value="30">Hiển thị 30</option>
-                                    </select>
-                                    <button type="submit">Loc</button>
-                                </div></form>
+                                    <script type="text/javascript">
+                                            function locationSort(){
+                                                var sort = document.getElementById('sort').value;
+                                                
+                                                window.location="index.php?ctrl=product&action=showbyId&sort="+sort+"&id="+<?php echo $_GET['id']; ?>;
+                                            }
+                                    </script>
                             </div>
                         </div>
                         <div class="products products-list products-grid equal-container auto-clear">
@@ -99,15 +96,26 @@
                         <div class="pagination">
                              <ul class="nav-links">
                             <?php
-                            $i=1;
-                            $total_page=ceil($total['totalrecord']/$limit);
-                            while($i<=$total_page){
-                                echo 
-                                '
-                                <li class="active"><a href="index.php?ctrl=product&action=showbyId&id='.$_GET['id'].'&current_page='.$i.'">'.$i.'</a></li>
-                                ';
-                                $i++;
-                            }
+                                $sort='';
+                                $id='';
+                                if (isset($_GET['action'])) {
+                                    $action=$_GET['action'];
+                                }
+                                if (isset($_GET['sort'])) {
+                                    $sort="&sort=".$_GET['sort'];
+                                }
+                                if (isset($_GET['id'])) {
+                                    $id='&id='.$_GET['id'];
+                                }
+                                $i=1;
+                                $total_page=ceil($total['totalrecord']/$limit);
+                                while($i<=$total_page){
+                                    echo 
+                                    '
+                                    <li class="active"><a href="index.php?ctrl=product&action='.$action.$sort.$id.'&current_page='.$i.'">'.$i.'</a></li>
+                                    ';
+                                    $i++;
+                                }
                             ?>
                                 <li class="back-next"><a href="#">Next</a></li>
                             </ul>

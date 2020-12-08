@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
@@ -82,7 +86,7 @@
                     </form>
                     <hr />
                     <div class="text-center">
-                      <a class="small" href="#">Forgot Password?</a>
+                      <a class="small" href="#" data-toggle="modal" data-target="#myModal">Forgot Password?</a>
                     </div>
                     <div class="text-center">
                       <a class="small" href="../site/index.php?ctrl=user">Create an Account!</a>
@@ -103,19 +107,20 @@
     top: 0;
     background-color: #666666de;
 } -->
-    <div class="forgot-pass">
-      <form class="form-group" action="controller/login.php?act=forgetpass" method="POST" class="container d-flex justify-content-center">
+    
+    <div class="modal pt-3" id="myModal">
+      <form class="form-group" action="controller/login.php?act=forgetpass" method="POST" class=" container d-flex justify-content-center">
         <div class="card container ">
           <div class="card-header info">
-            quen mật khẩu
+            QUÊN MẬT KHẨU
           </div>
           <div class="card-body">
             <!-- nhap dia chi  -->
             <div class="form-group">
-              <label>email của bạn</label><br>
-              <input aria-describedby="emailHelp" class="form-control" type="email" name="userEmail" placeholder="nhạp địa chỉ email của bạn"><br>
+              <label>Email của bạn</label><br>
+              <input aria-describedby="emailHelp" class="form-control" type="email" name="userEmail" placeholder="nhập địa chỉ email của bạn"><br>
             </div>
-            <input class="btn btn-primary" type="submit" name="sb-pass" value="thêm tài khoản">
+            <input class="btn btn-primary" type="submit" name="sb-pass" value="Gửi">
           </div>
         </div>
       </form>
