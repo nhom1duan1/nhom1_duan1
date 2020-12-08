@@ -137,7 +137,7 @@
         </div>
         <div class="block-recent-view">
             <div class="container">
-                <div class="title-of-section"><span>Sản phẩm giá rẻ</span></div>
+                <div class="title-of-section" id="1"><span>Sản phẩm giá tốt</span></div>
                 <div class="owl-carousel nav-style2 border-background equal-container" data-nav="true"
                      data-autoplay="false" data-dots="false" data-loop="true" data-margin="30"
                      data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4},"1000":{"items":4}}'>
@@ -197,7 +197,7 @@
                            
         <div class="block-sale-product full-width block-background">
             <div class="container">
-                <div class="title-of-section"><span>Sản phẩm nhiều lượt xem</span></div>
+                <div class="title-of-section" id="2"><span>Sản phẩm nhiều lượt xem</span></div>
                 <div class="owl-carousel nav-style2 border-background equal-container" data-nav="true"
                      data-autoplay="false" data-dots="false" data-loop="true" data-margin="30"
                      data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"1200":{"items":3}}'>
@@ -257,7 +257,7 @@
         
         <div class="block-recent-view">
             <div class="container">
-                <div class="title-of-section"><span>Sản phẩm đang giảm giá cao</span></div>
+                <div class="title-of-section" id="3"><span>Sản phẩm đang giảm giá cao</span></div>
                 <div class="owl-carousel nav-style2 border-background equal-container" data-nav="true"
                      data-autoplay="false" data-dots="false" data-loop="true" data-margin="30"
                      data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4},"1000":{"items":4}}'>

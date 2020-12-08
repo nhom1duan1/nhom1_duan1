@@ -28,7 +28,7 @@ function addToCart($id){
 }
 function addToOrder($ma_kh,$name,$ghichu,$phone,$diachi,$thanhtien,$ngay)
 {
-  $query="insert into donhang(ma_donhang,ma_kh,thanh_tien,thoi_gian,ten_nguoinhan,dia_chi,sdt,ghi_chu)
+  $query="insert into donhang(ma_donhang,ma_kh,thanh_tien,thoigian,ten_nguoinhan,dia_chi,sdt,ghi_chu)
   values(null,'$ma_kh','$thanhtien','$ngay','$name','$diachi','$phone','$ghichu')";
   //INSERT INTO `donhang`(`ma_donhang`, `ma_kh`, `thanh_tien`, `thoi_gian`, `ten_nguoinhan`, `dia_chi`, `sdt`, `ghi_chu`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8])
   
