@@ -23,44 +23,34 @@
                             </h4>
                             <div class="toolbar-option">
                                 <div class="toolbar-sort">
-                                    <select title="sort" class="chosen-select sorter-options form-control">
-                                        <option selected="selected" value="position">Độ phổ biến</option>
-                                        <option value="name">Tên</option>
-                                        <option value="price">Giá</option>
+                                    
+                                    <?php
+                                        if(isset($_GET['sort'])){
+                                            $s=$_GET['sort'];
+                                        }
+                                        else{
+                                            $s="see";
+                                        }
+                                        echo '
+                                        <script>
+                                        document.getElementbyId("'.$s.'").style.color="red";
+                                    </script>
+                                        ';
+                                    ?>
+                                    <select title="sort" name="sort" id="sort" class="chosen-select sorter-options form-control" onchange="locationSort();">
+                                        <option id="see" name="see" value="see">Độ phổ biến</option>
+                                        <option id="nameaz" name="nameaz" value="nameaz">Tên A-Z</option>
+                                        <option id="nameza" name="nameza" value="nameza">Tên Z-A</option>
+                                        <option id="pricetop" name="pricetop" value="pricetop">Giá từ cao đến thấp</option>
+                                        <option id="pricedown" name="pricedown" value="pricedown">Giá từ thấp đến cao</option>
                                     </select>
-                                    <script type="text/javascript">
+                                <script type="text/javascript">
                                         function locationSort(){
-                                            var sort = document.getElementById('sort').value
-                                            switch(sort){
-                                                case "see":
-                                                    window.location="index.php?ctrl=product&action=sort&sort=see";
-                                                    break;
-                                                case "nameaz":
-                                                    window.location="index.php?ctrl=product&action=sort&sort=nameaz";
-
-                                                    break;
-                                                case "nameza":
-                                                    window.location="index.php?ctrl=product&action=sort&sort=nameza";
-                                                    break;
-                                                case "pricetop":
-                                                    window.location="index.php?ctrl=product&action=sort&sort=pricetop";
-                                                    break;
-                                                case "pricedown":
-                                                    window.location="index.php?ctrl=product&action=sort&sort=pricedown";
-                                                break;
-                                            }
+                                            var sort = document.getElementById('sort').value;
+                                            window.location="index.php?ctrl=product&action=product&sort="+sort;
                                         }
                                     </script>
                                 </div>
-                                <form action="index.php?ctrl=product&action=product" method="post">
-                                <div class="toolbar-per">
-                                    <select name="select" title="limit" class="chosen-select limiter-options form-control">
-                                        <option  selected="selected" value="9">Hiển thị 9</option>
-                                        <option value="18">Hiển thị 18</option>
-                                        <option value="30">Hiển thị 30</option>
-                                    </select>
-                                    <button type="submit">Loc</button>
-                                </div></form>
                             </div>
                         </div>
                         <div class="products products-list products-grid equal-container auto-clear">
@@ -117,18 +107,24 @@
                         </div>
                         <div class="pagination">
                             <ul class="nav-links">
-                            <?php
-                            $i=1;
-                            $total_page=ceil($total['totalrecord']/$limit);
-                            while($i<=$total_page){
-                                echo 
-                                '
-                                <li class="active"><a href="index.php?ctrl=product&action=product&current_page='.$i.'">'.$i.'</a></li>
-                                ';
-                                $i++;
-                            }
+                                <?php
+                                $sort='';
+                                if (isset($_GET['action'])) {
+                                    $action=$_GET['action'];
+                                }
+                                if (isset($_GET['sort'])) {
+                                    $sort="&sort=".$_GET['sort'];
+                                }
+                                $i=1;
+                                $total_page=ceil($total['totalrecord']/$limit);
+                                while($i<=$total_page){
+                                    echo 
+                                    '
+                                    <li class="active"><a href="index.php?ctrl=product&action='.$action.$sort.'&current_page='.$i.'">'.$i.'</a></li>
+                                    ';
+                                    $i++;
+                                }
                             ?>
-                                <li class="back-next"><a href="#">Next</a></li>
                             </ul>
                             <span class="show-resuilt">Showing 1-8 of 12 result</span>
                         </div>

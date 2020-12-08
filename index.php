@@ -1,7 +1,7 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <?php
 ob_start();
-    session_start();
     if(isset($_GET['user'])){
         $_SESSION['username']=$_GET['user'];
     }
@@ -9,6 +9,13 @@ ob_start();
         $_SESSION['search']=$_POST['search'];
     }
 
+<<<<<<< HEAD
+=======
+    if (isset($_GET['logout'])) {
+    session_destroy();
+    header('location: admin/login.php');
+  }
+>>>>>>> d306bef40da1d149a32839d265f7825f790000b4
 ?>
 <html lang="en">
 <head>
@@ -33,7 +40,7 @@ ob_start();
 <div class="wrapper">
     <form id="block-search-mobile" method="get" class="block-search-mobile">
         <div class="form-content">
-            <div class="control" name="search">
+            <div class="control">
                 <a href="#" class="close-block-serach"><span class="icon flaticon-close"></span></a>
                 <input type="text" name="search" placeholder="Search" class="input-subscribe">
                 <button type="submit" class="btn search">
@@ -131,14 +138,14 @@ ob_start();
                         <!-- block search -->
                         <div class="block-search">
                             <div class="block-content">
+                                
                                 <div class="form-search">
-                                    <form action="index.php?ctrl=search" method="get">
+                                    <form>
                                         <div class="box-group">
-                                            <input type="hidden" name="ctrl" value="search">
-                                            <input type="search" id="user-search" class="form-control" name="search" placeholder="Nhập từ khóa cần tìm">
-                                            <button class="btn btn-search" name="sbs" type="submit" >
-                                                <span class="flaticon-magnifying-glass"></span>
-                                            </button>
+                                            <input type="text" class="form-control"
+                                                   placeholder="Nhập từ khóa cần tìm">
+                                            <button class="btn btn-search" type="button"><span
+                                                    class="flaticon-magnifying-glass"></span></button>
                                         </div>
                                     </form>
                                 </div>
@@ -206,7 +213,7 @@ ob_start();
                                     <a href="index.php?ctrl=product&action=product">sản phẩm</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="">tin tức</a>
+                                    <a href="index.php?ctrl=news">tin tức</a>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="index.php?ctrl=contact">liên hệ</a>
@@ -265,55 +272,22 @@ ob_start();
                         <div class="links">
                             <h3 class="title-of-section">Thông tin</h3>
                             <ul>
-                                <li><a href="#">Đặc biệt</a></li>
-                                <li><a href="#">Sản phẩm mới</a></li>
-                                <li><a href="#">Sản phẩm bán chạy</a></li>
-                                <li><a href="#">Tất cả sản phẩm</a></li>
-                                <li><a href="#">Liên hệ</a></li>
-                                <li><a href="#">Địa chỉ</a></li>
-                                <li><a href="#">Blog</a></li>
+                                <li><a href="index.php#1">Sản phẩm giá tốt</a></li>
+                                <li><a href="index.php#2">Sản phẩm nhiều lượt xem</a></li>
+                                <li><a href="index.php#3">Sản phẩm đang giảm giá</a></li>
+                                <li><a href="index.php?ctrl=product">Tất cả sản phẩm</a></li>
+                                <li><a href="index.php?ctrl=contact">Địa chỉ</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 equal-elem">
-                        <div class="links">
-                            <h3 class="title-of-section">Khách hàng thân thiết</h3>
-                            <span class="span-newsletter">Đăng kí trở thành khách hàng thân thiết để nhận được thông tin về sản phẩm mới.</span>
-                            <div class="newsletter-form">
-                                <form id="newsletter-validate-detail" class="form subscribe">
-                                    <div class="control">
-                                        <input type="email" placeholder="Nhập email" id="newsletter" name="email"
-                                               class="input-subscribe">
-                                        <button type="submit" title="Subscribe" class="btn subscribe">
-                                            <span>Đăng nhập</span>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="socials">
-                                <a href="#" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#" class="social"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                <a href="#" class="social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
-            </div>
-        </div>
-        <div class="copyright full-width">
-            <div class="container">
-                <div class="copyright-right">
+                <div class="row">
                     © Copyright 2020<span> Fshop</span>. All Rights Reserved.
                 </div>
-                <div class="pay-men">
-                    <a href="#"><img src="site/assets/images/general/pay1.jpg" alt="pay1"></a>
-                    <a href="#"><img src="site/assets/images/general/pay2.jpg" alt="pay2"></a>
-                    <a href="#"><img src="site/assets/images/general/pay3.jpg" alt="pay3"></a>
-                    <a href="#"><img src="site/assets/images/general/pay4.jpg" alt="pay4"></a>
-                </div>
             </div>
         </div>
+        
     </footer>
     <!-- end FOOTER -->
 </div>
