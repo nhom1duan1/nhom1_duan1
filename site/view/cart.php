@@ -115,7 +115,7 @@
                         <label class="title">Địa chỉ giao hàng:</label>
                         <input type="text" name="diachi" class="form-control" placeholder="Địa chỉ nhận hàng">
                         <input hidden name="thanhtien" value="<?php echo $tongtien ?>">
-                        <input hidden name="ma_kh" value="<?php echo $_SESSION['ma_kh'] ?>">
+                        <input hidden name="ma_kh" value="<?php echo $_SESSION['id'] ?>">
                     </div>
                     </div>
                         <button type="submit" name="submit" class="btn-order">Đặt hàng</button>
