@@ -8,7 +8,7 @@
 	}
 	switch ($act) {
 		case 'index':
-			$products=showAllProduct();
+			$products=showAllProduct() ;
 			include 'view/product/showProduct.php';
 			break;
 		case 'update':

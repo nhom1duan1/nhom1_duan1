@@ -2,7 +2,7 @@
 	include_once 'database.php';
 	function showAllProduct()
 	{
-		$sql='select * from sanpham';
+		$sql='select * from sanpham order by ma_sp desc';
 		return query($sql);
 	}
 	

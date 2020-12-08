@@ -116,8 +116,9 @@ switch ($action) {
     break;
     case 'detail':
         $id= $_GET['id'];
-        $all= showAllProduct();
         $product= showProductbyId($id);
+
+        $all= showProductSameCata($product['ma_loai']);
         include 'site/view/detail_product.php';
     break;
     case 'home':// cái này không cần thiết

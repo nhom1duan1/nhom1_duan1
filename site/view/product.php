@@ -61,7 +61,7 @@
                                             <div class="product-inner">
                                                 <div class="product-thumb">
                                                     <div class="thumb-inner">
-                                                        <a href="index.php?ctrl=product&action=detail&id='.$value['ma_sp'].'"><img src="'.$value['hinh_anh'].'" alt="p8"></a>
+                                                        <a href="index.php?ctrl=product&action=detail&id='.$value['ma_sp'].'"><img src="images/'.$value['hinh_anh'].'" alt="p8"></a>
                                                     </div>
                                                     <span class="onsale">-50%</span>
                                                 </div>
@@ -70,9 +70,9 @@
                                                     </a></div>
                                                     <span class="price">
 
-                                                            <ins>$'.$value['gia_giam'].'</ins>
+                                                            <ins>'.$value['gia_giam'].'-VNĐ</ins>
 
-                                                            <del>$'.$value['gia_goc'].'</del>
+                                                            <del>'.$value['gia_goc'].'-VNĐ</del>
 
                                                         </span>
                                                     <span class="star-rating">
@@ -94,12 +94,10 @@
                                                         <p>Weigh: 8.25 kg</p>
                                                         <p>Size: One Size Fits All </p>
                                                         <p>Guarantee: 2 Year</p>
-                                                    </div>
+                                                    </div> 
                                                     <div class="single-add-to-cart">
                                                         <a href="index.php?ctrl=cart&action=addtocart&id='.$value['ma_sp'].'" class="btn-add-to-cart">Thêm vào giỏ hàng</a>
                                                         
-                                                        <a href="index.php?ctrl=wishlist&action=addtowish&id='.$value['ma_sp'].'" class="wishlist"><i class="fa fa-heart-o"
-                                                                                        aria-hidden="true"></i>Wishlist</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -129,7 +127,7 @@
                                 }
                             ?>
                             </ul>
-                            <span class="show-resuilt">Showing 1-8 of 12 result</span>
+                            <span class="show-resuilt">Hiển thị 9 của tất cả sản phẩm</span>
                         </div>
                     </div>
                 </div>
@@ -185,12 +183,5 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="block-banner-sidebar">
-                            <a href="#"><img src="site/assets/images/product/banner-sidebar.jpg" alt="banner-sidebar"></a>
-                            <div class="promotion-banner-inner">
-                                <h4>Fly Drone</h4>
-                                <h3>Tincidunt interdum senectus fames sociis sem platea </h3>
-                                <a class="banner-link" href="grid-product.html">Shop now</a>
-                            </div>
-                        </div>
+                       
                         

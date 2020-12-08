@@ -2,11 +2,7 @@
    include 'product.php';
    
 
-  function addToWish($id ,$hinh,$tensp,$gia){
-     $sql="INSERT INTO wishlist(ma,hinh_anh,ten_sp,gia_giam)
-     values(null,'$hinh','$tensp','$gia') ";
-      $lastId = executeReturnID($sql);
-      return $lastId;
+  function addToWish($id ){
    //lay thong tin san pham can them vao gio hang
    $product=showProductbyId($id);
    $bool=false;
