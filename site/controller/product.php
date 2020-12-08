@@ -110,6 +110,8 @@ switch ($action) {
 
             break;
         }
+
+
         include 'site/view/productbyId.php';
     break;
     case 'detail':

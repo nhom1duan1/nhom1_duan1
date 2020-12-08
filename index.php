@@ -165,15 +165,15 @@ ob_start();
                                     <span></span>
                                     <span></span>
                                 </span>
-                                <span class="title-menu-mobile">Main menu</span> 
+                                <span class="title-menu-mobile">Main menu</span>
                             </span>
-                        <div class="block-minicart dropdown style2">
-                            <a class="minicart" href="index.php?ctrl=cart">
+                            <div class="block-minicart dropdown style2">
+                                <a class="minicart" href="index.php?ctrl=cart">
 
                                     <span class="counter qty">
 
                                         <span class="cart-icon"><i class="flaticon-shopping-cart"
-                                                                   aria-hidden="true"></i></span>
+                                                aria-hidden="true"></i></span>
 
                                         <span class="counter-number"><?php 
                                         $dem=0;
@@ -188,135 +188,139 @@ ob_start();
                                         ?></span>
 
                                     </span>
-                                <span class="counter-your-cart">
+                                    <span class="counter-your-cart">
 
                                         <span class="counter-label">Giỏ hàng:</span>
 
                                         <span class="counter-price">$<?php echo $tongtien ?></span>
 
                                     </span>
-                            </a>
-                        </div><!-- block mini cart -->
-                        <a href="#" class="hidden-md search-hidden"><span class="flaticon-magnifying-glass"></span></a>
-                        
+                                </a>
+                            </div><!-- block mini cart -->
+                            <a href="#" class="hidden-md search-hidden"><span
+                                    class="flaticon-magnifying-glass"></span></a>
+
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div><!-- header-content -->
-        <!-- header-menu-bar -->
-        <div class="header-menu-bar header-sticky">
-            <div class="header-menu-nav menu-style-1 ">
-                <div class="container ">
-                    <div class="header-menu-nav-inner  ">
-                        <div class="header-menu header-menu-resize ">
-                            <ul class="header-nav dagon-nav">
-                                <li class="btn-close hidden-md"><i class="flaticon-close" aria-hidden="true"></i></li>
-                                <li class="menu-item-has-children">
-                                    <a href="index.php">Trang chủ</a>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="index.php?ctrl=product&action=product">sản phẩm</a>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="">tin tức</a>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="index.php?ctrl=contact">liên hệ</a>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="index.php?ctrl=about_us">Giới thiệu</a>
-                                </li>
-                                
-                            </ul>
+            </div><!-- header-content -->
+            <!-- header-menu-bar -->
+            <div class="header-menu-bar header-sticky">
+                <div class="header-menu-nav menu-style-1 ">
+                    <div class="container ">
+                        <div class="header-menu-nav-inner  ">
+                            <div class="header-menu header-menu-resize ">
+                                <ul class="header-nav dagon-nav">
+                                    <li class="btn-close hidden-md"><i class="flaticon-close" aria-hidden="true"></i>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="index.php">Trang chủ</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="index.php?ctrl=product&action=product">sản phẩm</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="">tin tức</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="index.php?ctrl=contact">liên hệ</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="index.php?ctrl=about_us">Giới thiệu</a>
+                                    </li>
+
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- end header-menu-bar -->
-    </header>
-    <!-- END HEADER -->
-    <!--  -->
-    <main class="site-main">
-        <?php
+            <!-- end header-menu-bar -->
+        </header>
+        <!-- END HEADER -->
+        <!--  -->
+        <main class="site-main">
+            <?php
             $ctrl='home';
             if(isset($_GET['ctrl'])){
                 $ctrl= $_GET['ctrl'];
             }
             include 'site/controller/'.$ctrl.'.php';
         ?>
-    </main>
-        
-    <!-- FOOTER -->
-    <footer class="site-footer footer-opt-2">
-        <div class="footer-column equal-container" style="margin-bottom: 30px;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 equal-elem">
-                        <div class="logo-footer"><img src="site/assets/images/logo-light.png" alt="logo"></div>
-                        <div class="contacts">
-                            <p class="contacts-info">Fshop là một đơn vị uy tính chuyên cung cấp các mặt hàng công nghệ. Công ty có hệ thống phân phối với nhiều chi nhánh khắp cả nước.</p>
-                            <span class="contacts-info info-address ">314/55, Tân Chánh Hiệp, Q12, TP.HCM</span>
-                            <span class="contacts-info info-phone">(+84) 929 441 57</span>
-                            <span class="contacts-info info-support">khaitrung147@gmail.com</span>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer footer-opt-2">
+            <div class="footer-column equal-container" style="margin-bottom: 30px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 equal-elem">
+                            <div class="logo-footer"><img src="site/assets/images/logo-light.png" alt="logo"></div>
+                            <div class="contacts">
+                                <p class="contacts-info">Fshop là một đơn vị uy tính chuyên cung cấp các mặt hàng công
+                                    nghệ. Công ty có hệ thống phân phối với nhiều chi nhánh khắp cả nước.</p>
+                                <span class="contacts-info info-address ">314/55, Tân Chánh Hiệp, Q12, TP.HCM</span>
+                                <span class="contacts-info info-phone">(+84) 929 441 57</span>
+                                <span class="contacts-info info-support">khaitrung147@gmail.com</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6 equal-elem">
-                        <div class="links">
-                            <h3 class="title-of-section">Tài khoản</h3>
-                            <ul>
-                                <li><a href="#">Đăng kí</a></li>
-                                <li><a href="index.php?ctrl=cart">Xem giỏ hàng</a></li>
-                                <li><a href="#">Liên hệ</a></li>
-                                <li><a href="#">Kiểm tra đơn hàng</a></li>
-                                <li><a href="#">Trợ giúp</a></li>
-                            </ul>
+                        <div class="col-md-2 col-sm-6 equal-elem">
+                            <div class="links">
+                                <h3 class="title-of-section">Tài khoản</h3>
+                                <ul>
+                                    <li><a href="#">Đăng kí</a></li>
+                                    <li><a href="index.php?ctrl=cart">Xem giỏ hàng</a></li>
+                                    <li><a href="#">Liên hệ</a></li>
+                                    <li><a href="#">Kiểm tra đơn hàng</a></li>
+                                    <li><a href="#">Trợ giúp</a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6 equal-elem">
-                        <div class="links">
-                            <h3 class="title-of-section">Thông tin</h3>
-                            <ul>
-                                <li><a href="index.php#1">Sản phẩm giá tốt</a></li>
-                                <li><a href="index.php#2">Sản phẩm nhiều lượt xem</a></li>
-                                <li><a href="index.php#3">Sản phẩm đang giảm giá</a></li>
-                                <li><a href="index.php?ctrl=product">Tất cả sản phẩm</a></li>
-                                <li><a href="index.php?ctrl=contact">Địa chỉ</a></li>
-                            </ul>
+                        <div class="col-md-2 col-sm-6 equal-elem">
+                            <div class="links">
+                                <h3 class="title-of-section">Thông tin</h3>
+                                <ul>
+                                    <li><a href="index.php#1">Sản phẩm giá tốt</a></li>
+                                    <li><a href="index.php#2">Sản phẩm nhiều lượt xem</a></li>
+                                    <li><a href="index.php#3">Sản phẩm đang giảm giá</a></li>
+                                    <li><a href="index.php?ctrl=product">Tất cả sản phẩm</a></li>
+                                    <li><a href="index.php?ctrl=contact">Địa chỉ</a></li>
+                                </ul>
+                            </div>
                         </div>
+
                     </div>
-                    
-                </div>
-                <div class="row">
-                    © Copyright 2020<span> Fshop</span>. All Rights Reserved.
+                    <div class="row">
+                        © Copyright 2020<span> Fshop</span>. All Rights Reserved.
+                    </div>
                 </div>
             </div>
-        </div>
-        
-    </footer>
-    <!-- end FOOTER -->
-</div>
-<a href="#" id="scrollup" title="Scroll to Top">Scroll</a>
-<!-- jQuery -->
-<script type="text/javascript" src="site/assets/js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="site/assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="site/assets/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="site/assets/js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="site/assets/js/wow.min.js"></script>
-<script type="text/javascript" src="site/assets/js/jquery.actual.min.js"></script>
-<script type="text/javascript" src="site/assets/js/chosen.jquery.min.js"></script>
-<script type="text/javascript" src="site/assets/js/jquery.bxslider.min.js"></script>
-<script type="text/javascript" src="site/assets/js/jquery.sticky.js"></script>
-<script type="text/javascript" src="site/assets/js/jquery.elevateZoom.min.js"></script>
-<script src="site/assets/js/fancybox/source/jquery.fancybox.pack.js"></script>
-<script src="site/assets/js/fancybox/source/helpers/jquery.fancybox-media.js"></script>
-<script src="site/assets/js/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
-<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC3nDHy1dARR-Pa_2jjPCjvsOR4bcILYsM'></script>
-<script type="text/javascript" src="site/assets/js/function.js"></script>
-<script type="text/javascript" src="site/assets/js/Modernizr.js"></script>
-<script type="text/javascript" src="site/assets/js/jquery.plugin.js"></script>
-<script type="text/javascript" src="site/assets/js/jquery.countdown.js"></script>
+
+        </footer>
+        <!-- end FOOTER -->
+    </div>
+    <a href="#" id="scrollup" title="Scroll to Top">Scroll</a>
+    <!-- jQuery -->
+    <script type="text/javascript" src="site/assets/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="site/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="site/assets/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="site/assets/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="site/assets/js/wow.min.js"></script>
+    <script type="text/javascript" src="site/assets/js/jquery.actual.min.js"></script>
+    <script type="text/javascript" src="site/assets/js/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="site/assets/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="site/assets/js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="site/assets/js/jquery.elevateZoom.min.js"></script>
+    <script src="site/assets/js/fancybox/source/jquery.fancybox.pack.js"></script>
+    <script src="site/assets/js/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+    <script src="site/assets/js/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC3nDHy1dARR-Pa_2jjPCjvsOR4bcILYsM'></script>
+    <script type="text/javascript" src="site/assets/js/function.js"></script>
+    <script type="text/javascript" src="site/assets/js/Modernizr.js"></script>
+    <script type="text/javascript" src="site/assets/js/jquery.plugin.js"></script>
+    <script type="text/javascript" src="site/assets/js/jquery.countdown.js"></script>
 </body>
+
 </html>
 <?php
 ob_flush();
