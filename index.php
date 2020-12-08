@@ -9,10 +9,13 @@ ob_start();
         $_SESSION['search']=$_POST['search'];
     }
 
+<<<<<<< HEAD
     if (isset($_GET['logout'])) {
     session_destroy();
     header('location: admin/login.php');
   }
+=======
+>>>>>>> 2465cf84655634b3f455bac68eafc81a1a608b76
 ?>
 <html lang="en">
 
@@ -125,6 +128,7 @@ ob_start();
                                 </li>';
                             }
                         ?>
+<<<<<<< HEAD
                     </ul><!-- heder links -->
                 </div>
             </div> <!-- header-top -->
@@ -154,6 +158,37 @@ ob_start();
                                             </div>
                                         </form>
                                     </div>
+=======
+                </ul><!-- heder links -->
+            </div>
+        </div> <!-- header-top -->
+        <!-- header-content -->
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 nav-left">
+                        <!-- logo -->
+                        <strong class="logo">
+                            <a href="index.php?ctrl=home"><img src="site/assets/images/logo.png" alt="logo"></a>
+                        </strong>
+                        <!-- logo -->
+                    </div>
+                    <div class="col-md-8 nav-mind">
+                        <!-- block search -->
+                        <div class="block-search">
+                            <div class="block-content">
+                                
+                                <div class="form-search">
+                                <form action="index.php?ctrl=search" method="get">
+                                        <div class="box-group">
+                                            <input type="hidden" name="ctrl" value="search">
+                                            <input type="search" id="user-search" class="form-control" name="search" placeholder="Nhập từ khóa cần tìm">
+                                            <button class="btn btn-search" name="sbs" type="submit" >
+                                                <span class="flaticon-magnifying-glass"></span>
+                                            </button>
+                                        </div>
+                                    </form>
+>>>>>>> 2465cf84655634b3f455bac68eafc81a1a608b76
                                 </div>
                             </div><!-- block search -->
                         </div>
@@ -203,6 +238,7 @@ ob_start();
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
             </div><!-- header-content -->
             <!-- header-menu-bar -->
             <div class="header-menu-bar header-sticky">
@@ -231,6 +267,35 @@ ob_start();
 
                                 </ul>
                             </div>
+=======
+            </div>
+        </div><!-- header-content -->
+        <!-- header-menu-bar -->
+        <div class="header-menu-bar header-sticky">
+            <div class="header-menu-nav menu-style-1 ">
+                <div class="container ">
+                    <div class="header-menu-nav-inner  ">
+                        <div class="header-menu header-menu-resize ">
+                            <ul class="header-nav dagon-nav">
+                                <li class="btn-close hidden-md"><i class="flaticon-close" aria-hidden="true"></i></li>
+                                <li class="menu-item-has-children">
+                                    <a href="index.php">Trang chủ</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="index.php?ctrl=product&action=product">sản phẩm</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="index.php?ctrl=news">tin tức</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="index.php?ctrl=contact">liên hệ</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="index.php?ctrl=about_us">Giới thiệu</a>
+                                </li>
+                                
+                            </ul>
+>>>>>>> 2465cf84655634b3f455bac68eafc81a1a608b76
                         </div>
                     </div>
                 </div>

@@ -120,6 +120,7 @@
             </li>
 
 
+<<<<<<< HEAD
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNCC"
                     aria-expanded="true" aria-controls="collapseNCC">
@@ -134,6 +135,59 @@
                     </div>
                 </div>
             </li>
+=======
+         <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseBL"
+            aria-expanded="true"
+            aria-controls="collapseBL"
+          >
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Bình luận</span>
+          </a>
+          <div
+            id="collapseBL"
+            class="collapse"
+            aria-labelledby="headingNCC"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Chức năng:</h6>
+              <a class="collapse-item" href="index.php?ctrl=comment&action=index">Xem danh sách</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseN"
+            aria-expanded="true"
+            aria-controls="collapseN"
+          >
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Tin Tức</span>
+          </a>
+          <div
+            id="collapseN"
+            class="collapse"
+            aria-labelledby="headingNCC"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Chức năng:</h6>
+              <a class="collapse-item" href="index.php?ctrl=news&act=index">Xem danh sách</a>
+              <a class="collapse-item" href="index.php?ctrl=news&act=addnews">Viết tin tức</a>
+            </div>
+          </div>
+        </li>
+        <hr class="sidebar-divider" />
+      </ul>
+>>>>>>> 2465cf84655634b3f455bac68eafc81a1a608b76
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBL"
