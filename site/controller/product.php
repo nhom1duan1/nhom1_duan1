@@ -58,6 +58,11 @@ switch ($action) {
             break;
         }
 
+<<<<<<< HEAD
+        break;
+        default:
+            # code...
+=======
         include 'site/view/product.php';
     break;
     case 'showbyId':
@@ -160,6 +165,7 @@ switch ($action) {
             $like="ten_sp ASC";
             $product= productSort($like,$limit,$start);
             //include_once 'site/view/product.php';
+>>>>>>> 45f630aef2d06aff207840e4d4e72267c8460819
             break;
             case 'nameza':
             $like="ten_sp DESC";
