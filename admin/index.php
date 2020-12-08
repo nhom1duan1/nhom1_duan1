@@ -69,6 +69,13 @@
             <span>Dashboard</span></a
           >
         </li>
+        <hr class="sidebar-divider my-0" />
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.php">
+            <i class="fas fa-cloud"></i>
+            <span>Vào trang web</span></a
+          >
+        </li>
         <hr class="sidebar-divider" />
         <div class="sidebar-heading">Quản lý</div>
         <li class="nav-item">
