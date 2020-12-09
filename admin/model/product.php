@@ -2,10 +2,14 @@
 	include_once 'database.php';
 	function showAllProduct()
 	{
-		$sql='select * from sanpham order by ma_sp desc';
+		$sql='select * from sanpham order by ma_sp desc ';
 		return query($sql);
 	}
-	
+	function showAllProducts($limit , $start)
+	{
+		$sql='select * from sanpham order by ma_sp desc limit '.$limit.','.$start;
+		return query($sql);
+	}
 	function addNewProduct($id,$cataid,$productName,$giaGoc,$giaGiam,$brand,$path,$truycap,$mota,$anhien,$thutu){
 		$sql="insert into sanpham(ma_sp,ma_loai,ten_sp,gia_goc,gia_giam,ma_hang,hinh_anh,truy_cap,mo_ta,an_hien,thu_tu) values(null,'$cataid','$productName','$giaGoc','$giaGiam','$brand','$path','$truycap','$mota','$anhien','$thutu')";
 		execute($sql);
@@ -35,6 +39,10 @@
 	function demCatalog($id)
 	{
 		$sql="Select count(*) as 'soluong' from sanpham where ma_loai='$id'";
+		return queryOne($sql);
+	}
+	function countProduct(){
+		$sql="select count(ma_sp) as totalrecord from sanpham";
 		return queryOne($sql);
 	}
 ?>

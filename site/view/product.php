@@ -97,10 +97,7 @@
                                                     </div> 
                                                     <div class="single-add-to-cart">
                                                         <a href="index.php?ctrl=cart&action=addtocart&id='.$value['ma_sp'].'" class="btn-add-to-cart">Thêm vào giỏ hàng</a>
-<<<<<<< HEAD
                                                         
-=======
->>>>>>> 72c5fb6823d3678d56668a00aea5625f6362b0db
                                                     </div>
                                                 </div>
                                             </div>

@@ -8,7 +8,13 @@
 	}
 	switch ($act) {
 		case 'index':
-			$products=showAllProduct() ;
+			$act='index';
+			 $total=countProduct();
+			 $limit=5;
+       		 $current_page=isset($_GET['current_page']) ? $_GET['current_page'] : 1;
+        	 $start=($current_page-1)*$limit;
+			
+			$products=showAllProducts($start , $limit) ;
 			include 'view/product/showProduct.php';
 			break;
 		case 'update':

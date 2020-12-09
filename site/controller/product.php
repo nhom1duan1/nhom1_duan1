@@ -57,7 +57,6 @@ switch ($action) {
                   echo "<script>alert('vui')</script>";
             break;
         }
-<<<<<<< HEAD
 
         include 'site/view/product.php';
     break;
@@ -109,17 +108,6 @@ switch ($action) {
                 $product= showProductbyId_loai($ma_loai,$start,$limit,$like);
             
 
-=======
-        break;
-        default:
-            # code...
-        break;
-        default:
-            # code...
-        break;
-        default:
-            # code...
->>>>>>> 2465cf84655634b3f455bac68eafc81a1a608b76
             break;
         }
 
