@@ -6,7 +6,13 @@
   }
   switch ($action) {
             case 'index':
-            $catalogs =getAllBrand();
+              $act='index';
+            $total=countBrand();
+			      $limit=5;
+       		  $current_page=isset($_GET['current_page']) ? $_GET['current_page'] : 1;
+        	  $start=($current_page-1)*$limit;
+
+            $catalogs =getAllBrands($start , $limit);
             include 'view/brand/index.php';
             break;
 

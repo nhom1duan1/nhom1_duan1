@@ -62,7 +62,7 @@
                               <td>'.$key['sdt'].'</td>
                               <td>'.$key['dia_chi'].'</td>
                               <td>'.$key['thanh_tien'].'</td>  
-                              <td >'.$key['thoi_gian'].'</td>
+                              <td >'.$key['thoigian'].'</td>
                               <td>'.$key['tinh_trang'].'</td>
                               <td>
                                 <a href="index.php?ctrl=cart&action=detail&ma_donhang='.$key['ma_donhang'].'" class="btn btn-danger">Chi tiết đơn hàng</a>
