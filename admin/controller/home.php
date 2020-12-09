@@ -3,5 +3,5 @@
  include 'model/catalogs.php';
  $product= showAllProduct();
  $loai_sp= getAllCatalog();
- include 'view/home/index.php';
+ include 'view/home/chart.php';
  ?>

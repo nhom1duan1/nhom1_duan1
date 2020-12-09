@@ -13,36 +13,19 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th scope="col" colspan="2">Mã đơn hàng</th>
+                            <th></th>
+                            <th scope="col">Mã đơn hàng</th>
                             <!-- <th>x</th>  -->
-                            <th scope="col">Tên khách hàng</th>
+                            <th scope=" col">Tên khách hàng</th>
                             <th scope="col">Số điện thoại</th>
                             <th scope="col">Địa chỉ</th>
                             <th scope="col">Thành tiền</th>
                             <th scope="col">Thời gian đặt hàng</th>
+                            <th>Ghi chú</th>
                             <th scope="col">Tình trạng</th>
-
-                            <th></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
+                            <th colspan=3></th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th scope="col" colspan="2">Mã đơn hàng</th>
-                            <!-- <th>x</th>  -->
-                            <th scope="col">Tên khách hàng</th>
-                            <th scope="col">Số điện thoại</th>
-                            <th scope="col">Địa chỉ</th>
-                            <th scope="col">Thành tiền</th>
-                            <th scope="col">Thời gian đặt hàng</th>
-                            <th scope="col">Tình trạng</th>
-
-                            <th></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         <?php
                           foreach($catalogs as $key){
@@ -63,20 +46,24 @@
                               <td>'.$key['dia_chi'].'</td>
                               <td>'.$key['thanh_tien'].'</td>  
                               <td >'.$key['thoigian'].'</td>
+<<<<<<< HEAD
+=======
+                              <td class="col-sm-12" >'.$key['ghi_chu'].'</td>
+>>>>>>> 1730727e39322e99af13001560b7e17ae5cff137
                               <td>'.$key['tinh_trang'].'</td>
                               <td>
-                                <a href="index.php?ctrl=cart&action=detail&ma_donhang='.$key['ma_donhang'].'" class="btn btn-danger">Chi tiết đơn hàng</a>
+                                <a href="index.php?ctrl=cart&action=detail&ma_donhang='.$key['ma_donhang'].'" class="btn btn-danger">Chi tiết</a>
                               </td>
                               <td>
                                 <a onclick="return canhbao()" class="btn btn-warning" href="index.php?ctrl=cart&action=delete&ma_donhang='.$key['ma_donhang'].'">Xóa</a>
+                              </td>
+                              <td>
                                 <a class="btn btn-info" href="index.php?ctrl=cart&action=edit&ma_donhang='.$key['ma_donhang'].'">Sửa</a>
                               </td>
                               
                           
                               </tr>
                               
-                              <td colspan="2">Ghi chú</td>
-                              <td class="col-sm-12" >'.$key['ghi_chu'].'</td>
                           
                             ';
                           }

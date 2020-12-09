@@ -1,17 +1,10 @@
 <?php
 include 'site/model/product.php'; 
-$action='index';
+$action='product';
 if(isset($_GET['action'])){
     $action= $_GET['action'];
 }
 switch ($action) {
-    case 'index':// trang san pham
-        include 'site/model/catalogs.php';
-        $catalogs= getAllCatalog();
-        $product= showAllProduct();
-        include 'site/view/product.php';
-    break; 
-    
     case 'product':
         include 'site/model/catalogs.php';
         $sort="see";
@@ -110,8 +103,6 @@ switch ($action) {
 
             break;
         }
-
-
         include 'site/view/productbyId.php';
     break;
     case 'detail':

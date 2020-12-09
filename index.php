@@ -61,48 +61,7 @@ ob_start();
                     </ul><!-- hotline -->
                     <!-- heder links -->
                     <ul class="nav-top-right dagon-nav">
-                        <li class="menu-item-has-children"><a href="#" class="dropdown-toggle"><img
-                                    src="site/assets/images/general/vietnam.jpg" alt="flag">Việt Nam<i
-                                    class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            <ul class="submenu parent-megamenu">
-                                <li class="switcher-option">
-                                    <a href="#" class="flag"><img src="site/assets/images/general/vietnam.jpg"
-                                            alt="flag">Việt Nam</a>
-                                </li>
-                                <li class="switcher-option">
-                                    <a href="#" class="flag"><img src="site/assets/images/general/l1.jpg"
-                                            alt="flag">English</a>
-                                </li>
-                                <li class="switcher-option">
-                                    <a href="#" class="flag"><img src="site/assets/images/general/l3.jpg"
-                                            alt="flag">German</a>
-                                </li>
-                                <li class="switcher-option">
-                                    <a href="#" class="flag"><img src="site/assets/images/general/l4.jpg"
-                                            alt="flag">French</a>
-                                </li>
-                                <li class="switcher-option">
-                                    <a href="#" class="flag"><img src="site/assets/images/general/l5.jpg"
-                                            alt="flag">Canada</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#" class="dropdown-toggle">
-                                <span>VNĐ (VietNam)</span><i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </a>
-                            <ul class="submenu parent-megamenu">
-                                <li class="switcher-option">
-                                    <a href="#" class="switcher-flag icon">VNĐ (VietNam)</a>
-                                </li>
-                                <li class="switcher-option">
-                                    <a href="#" class="switcher-flag icon">Euro (EUR)</a>
-                                </li>
-                                <li class="switcher-option">
-                                    <a href="#" class="switcher-flag icon">Dollar (USD)</a>
-                                </li>
-                            </ul>
-                        </li>
+
                         <?php
                             if(!isset($_SESSION['username'])){
                                 echo '<li><a href="admin/login.php">
@@ -147,10 +106,12 @@ ob_start();
                                     <div class="form-search">
                                         <form>
                                             <div class="box-group">
-                                                <input type="text" class="form-control"
+                                                <input type="hidden" name="ctrl" value="search">
+                                                <input type="search" id="user-search" class="form-control" name="search"
                                                     placeholder="Nhập từ khóa cần tìm">
-                                                <button class="btn btn-search" type="button"><span
-                                                        class="flaticon-magnifying-glass"></span></button>
+                                                <button class="btn btn-search" name="sbs" type="submit">
+                                                    <span class="flaticon-magnifying-glass"></span>
+                                                </button>
                                             </div>
                                         </form>
                                     </div>
