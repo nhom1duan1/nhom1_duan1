@@ -153,7 +153,7 @@ ob_start();
 
                                         <span class="counter-label">Giỏ hàng:</span>
 
-                                        <span class="counter-price">$<?php echo $tongtien ?></span>
+                                        <span class="counter-price"><?php echo $tongtien ?>-VNĐ</span>
 
                                     </span>
                                 </a>

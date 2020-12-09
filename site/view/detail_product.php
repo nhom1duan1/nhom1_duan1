@@ -81,9 +81,9 @@
                             <div class="product-info-price">
                                 <span class="price">
 
-                                    <ins>$<?php echo $product['gia_giam'] ?></ins>
+                                    <ins><?php echo $product['gia_giam'] ?>-VNĐ</ins>
 
-                                    <del>$<?php echo $product['gia_goc'] ?></del>
+                                    <del><?php echo $product['gia_goc'] ?>-VNĐ</del>
 
                                 </span>
                                 <div class="quantity">
@@ -96,8 +96,7 @@
                                 </div>
                                 <div class="single-add-to-cart">
                                     <a href="index.php?ctrl=cart&action=addtocart&id=<?php echo $product['ma_sp'] ?>" class="btn-add-to-cart">Thêm vào giỏ hàng</a>
-                                    <a href="compare.html" class="compare"><i class="fa fa-exchange"></i>So sánh</a>
-                                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i>Danh sách yêu thích</a>
+                                
                                 </div>
                             </div>
                             <div class="group-btn-share">
@@ -246,18 +245,18 @@
                         <div class="product-inner equal-elem">
                             <div class="product-thumb">
                                 <div class="thumb-inner">
-                                    <a href="index.php?ctrl=product&action=detail&id='.$koy['ma_sp'].'"><img src="../images/'.$koy['hinh_anh'].'" alt=""></a>
+                                    <a href="index.php?ctrl=product&action=detail&id='.$koy['ma_sp'].'"><img src="images/'.$koy['hinh_anh'].'" alt=""></a>
                                 </div>
                                 <span class="onsale">-50%</span>
-                                  <a href="#" class="quick-view">Quick View</a> 
+                                  
                             </div>
                             <div class="product-innfo">
                                 <div class="product-name"><a href="#">'.$koy['ten_sp'].'</a></div>
                                 <span class="price">
 
-                                        <ins>$'.$koy['gia_giam'].'</ins>
+                                        <ins>'.$koy['gia_giam'].'-VNĐ</ins>
 
-                                        <del>$'.$koy['gia_goc'].'</del>
+                                        <del>'.$koy['gia_goc'].'-VNĐ</del>
 
                                     </span>
                                 <span class="star-rating">
@@ -276,10 +275,9 @@
 
                                     </span>
                                 <div class="group-btn-hover style2">
-                                    <a href="#" class="add-to-cart"><i class="flaticon-shopping-cart"
+                                    <a href="index.php?ctrl=cart&action=addtocart&id='.$koy['ma_sp'].'" class="add-to-cart"><i class="flaticon-shopping-cart"
                                                                        aria-hidden="true"></i></a>
-                                    <a href="compare.html" class="compare"><i class="fa fa-exchange"></i></a>
-                                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                  
                                 </div>
                             </div>
                         </div>

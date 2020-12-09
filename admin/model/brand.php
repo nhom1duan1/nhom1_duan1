@@ -2,7 +2,7 @@
     include_once'database.php';
 
     function getAllBrand(){
-        $sql="SELECT * FROM hang ORDER by ma_hang";
+        $sql="SELECT * FROM hang ORDER by ma_hang desc";
         return query($sql);
     }
      function addBrand($id,$hang){

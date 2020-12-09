@@ -1,43 +1,81 @@
- <div id="block-quick-view-popup" class="block-quick-view-popup">
-        <div class="quick-view-content">
-            <a href="#" class="popup-btn-close"><span class="flaticon-close"></span></a>
-            <div class="product-items">
-            
-                <div class="product-image">
-                    <a href="#"><img src="assets/images/popup-pro.jpg" alt="p1"></a>
+      <main class="site-main shopping-cart">
+                <div class="container">
+                    <ol class="breadcrumb-page">
+                        <li><a href="index.php">Trang chủ </a></li>
+                        <li class="active"><a href="#">Shopping Cart</a></li>
+                    </ol>
                 </div>
-                <div class="product-info">
-                    <div class="product-name"><a href="#">Photo Camera</a></div>
-                    <span class="star-rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <span class="review">5 Review(s)</span>
-                        </span>
-                    <a href="wishlist.html" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i>Add to
-                        Wishlist</a>
-                    <div class="product-infomation">
-                        Description Our new HPB12 / A12 battery is rated at 2000mAh and designed to power up Black and
-                        Decker FireStorm line of 12V tools allowing...
-                    </div>
-                </div>
-                <div class="product-info-price">
-                        <span class="price">
-                            <ins>$229.00</ins>
-                            <del>$259.00</del>
-                        </span>
-                    <div class="quantity">
-                        <h6 class="quantity-title">Quantity:</h6>
-                        <div class="buttons-added">
-                            <input type="text" value="1" title="Qty" class="input-text qty text" size="1">
-                            <a href="#" class="sign plus"><i class="fa fa-plus"></i></a>
-                            <a href="#" class="sign minus"><i class="fa fa-minus"></i></a>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <form class="form-cart" method="post">
+                                <div class="table-cart">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th class="tb-image"></th>
+                                            <th class="tb-product">Tên sản phẩm</th>
+                                            <th class="tb-price">Giá sản phẩm</th>
+                                            <th class="tb-qty">Số lượng</th>
+                                            <th class="tb-total">Thành tiền</th>
+                                            <th class="tb-remove"></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php
+                                            
+                                            $tongtien=0;
+                                            if(!isset($_SESSION['carts'])){
+                                            echo '
+                                                <div class="baorong">Bạn chưa chọn sản phẩm nào !</div>
+                                                <script>
+                                                document.getElementById("thead").style.display="none";
+                                                </script>
+                                            ';
+                                            }
+                                            else{ 
+                                            foreach ($_SESSION['carts'] as $p){ 
+                                                echo '
+                                                
+                                                <tr>
+                                                    <td class="tb-image"><a href="#" class="item-photo"><img src="'.$p['image'].'" width="100px" /></a></td>
+                                                    <td class="tb-product">
+                                                        <div class="product-name"><a href="#">'.$p['name'].'</a></div>
+                                                    </td>
+                                                    <td class="tb-price">
+                                                        <span class="price">$'.$p['price'].'</span>
+                                                    </td>
+                                                    <td class="tb-qty">
+                                                        <div class="quantity">
+                                                            <div class="buttons-added">
+                                                                <input name="soluong" type="text" value="'.$p['quantity'].'" title="Qty" class="input-text qty text"
+                                                                    size="1">
+                                                                <a href="#" class="sign plus"><i class="fa fa-plus"></i></a>
+                                                                <a href="#" class="sign minus"><i class="fa fa-minus"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tb-total">
+                                                        <span class="price">'.$p['price']*$p['quantity'].'</span>
+                                                    </td>
+                                                    <td class="tb-remove">
+                                                        <a href="index.php?ctrl=cart&action=deleteCart&id='.$p['id'].'" class="action-remove"><span><i class="flaticon-close"
+                                                                                                aria-hidden="true"></i></span></a>
+                                                    </td>
+                                                </tr>
+                                                ';
+                                                
+                                                $tongtien= $tongtien + $p['price']*$p['quantity'];
+                                            } 
+                                            } 
+                                        ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="cart-actions">
+                                    <button type="button" class="btn-continue">
+                                        <span><a href="index.php?ctrl=product">Tiếp tục mua sắm</a> </span>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
-                    </div>
-                    <a href=""index.php?ctrl=cart"" class="btn-add-to-cart">Add to cart</a>
-                </div>
-            </div>
-        </div>
-    </div>

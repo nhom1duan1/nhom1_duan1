@@ -60,6 +60,7 @@
                   else{
                     $anhien='Ẩn';
                   };
+                 
                   echo'
                     <tr>
                       <td><input type="checkbox" name="chonX[]"></td>
@@ -81,12 +82,20 @@
               ?>
                     </tbody>
                 </table>
+               
                 <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  <?php
+                  
+                    $i=1;
+                    $total_page=ceil($total['totalrecord']/$limit);
+                        while($i <= $total_page){
+                            if($act=='index'){
+                                echo ' 
+                                <li class="page-item"> <a class="page-link"  href="index.php?ctrl=product&action='.$act.'&current_page='.$i.'">'.$i.'</a></li>';
+                                $i++;
+                            }
+                    }
+                  ?>
                 </ul>
             </div>
         </div>

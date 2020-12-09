@@ -15,7 +15,7 @@
             }
             else{
                 include_once 'site/model/product.php';
-                $all=showAllProduct();
+                $all=showTruyCap();
                 include('site/view/cart.php');
             }
         break;

@@ -38,13 +38,18 @@
 		return queryOne($sql);
 		
 	}
+	function showProductSameCata($id){
+		$sql="select *from sanpham where ma_loai='$id' ";
+		return query($sql);
+		
+	}
 	function deleteProduct($id)
     {
         $sql="delete from sanpham where ma_sp='$id'";
         execute($sql);
 	}
 	function showLowPrice(){
-		 $sql="SELECT * from sanpham order by gia_goc limit 8";
+		 $sql="SELECT * from sanpham  order by  gia_goc asc limit 8 ";
           return query($sql);
 	}
 	function showHighSale(){
@@ -52,7 +57,7 @@
           return query($sql);
 	}
 	function showTruyCap(){
-		$sql="SELECT * from sanpham order by truy_cap limit 8";
+		$sql="SELECT * from sanpham order by truy_cap desc limit 8";
 		return query($sql);
 	}
 	function quickview($id){

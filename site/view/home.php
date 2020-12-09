@@ -91,11 +91,11 @@
                      data-loop="true" data-margin="30"
                      data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4}}'>
                     <div class="block-top-categori-item">
-                        <a href="index.php?ctrl=product&action=showbyId&id=18"><img src="site/assets/images/home1/c1.jpg" alt="c1"></a>
+                        <a href="index.php?ctrl=product&action=showbyId&id=5"><img src="site/assets/images/home1/c1.jpg" alt="c1"></a>
                         <div class="block-top-categori-title">Đồng hồ</div>
                     </div>
                     <div class="block-top-categori-item">
-                        <a href="index.php?ctrl=product&action=showbyId&id=19"><img src="site/assets/images/home1/c3.jpg" alt="c3"></a>
+                        <a href="index.php?ctrl=product&action=showbyId&id=8"><img src="site/assets/images/home1/c3.jpg" alt="c3"></a>
                         <div class="block-top-categori-title">Phụ kiện</div>
                     </div>
                     <div class="block-top-categori-item">
@@ -117,7 +117,7 @@
                             <a href="index.php?ctrl=product" class="banner-img"><img src="site/assets/images/home1/background-product.jpg" alt="banner3"></a>
                             <div class="promotion-banner-inner">
                                 <h4>Điện thoại</h4>
-                                <h3>Sale <strong>40%</strong> Off</h3>
+                                <h3>Giảm <strong>40%</strong> giá</h3>
                                 <a class="banner-link" href="index.php?ctrl=product">Xem ngay</a>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
                             <a href="index.php?ctrl=product" class="banner-img"><img src="site/assets/images/home1/banner4.jpg" alt="banner4"></a>
                             <div class="promotion-banner-inner">
                                 <h4>Tai nghe</h4>
-                                <h3>Get <strong>25%</strong> Flat Off</h3>
+                                <h3>Nhận <strong>25%</strong> ưu đãi</h3>
                                 <a class="banner-link" href="index.php?ctrl=product">Xem ngay</a>
                             </div>
                         </div>
@@ -151,16 +151,16 @@
                         <div class="product-inner equal-elem">
                             <div class="product-thumb">
                                 <div class="thumb-inner">
-                                    <a href="index.php?ctrl=product&action=detail&id='.$key['ma_sp'].'"><img src="'.$key['hinh_anh'].'" alt=""></a>
+                                    <a href="index.php?ctrl=product&action=detail&id='.$key['ma_sp'].'"><img src="images/'.$key['hinh_anh'].'" alt=""></a>
                                 </div>
                             </div>
                             <div class="product-innfo">
                                 <div class="product-name"><a href="#">'.$key['ten_sp'].'</a></div>
                                 <span class="price">
 
-                                        <ins>$'.$key['gia_giam'].'</ins>
+                                        <ins>'.$key['gia_giam'].'-VNĐ</ins>
 
-                                        <del>$'.$key['gia_goc'].'</del>
+                                        <del>'.$key['gia_goc'].'-VNĐ</del>
 
                                     </span>
                                 <span class="star-rating">
@@ -181,7 +181,6 @@
                                 <div class="group-btn-hover style2">
                                     <a href="index.php?ctrl=cart&action=addtocart&id='.$key['ma_sp'].'" class="add-to-cart"><i class="flaticon-shopping-cart"
                                                                        aria-hidden="true"></i></a>
-                                    <a href="index.php?ctrl=wishlist&action=addtowish&id='.$key['ma_sp'].'" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -211,7 +210,7 @@
                         <div class="product-inner equal-elem">
                             <div class="product-thumb">
                                 <div class="thumb-inner">
-                                   <a href="index.php?ctrl=product&action=detail&id='.$kay['ma_sp'].'"><img src="'.$kay['hinh_anh'].'" alt=""></a>
+                                   <a href="index.php?ctrl=product&action=detail&id='.$kay['ma_sp'].'"><img src="images/'.$kay['hinh_anh'].'" alt=""></a>
                                 </div>
                                 <span class="onsale">-50%</span>
                             </div>
@@ -219,9 +218,9 @@
                                 <div class="product-name"><a href="#">'.$kay['ten_sp'].'</a></div>
                                 <span class="price">
 
-                                        <ins>$'.$kay['gia_giam'].'</ins>
+                                        <ins>'.$kay['gia_giam'].'-VNĐ</ins>
 
-                                        <del>$'.$kay['gia_goc'].'</del>
+                                        <del>'.$kay['gia_goc'].'-VNĐ</del>
 
                                     </span>
                                 <span class="star-rating">
@@ -242,7 +241,6 @@
                                 <div class="group-btn-hover style2">
                                     <a href="index.php?ctrl=cart&action=addtocart&id='.$key['ma_sp'].'" class="add-to-cart"><i class="flaticon-shopping-cart"
                                                                        aria-hidden="true"></i></a>
-                                    <a href="index.php?ctrl=wishlist&action=addtowish&id='.$key['ma_sp'].'" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -271,7 +269,7 @@
                         <div class="product-inner equal-elem">
                             <div class="product-thumb">
                                 <div class="thumb-inner">
-                                    <a href="index.php?ctrl=product&action=detail&id='.$koy['ma_sp'].'"><img src="'.$koy['hinh_anh'].'" alt=""></a>
+                                    <a href="index.php?ctrl=product&action=detail&id='.$koy['ma_sp'].'"><img src="images/'.$koy['hinh_anh'].'" alt=""></a>
                                 </div>
                                 <span class="onsale">-50%</span>
                             </div>
@@ -279,9 +277,9 @@
                                 <div class="product-name"><a href="#">'.$koy['ten_sp'].'</a></div>
                                 <span class="price">
 
-                                        <ins>$'.$koy['gia_giam'].'</ins>
+                                        <ins>'.$koy['gia_giam'].'-VNĐ</ins>
 
-                                        <del>$'.$koy['gia_goc'].'</del>
+                                        <del>'.$koy['gia_goc'].'-VNĐ</del>
 
                                     </span>
                                 <span class="star-rating">
@@ -302,7 +300,6 @@
                                 <div class="group-btn-hover style2">
                                     <a href="index.php?ctrl=cart&action=addtocart&id='.$key['ma_sp'].'" class="add-to-cart"><i class="flaticon-shopping-cart"
                                                                        aria-hidden="true"></i></a>
-                                    <a href="index.php?ctrl=wishlist&action=addtowish&id='.$key['ma_sp'].'" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>

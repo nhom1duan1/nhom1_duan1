@@ -1,7 +1,7 @@
 <?php
     include_once ('database.php');
     function getAllCatalog(){
-        $sql="SELECT * from catalogs order by ma_loai ";
+        $sql="SELECT * from catalogs order by ma_loai desc";
         return query($sql);
     }
     function addNewCatalog($name,$thutu,$anhien){

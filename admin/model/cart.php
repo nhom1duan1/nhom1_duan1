@@ -1,7 +1,7 @@
 <?php
     include_once'database.php';
     function getAllCart(){
-        $sql="SELECT * FROM donhang ORDER BY ma_donhang";
+        $sql="SELECT * FROM donhang ORDER BY ma_donhang desc";
         return query($sql);
     }
     function deleteCart($id){

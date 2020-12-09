@@ -1,7 +1,7 @@
 <?php
     include_once ('database.php');
     function getAllComment(){
-        $sql="SELECT * FROM binhluan ORDER by ma_binhluan";
+        $sql="SELECT * FROM binhluan ORDER by ma_binhluan desc";
         return query($sql);
     }
     function deleteComment($id){
