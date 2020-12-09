@@ -66,6 +66,7 @@
 					// Instantiation and passing `true` enables exceptions
 					$mail = new PHPMailer(true);
 					try {
+						
 					    //Server settings
 					    $mail -> charSet = "UTF-8";
 					    $mail->SMTPDebug = 4;                      // Enable verbose debug output
@@ -95,8 +96,9 @@
 					    }
 					    echo 'Message has been sent';
 					    $pass_mahoa=password_hash($password, PASSWORD_BCRYPT,["cost" => 12]);//mã hóa password
-					    forGotPass($pass_mahoa,$username);//cập nhật password mới
-					    echo "<script>alert('mật khẩu mới đã được gửi về email của bạn');window.location='../login.php';</script>";
+						forGotPass($pass_mahoa,$username);//cập nhật password mới
+						echo "Thành công !!"
+					    //echo "<script>window.location='../login.php';</script>";
 					} catch (Exception $e) {
 					    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 					}
