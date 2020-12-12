@@ -92,14 +92,15 @@
 					    //thông báo đã gửi mail đươc hây chưa 
 					    if (!$mail->send()) {
 					    	echo "gửi không thành công";
-					    	echo 'mail Error: '.$mail->ErrorInfo;
+					    	//echo 'mail Error: '.$mail->ErrorInfo;
 					    }
 					    echo 'Message has been sent';
 					    $pass_mahoa=password_hash($password, PASSWORD_BCRYPT,["cost" => 12]);//mã hóa password
 						forGotPass($pass_mahoa,$username);//cập nhật password mới
-						echo "Thành công !!"
+						echo "Thành công !!";
 					    //echo "<script>window.location='../login.php';</script>";
-					} catch (Exception $e) {
+					}
+					catch (Exception $e) {
 					    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 					}
 				}

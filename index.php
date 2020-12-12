@@ -181,7 +181,7 @@ ob_start();
                                         <a href="index.php?ctrl=product&action=product">sản phẩm</a>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="">tin tức</a>
+                                        <a href="index.php?ctrl=news">tin tức</a>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="index.php?ctrl=contact">liên hệ</a>

@@ -9,6 +9,6 @@
 	function getEmail($email)
 	{
 		$sql="select email from khachhang where email='$email'";
-		queryOne($sql);
+		return queryOne($sql);
 	}
 ?>

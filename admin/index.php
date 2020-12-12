@@ -148,6 +148,20 @@
                     </div>
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseN"
+                    aria-expanded="true" aria-controls="collapseN">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Tin Tức</span>
+                </a>
+                <div id="collapseN" class="collapse" aria-labelledby="headingNCC" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Chức năng:</h6>
+                        <a class="collapse-item" href="index.php?ctrl=news">Xem danh sách</a>
+                        <a class="collapse-item" href="index.php?ctrl=news&action=addnews">Thêm Tin Tức</a>
+                    </div>
+                </div>
+            </li>
             <hr class="sidebar-divider" />
         </ul>
 

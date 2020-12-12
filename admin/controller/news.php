@@ -44,7 +44,13 @@
 			$post=showAllNewsById($id);
 			include 'view/news/update.php';
 			break;
-		
+		case 'delete':
+			if (isset($_GET['id'])) {
+				$id=$_GET['id'];
+			}
+			deletenews($id);
+			echo "<script>window.location='index.php?ctrl=news';</script>";
+			break;
 		default:
 			# code...
 			break;

@@ -72,7 +72,7 @@
                                             khẩu?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="../site/index.php?ctrl=user">Tạo tài khoản!</a>
+                                        <a class="small" href="../index.php?ctrl=newAccount">Tạo tài khoản!</a>
                                     </div>
                                 </div>
                             </div>

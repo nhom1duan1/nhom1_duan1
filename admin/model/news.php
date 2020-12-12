@@ -21,4 +21,9 @@
 		$sql="UPDATE `news` SET `tieu_de`='$tieude',`noi_dung`='$noidung',`tac_gia`='$tacgia',`an_hien`='$anhien',`tom_tat`='$tomTat',`anh_nen`='$anhNen' where id='$id'";
 		execute($sql);
 	}
+	function deletenews($id){
+		$sql="delete from news where id='$id'";
+		execute($sql);
+		//header('localhost:index.php?ctrl=user');
+	}
 ?>
