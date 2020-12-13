@@ -59,7 +59,8 @@
 						// forGotPass($pass_mahoa,$username);//cập nhật password mới
 					    //echo "<script>window.location='../login.php';</script>";
 					} catch (Exception $e) {
-					    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+					   //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+						echo '<script>alert("e mail lỏi");window.location="http://shopdocongnghe.000webhostapp.com/admin/login.php";</script>';
 					}
 				}
 			echo '<script>alert("Đăng ký thành công");window.location="http://shopdocongnghe.000webhostapp.com";</script>';

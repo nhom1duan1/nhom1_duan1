@@ -69,7 +69,7 @@
 						
 					    //Server settings
 					    $mail -> charSet = "UTF-8";
-					    $mail->SMTPDebug = 4;                      // Enable verbose debug output
+					    $mail->SMTPDebug = 0;                      // Enable verbose debug output
 					    $mail->isSMTP();                                            // Send using SMTP
 					    $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
 					    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -87,21 +87,22 @@
 					    $mail->isHTML(true);// Set email format to HTML
 					    $password=rand(100000,999999);//tạo password mới
 					    $mail->Subject = 'Your account Fshop';//tiêu đề
-					    $mail->Body = '<h3>your new password</h3></br><b>'.$password.'</b></br><p><a href="http://localhost/nhom1_duan1/admin/controller/login.php?act=updatepassword&username='.$username.'">Đổi mật khẩu tại đây</a></p>';//body mail
+					    $mail->Body = '<h3>your new password</h3></br><b>'.$password.'</b></br><p><a href="http://shopdocongnghe.000webhostapp.com/admin/controller/login.php?act=updatepassword&username='.$username.'">Đổi mật khẩu tại đây</a></p>';//body mail
 					    
 					    //thông báo đã gửi mail đươc hây chưa 
 					    if (!$mail->send()) {
 					    	echo "gửi không thành công";
 					    	//echo 'mail Error: '.$mail->ErrorInfo;
 					    }
-					    echo 'Message has been sent';
+					    //echo 'Message has been sent';
 					    $pass_mahoa=password_hash($password, PASSWORD_BCRYPT,["cost" => 12]);//mã hóa password
 						forGotPass($pass_mahoa,$username);//cập nhật password mới
-						echo "Thành công !!";
-					    //echo "<script>window.location='../login.php';</script>";
+						//echo "Thành công !!";
+					    echo "<script>alert('kiểm tra e mail nhé');window.location='../login.php';</script>";
 					}
 					catch (Exception $e) {
-					    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+					    echo 'lõi';
+					    //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 					}
 				}
 			}
@@ -133,6 +134,7 @@
 								$pass_mahoa=password_hash($password, PASSWORD_BCRYPT,["cost" => 12]);
 								$email=$username;
 								updatePassword($pass_mahoa,$email);
+								echo "<script>window.location='login.php';</script>";
 							}
 						}
 					}	
